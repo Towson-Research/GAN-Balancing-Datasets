@@ -1,5 +1,10 @@
 # GAN-Balancing-Datasets
-COSC 490 - Towson University Research Project:
+COSC 490 - Towson University 
+
+Insurehub page   
+Using KDD99 Dataset http://kdd.ics.uci.edu/databases/kddcup99/
+
+Members:
 - Tim Merino
 - Matt Stillwell
 - Max Coplan
@@ -8,9 +13,6 @@ COSC 490 - Towson University Research Project:
 - Alex Stoyanov
 - Jon Patton
 - Long Chen
-
-Insurehub page   
-Using KDD99 Dataset http://kdd.ics.uci.edu/databases/kddcup99/
 
 ## Description
 Our goal is to build a GAN network with discriminator function usinginformation from the previous research in this field and earlier work at ArgonneNational Laboratory using suitable datasets. We have also found publicly availablecyber attack data sets that can be used to supplement our GAN training. Currentcyber attack data is unbalanced, outdated, and narrowly scoped. This can lead tocyber attacks not being accurately identified, leading to security breaches.Bytraining a GAN using the limited data sets available online, our Generator neuralnetwork model would be able to replicate and expand existing datasets and teach other discriminator algorithms using our data. Our Discriminator algorithm couldalso recognize cyber attacks based on incoming traffic and reduce false positivesthat plague current detection systems.
