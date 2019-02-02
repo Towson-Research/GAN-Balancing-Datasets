@@ -1,0 +1,127 @@
+
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.918
+Generator hidden layer 1 size: 90
+Generator hidden layer 2 size: 77
+Generator hidden layer 3 size: 99
+Iteration 0
+Result file name: GANresultsSmurf907799iter0.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.758
+Generator hidden layer 1 size: 12
+Generator hidden layer 2 size: 56
+Generator hidden layer 3 size: 12
+Iteration 0
+Result file name: GANresultsSmurf125612iter0.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.832
+Generator hidden layer 1 size: 12
+Generator hidden layer 2 size: 56
+Generator hidden layer 3 size: 12
+Iteration 2
+Result file name: GANresultsSmurf125612iter2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.598
+Generator hidden layer 1 size: 12
+Generator hidden layer 2 size: 56
+Generator hidden layer 3 size: 12
+Iteration 3
+Result file name: GANresultsSmurf125612iter3.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.750
+Generator hidden layer 1 size: 13
+Generator hidden layer 2 size: 77
+Generator hidden layer 3 size: 90
+Iteration 0
+Result file name: GANresultsSmurf137790iter0.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.750
+Generator hidden layer 1 size: 13
+Generator hidden layer 2 size: 77
+Generator hidden layer 3 size: 90
+Iteration 1
+Result file name: GANresultsSmurf137790iter1.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 13
+Generator hidden layer 2 size: 77
+Generator hidden layer 3 size: 90
+Iteration 2
+Result file name: GANresultsSmurf137790iter2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.816
+Generator hidden layer 1 size: 13
+Generator hidden layer 2 size: 77
+Generator hidden layer 3 size: 90
+Iteration 3
+Result file name: GANresultsSmurf137790iter3.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 13
+Generator hidden layer 2 size: 77
+Generator hidden layer 3 size: 90
+Iteration 4
+Result file name: GANresultsSmurf137790iter4.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.824
+Generator hidden layer 1 size: 66
+Generator hidden layer 2 size: 99
+Generator hidden layer 3 size: 67
+Iteration 0
+Result file name: GANresultsSmurf669967iter0.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.871
+Generator hidden layer 1 size: 66
+Generator hidden layer 2 size: 99
+Generator hidden layer 3 size: 67
+Iteration 2
+Result file name: GANresultsSmurf669967iter2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.930
+Generator hidden layer 1 size: 66
+Generator hidden layer 2 size: 99
+Generator hidden layer 3 size: 67
+Iteration 4
+Result file name: GANresultsSmurf669967iter4.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 37
+Generator hidden layer 2 size: 17
+Generator hidden layer 3 size: 67
+Iteration 0
+Result file name: GANresultsSmurf371767iter0.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.828
+Generator hidden layer 1 size: 37
+Generator hidden layer 2 size: 17
+Generator hidden layer 3 size: 67
+Iteration 1
+Result file name: GANresultsSmurf371767iter1.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

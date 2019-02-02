@@ -1,0 +1,397 @@
+
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 25
+Generator hidden layer 2 size: 15
+Generator hidden layer 3 size: 65
+Iteration 0
+Result file name: GANresultsSatan251565iter0.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 25
+Generator hidden layer 2 size: 15
+Generator hidden layer 3 size: 65
+Iteration 1
+Result file name: GANresultsSatan251565iter1.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 25
+Generator hidden layer 2 size: 15
+Generator hidden layer 3 size: 65
+Iteration 2
+Result file name: GANresultsSatan251565iter2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 25
+Generator hidden layer 2 size: 15
+Generator hidden layer 3 size: 65
+Iteration 3
+Result file name: GANresultsSatan251565iter3.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 25
+Generator hidden layer 2 size: 15
+Generator hidden layer 3 size: 65
+Iteration 4
+Result file name: GANresultsSatan251565iter4.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 83
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 15
+Iteration 0
+Result file name: GANresultsSatan837615iter0.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 83
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 15
+Iteration 1
+Result file name: GANresultsSatan837615iter1.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 25
+Generator hidden layer 2 size: 15
+Generator hidden layer 3 size: 65
+Iteration 0
+Result file name: GANresultsSatan251565iter0.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 25
+Generator hidden layer 2 size: 15
+Generator hidden layer 3 size: 65
+Iteration 1
+Result file name: GANresultsSatan251565iter1.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 25
+Generator hidden layer 2 size: 15
+Generator hidden layer 3 size: 65
+Iteration 2
+Result file name: GANresultsSatan251565iter2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 25
+Generator hidden layer 2 size: 15
+Generator hidden layer 3 size: 65
+Iteration 3
+Result file name: GANresultsSatan251565iter3.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 25
+Generator hidden layer 2 size: 15
+Generator hidden layer 3 size: 65
+Iteration 4
+Result file name: GANresultsSatan251565iter4.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 26
+Generator hidden layer 2 size: 88
+Generator hidden layer 3 size: 64
+Iteration 0
+Result file name: GANresultsSatan268864iter0.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 26
+Generator hidden layer 2 size: 88
+Generator hidden layer 3 size: 64
+Iteration 1
+Result file name: GANresultsSatan268864iter1.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 25
+Generator hidden layer 2 size: 15
+Generator hidden layer 3 size: 65
+Iteration 0
+Result file name: GANresultsSatan251565iter0.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 25
+Generator hidden layer 2 size: 15
+Generator hidden layer 3 size: 65
+Iteration 1
+Result file name: GANresultsSatan251565iter1.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 25
+Generator hidden layer 2 size: 15
+Generator hidden layer 3 size: 65
+Iteration 2
+Result file name: GANresultsSatan251565iter2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 25
+Generator hidden layer 2 size: 15
+Generator hidden layer 3 size: 65
+Iteration 3
+Result file name: GANresultsSatan251565iter3.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 25
+Generator hidden layer 2 size: 15
+Generator hidden layer 3 size: 65
+Iteration 4
+Result file name: GANresultsSatan251565iter4.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 9
+Generator hidden layer 2 size: 40
+Generator hidden layer 3 size: 29
+Iteration 0
+Result file name: GANresultsSatan94029iter0.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 9
+Generator hidden layer 2 size: 40
+Generator hidden layer 3 size: 29
+Iteration 1
+Result file name: GANresultsSatan94029iter1.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 9
+Generator hidden layer 2 size: 40
+Generator hidden layer 3 size: 29
+Iteration 2
+Result file name: GANresultsSatan94029iter2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 9
+Generator hidden layer 2 size: 40
+Generator hidden layer 3 size: 29
+Iteration 3
+Result file name: GANresultsSatan94029iter3.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 9
+Generator hidden layer 2 size: 40
+Generator hidden layer 3 size: 29
+Iteration 4
+Result file name: GANresultsSatan94029iter4.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 76
+Generator hidden layer 2 size: 39
+Generator hidden layer 3 size: 86
+Iteration 0
+Result file name: GANresultsSatan763986iter0.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 76
+Generator hidden layer 2 size: 39
+Generator hidden layer 3 size: 86
+Iteration 1
+Result file name: GANresultsSatan763986iter1.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 76
+Generator hidden layer 2 size: 39
+Generator hidden layer 3 size: 86
+Iteration 2
+Result file name: GANresultsSatan763986iter2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 76
+Generator hidden layer 2 size: 39
+Generator hidden layer 3 size: 86
+Iteration 3
+Result file name: GANresultsSatan763986iter3.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 76
+Generator hidden layer 2 size: 39
+Generator hidden layer 3 size: 86
+Iteration 4
+Result file name: GANresultsSatan763986iter4.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 24
+Generator hidden layer 2 size: 97
+Generator hidden layer 3 size: 65
+Iteration 0
+Result file name: GANresultsSatan249765iter0.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 24
+Generator hidden layer 2 size: 97
+Generator hidden layer 3 size: 65
+Iteration 1
+Result file name: GANresultsSatan249765iter1.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 24
+Generator hidden layer 2 size: 97
+Generator hidden layer 3 size: 65
+Iteration 2
+Result file name: GANresultsSatan249765iter2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 24
+Generator hidden layer 2 size: 97
+Generator hidden layer 3 size: 65
+Iteration 3
+Result file name: GANresultsSatan249765iter3.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 24
+Generator hidden layer 2 size: 97
+Generator hidden layer 3 size: 65
+Iteration 4
+Result file name: GANresultsSatan249765iter4.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 15
+Generator hidden layer 2 size: 82
+Generator hidden layer 3 size: 39
+Iteration 0
+Result file name: GANresultsSatan158239iter0.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 15
+Generator hidden layer 2 size: 82
+Generator hidden layer 3 size: 39
+Iteration 1
+Result file name: GANresultsSatan158239iter1.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 15
+Generator hidden layer 2 size: 82
+Generator hidden layer 3 size: 39
+Iteration 2
+Result file name: GANresultsSatan158239iter2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 15
+Generator hidden layer 2 size: 82
+Generator hidden layer 3 size: 39
+Iteration 3
+Result file name: GANresultsSatan158239iter3.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 15
+Generator hidden layer 2 size: 82
+Generator hidden layer 3 size: 39
+Iteration 4
+Result file name: GANresultsSatan158239iter4.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 26
+Generator hidden layer 2 size: 99
+Generator hidden layer 3 size: 22
+Iteration 0
+Result file name: GANresultsSatan269922iter0.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 26
+Generator hidden layer 2 size: 99
+Generator hidden layer 3 size: 22
+Iteration 1
+Result file name: GANresultsSatan269922iter1.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 26
+Generator hidden layer 2 size: 99
+Generator hidden layer 3 size: 22
+Iteration 2
+Result file name: GANresultsSatan269922iter2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 26
+Generator hidden layer 2 size: 99
+Generator hidden layer 3 size: 22
+Iteration 3
+Result file name: GANresultsSatan269922iter3.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 26
+Generator hidden layer 2 size: 99
+Generator hidden layer 3 size: 22
+Iteration 4
+Result file name: GANresultsSatan269922iter4.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

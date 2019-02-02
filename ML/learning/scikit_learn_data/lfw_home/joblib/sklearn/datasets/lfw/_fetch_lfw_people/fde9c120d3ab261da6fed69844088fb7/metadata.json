@@ -1,0 +1,1 @@
+{"duration": 2.429081439971924, "input_args": {"data_folder_path": "'/home/ldeng/scikit_learn_data/lfw_home/lfw_funneled'", "slice_": "(slice(70, 195, None), slice(78, 172, None))", "color": "False", "resize": "0.4", "min_faces_per_person": "70"}}

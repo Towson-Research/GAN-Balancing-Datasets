@@ -1,0 +1,3250 @@
+
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.574
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 4
+Result file name: GANresultsportsweep304962iter4try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.590
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 8
+Result file name: GANresultsportsweep304962iter8try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.680
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 1
+Result file name: GANresultsportsweep304962iter1try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.867
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 2
+Result file name: GANresultsportsweep304962iter2try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.949
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 4
+Result file name: GANresultsportsweep304962iter4try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.734
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 5
+Result file name: GANresultsportsweep304962iter5try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.691
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 11
+Result file name: GANresultsportsweep304962iter11try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.562
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 12
+Result file name: GANresultsportsweep304962iter12try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.629
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 16
+Result file name: GANresultsportsweep304962iter16try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 17
+Result file name: GANresultsportsweep304962iter17try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.609
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 18
+Result file name: GANresultsportsweep304962iter18try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.945
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 20
+Result file name: GANresultsportsweep304962iter20try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.551
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 21
+Result file name: GANresultsportsweep304962iter21try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.980
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 22
+Result file name: GANresultsportsweep304962iter22try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.816
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 24
+Result file name: GANresultsportsweep304962iter24try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.750
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 25
+Result file name: GANresultsportsweep304962iter25try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.859
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 26
+Result file name: GANresultsportsweep304962iter26try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.656
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 28
+Result file name: GANresultsportsweep304962iter28try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.895
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 29
+Result file name: GANresultsportsweep304962iter29try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.645
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 31
+Result file name: GANresultsportsweep304962iter31try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.535
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 32
+Result file name: GANresultsportsweep304962iter32try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 33
+Result file name: GANresultsportsweep304962iter33try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.863
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 34
+Result file name: GANresultsportsweep304962iter34try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.969
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 35
+Result file name: GANresultsportsweep304962iter35try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.777
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 37
+Result file name: GANresultsportsweep304962iter37try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.527
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 38
+Result file name: GANresultsportsweep304962iter38try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.836
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 39
+Result file name: GANresultsportsweep304962iter39try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.969
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 41
+Result file name: GANresultsportsweep304962iter41try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.758
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 43
+Result file name: GANresultsportsweep304962iter43try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.832
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 44
+Result file name: GANresultsportsweep304962iter44try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.895
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 45
+Result file name: GANresultsportsweep304962iter45try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.965
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 46
+Result file name: GANresultsportsweep304962iter46try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.582
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 47
+Result file name: GANresultsportsweep304962iter47try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.973
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 48
+Result file name: GANresultsportsweep304962iter48try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.691
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 52
+Result file name: GANresultsportsweep304962iter52try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.992
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 54
+Result file name: GANresultsportsweep304962iter54try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.559
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 57
+Result file name: GANresultsportsweep304962iter57try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.863
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 63
+Result file name: GANresultsportsweep304962iter63try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.605
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 65
+Result file name: GANresultsportsweep304962iter65try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.953
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 66
+Result file name: GANresultsportsweep304962iter66try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.566
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 68
+Result file name: GANresultsportsweep304962iter68try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.605
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 69
+Result file name: GANresultsportsweep304962iter69try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.594
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 72
+Result file name: GANresultsportsweep304962iter72try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.656
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 73
+Result file name: GANresultsportsweep304962iter73try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.996
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 75
+Result file name: GANresultsportsweep304962iter75try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.770
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 79
+Result file name: GANresultsportsweep304962iter79try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.746
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 81
+Result file name: GANresultsportsweep304962iter81try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.863
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 83
+Result file name: GANresultsportsweep304962iter83try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.965
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 85
+Result file name: GANresultsportsweep304962iter85try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.609
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 86
+Result file name: GANresultsportsweep304962iter86try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.516
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 88
+Result file name: GANresultsportsweep304962iter88try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.582
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 94
+Result file name: GANresultsportsweep304962iter94try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.895
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 95
+Result file name: GANresultsportsweep304962iter95try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.957
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 96
+Result file name: GANresultsportsweep304962iter96try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 97
+Result file name: GANresultsportsweep304962iter97try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.688
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 99
+Result file name: GANresultsportsweep304962iter99try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.520
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 0
+Result file name: GANresultsportsweep304962iter0try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.801
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 1
+Result file name: GANresultsportsweep304962iter1try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.586
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 4
+Result file name: GANresultsportsweep304962iter4try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.555
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 7
+Result file name: GANresultsportsweep304962iter7try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.504
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 8
+Result file name: GANresultsportsweep304962iter8try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.594
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 12
+Result file name: GANresultsportsweep304962iter12try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.555
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 16
+Result file name: GANresultsportsweep304962iter16try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.543
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 18
+Result file name: GANresultsportsweep304962iter18try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.516
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 21
+Result file name: GANresultsportsweep304962iter21try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.668
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 22
+Result file name: GANresultsportsweep304962iter22try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.641
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 23
+Result file name: GANresultsportsweep304962iter23try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.961
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 24
+Result file name: GANresultsportsweep304962iter24try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.551
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 25
+Result file name: GANresultsportsweep304962iter25try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.758
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 26
+Result file name: GANresultsportsweep304962iter26try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.543
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 29
+Result file name: GANresultsportsweep304962iter29try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.684
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 30
+Result file name: GANresultsportsweep304962iter30try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.996
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 31
+Result file name: GANresultsportsweep304962iter31try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.543
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 32
+Result file name: GANresultsportsweep304962iter32try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.637
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 33
+Result file name: GANresultsportsweep304962iter33try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.922
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 34
+Result file name: GANresultsportsweep304962iter34try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.660
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 38
+Result file name: GANresultsportsweep304962iter38try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.922
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 39
+Result file name: GANresultsportsweep304962iter39try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.684
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 40
+Result file name: GANresultsportsweep304962iter40try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.574
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 42
+Result file name: GANresultsportsweep304962iter42try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.633
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 43
+Result file name: GANresultsportsweep304962iter43try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 46
+Result file name: GANresultsportsweep304962iter46try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.684
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 47
+Result file name: GANresultsportsweep304962iter47try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.641
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 48
+Result file name: GANresultsportsweep304962iter48try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.824
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 49
+Result file name: GANresultsportsweep304962iter49try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.609
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 51
+Result file name: GANresultsportsweep304962iter51try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.879
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 52
+Result file name: GANresultsportsweep304962iter52try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.586
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 53
+Result file name: GANresultsportsweep304962iter53try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.758
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 56
+Result file name: GANresultsportsweep304962iter56try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.523
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 57
+Result file name: GANresultsportsweep304962iter57try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.891
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 58
+Result file name: GANresultsportsweep304962iter58try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.668
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 59
+Result file name: GANresultsportsweep304962iter59try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 61
+Result file name: GANresultsportsweep304962iter61try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.617
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 63
+Result file name: GANresultsportsweep304962iter63try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.699
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 64
+Result file name: GANresultsportsweep304962iter64try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.848
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 68
+Result file name: GANresultsportsweep304962iter68try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.570
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 69
+Result file name: GANresultsportsweep304962iter69try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.668
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 72
+Result file name: GANresultsportsweep304962iter72try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.637
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 73
+Result file name: GANresultsportsweep304962iter73try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.945
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 76
+Result file name: GANresultsportsweep304962iter76try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.555
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 78
+Result file name: GANresultsportsweep304962iter78try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.898
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 80
+Result file name: GANresultsportsweep304962iter80try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.594
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 86
+Result file name: GANresultsportsweep304962iter86try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.555
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 87
+Result file name: GANresultsportsweep304962iter87try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.559
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 88
+Result file name: GANresultsportsweep304962iter88try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.887
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 89
+Result file name: GANresultsportsweep304962iter89try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.652
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 90
+Result file name: GANresultsportsweep304962iter90try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.520
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 91
+Result file name: GANresultsportsweep304962iter91try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.559
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 92
+Result file name: GANresultsportsweep304962iter92try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.977
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 94
+Result file name: GANresultsportsweep304962iter94try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.645
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 97
+Result file name: GANresultsportsweep304962iter97try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.902
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 98
+Result file name: GANresultsportsweep304962iter98try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 99
+Result file name: GANresultsportsweep304962iter99try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.664
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 0
+Result file name: GANresultsportsweep304962iter0try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.938
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 4
+Result file name: GANresultsportsweep304962iter4try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.520
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 5
+Result file name: GANresultsportsweep304962iter5try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.664
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 7
+Result file name: GANresultsportsweep304962iter7try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.762
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 8
+Result file name: GANresultsportsweep304962iter8try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.719
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 13
+Result file name: GANresultsportsweep304962iter13try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.805
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 16
+Result file name: GANresultsportsweep304962iter16try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.539
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 18
+Result file name: GANresultsportsweep304962iter18try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.789
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 20
+Result file name: GANresultsportsweep304962iter20try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 24
+Result file name: GANresultsportsweep304962iter24try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.688
+Generator hidden layer 1 size: 30
+Generator hidden layer 2 size: 49
+Generator hidden layer 3 size: 62
+Iteration 28
+Result file name: GANresultsportsweep304962iter28try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 1
+Result file name: GANresultsportsweep972578iter1try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 2
+Result file name: GANresultsportsweep972578iter2try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 3
+Result file name: GANresultsportsweep972578iter3try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.648
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 4
+Result file name: GANresultsportsweep972578iter4try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.566
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 8
+Result file name: GANresultsportsweep972578iter8try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.664
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 9
+Result file name: GANresultsportsweep972578iter9try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.859
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 10
+Result file name: GANresultsportsweep972578iter10try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 12
+Result file name: GANresultsportsweep972578iter12try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.543
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 13
+Result file name: GANresultsportsweep972578iter13try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.715
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 15
+Result file name: GANresultsportsweep972578iter15try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.773
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 17
+Result file name: GANresultsportsweep972578iter17try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 20
+Result file name: GANresultsportsweep972578iter20try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.934
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 22
+Result file name: GANresultsportsweep972578iter22try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 23
+Result file name: GANresultsportsweep972578iter23try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.539
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 24
+Result file name: GANresultsportsweep972578iter24try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.797
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 25
+Result file name: GANresultsportsweep972578iter25try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 29
+Result file name: GANresultsportsweep972578iter29try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.875
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 30
+Result file name: GANresultsportsweep972578iter30try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.699
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 31
+Result file name: GANresultsportsweep972578iter31try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.957
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 32
+Result file name: GANresultsportsweep972578iter32try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.875
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 33
+Result file name: GANresultsportsweep972578iter33try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.562
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 34
+Result file name: GANresultsportsweep972578iter34try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.938
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 35
+Result file name: GANresultsportsweep972578iter35try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 36
+Result file name: GANresultsportsweep972578iter36try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.902
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 37
+Result file name: GANresultsportsweep972578iter37try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.652
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 40
+Result file name: GANresultsportsweep972578iter40try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.645
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 42
+Result file name: GANresultsportsweep972578iter42try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.875
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 44
+Result file name: GANresultsportsweep972578iter44try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 48
+Result file name: GANresultsportsweep972578iter48try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.582
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 50
+Result file name: GANresultsportsweep972578iter50try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.758
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 51
+Result file name: GANresultsportsweep972578iter51try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.680
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 54
+Result file name: GANresultsportsweep972578iter54try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 55
+Result file name: GANresultsportsweep972578iter55try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.773
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 56
+Result file name: GANresultsportsweep972578iter56try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.906
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 58
+Result file name: GANresultsportsweep972578iter58try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.855
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 60
+Result file name: GANresultsportsweep972578iter60try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.953
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 61
+Result file name: GANresultsportsweep972578iter61try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.574
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 63
+Result file name: GANresultsportsweep972578iter63try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.574
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 64
+Result file name: GANresultsportsweep972578iter64try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.941
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 65
+Result file name: GANresultsportsweep972578iter65try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.590
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 66
+Result file name: GANresultsportsweep972578iter66try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.559
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 67
+Result file name: GANresultsportsweep972578iter67try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.949
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 68
+Result file name: GANresultsportsweep972578iter68try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.523
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 69
+Result file name: GANresultsportsweep972578iter69try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.762
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 70
+Result file name: GANresultsportsweep972578iter70try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.504
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 71
+Result file name: GANresultsportsweep972578iter71try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 74
+Result file name: GANresultsportsweep972578iter74try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.891
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 75
+Result file name: GANresultsportsweep972578iter75try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.742
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 76
+Result file name: GANresultsportsweep972578iter76try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 77
+Result file name: GANresultsportsweep972578iter77try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.844
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 81
+Result file name: GANresultsportsweep972578iter81try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.574
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 83
+Result file name: GANresultsportsweep972578iter83try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.844
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 85
+Result file name: GANresultsportsweep972578iter85try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 91
+Result file name: GANresultsportsweep972578iter91try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.684
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 92
+Result file name: GANresultsportsweep972578iter92try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.543
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 93
+Result file name: GANresultsportsweep972578iter93try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.539
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 95
+Result file name: GANresultsportsweep972578iter95try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.824
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 96
+Result file name: GANresultsportsweep972578iter96try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.617
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 97
+Result file name: GANresultsportsweep972578iter97try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.777
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 98
+Result file name: GANresultsportsweep972578iter98try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.852
+Generator hidden layer 1 size: 97
+Generator hidden layer 2 size: 25
+Generator hidden layer 3 size: 78
+Iteration 99
+Result file name: GANresultsportsweep972578iter99try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.516
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 0
+Result file name: GANresultsportsweep477688iter0try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.523
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 1
+Result file name: GANresultsportsweep477688iter1try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.574
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 2
+Result file name: GANresultsportsweep477688iter2try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.738
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 3
+Result file name: GANresultsportsweep477688iter3try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.605
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 5
+Result file name: GANresultsportsweep477688iter5try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.801
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 6
+Result file name: GANresultsportsweep477688iter6try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.676
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 7
+Result file name: GANresultsportsweep477688iter7try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.777
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 8
+Result file name: GANresultsportsweep477688iter8try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.910
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 11
+Result file name: GANresultsportsweep477688iter11try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.547
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 14
+Result file name: GANresultsportsweep477688iter14try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.586
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 15
+Result file name: GANresultsportsweep477688iter15try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.934
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 16
+Result file name: GANresultsportsweep477688iter16try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.902
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 17
+Result file name: GANresultsportsweep477688iter17try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.996
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 18
+Result file name: GANresultsportsweep477688iter18try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 19
+Result file name: GANresultsportsweep477688iter19try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.844
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 20
+Result file name: GANresultsportsweep477688iter20try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.582
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 21
+Result file name: GANresultsportsweep477688iter21try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.605
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 23
+Result file name: GANresultsportsweep477688iter23try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.973
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 24
+Result file name: GANresultsportsweep477688iter24try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.879
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 26
+Result file name: GANresultsportsweep477688iter26try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 27
+Result file name: GANresultsportsweep477688iter27try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.594
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 29
+Result file name: GANresultsportsweep477688iter29try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.949
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 30
+Result file name: GANresultsportsweep477688iter30try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 32
+Result file name: GANresultsportsweep477688iter32try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.531
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 34
+Result file name: GANresultsportsweep477688iter34try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 35
+Result file name: GANresultsportsweep477688iter35try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.734
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 37
+Result file name: GANresultsportsweep477688iter37try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.574
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 40
+Result file name: GANresultsportsweep477688iter40try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.547
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 42
+Result file name: GANresultsportsweep477688iter42try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 43
+Result file name: GANresultsportsweep477688iter43try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.598
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 44
+Result file name: GANresultsportsweep477688iter44try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.703
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 45
+Result file name: GANresultsportsweep477688iter45try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.793
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 47
+Result file name: GANresultsportsweep477688iter47try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.762
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 49
+Result file name: GANresultsportsweep477688iter49try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 51
+Result file name: GANresultsportsweep477688iter51try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.754
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 53
+Result file name: GANresultsportsweep477688iter53try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.609
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 55
+Result file name: GANresultsportsweep477688iter55try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.906
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 56
+Result file name: GANresultsportsweep477688iter56try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.906
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 58
+Result file name: GANresultsportsweep477688iter58try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.734
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 59
+Result file name: GANresultsportsweep477688iter59try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.531
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 60
+Result file name: GANresultsportsweep477688iter60try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.863
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 62
+Result file name: GANresultsportsweep477688iter62try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.691
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 63
+Result file name: GANresultsportsweep477688iter63try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.781
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 64
+Result file name: GANresultsportsweep477688iter64try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.664
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 65
+Result file name: GANresultsportsweep477688iter65try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.723
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 66
+Result file name: GANresultsportsweep477688iter66try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.508
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 67
+Result file name: GANresultsportsweep477688iter67try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.551
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 68
+Result file name: GANresultsportsweep477688iter68try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 69
+Result file name: GANresultsportsweep477688iter69try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.625
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 70
+Result file name: GANresultsportsweep477688iter70try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.551
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 71
+Result file name: GANresultsportsweep477688iter71try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.621
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 74
+Result file name: GANresultsportsweep477688iter74try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.699
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 75
+Result file name: GANresultsportsweep477688iter75try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.551
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 79
+Result file name: GANresultsportsweep477688iter79try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 80
+Result file name: GANresultsportsweep477688iter80try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.664
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 81
+Result file name: GANresultsportsweep477688iter81try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 82
+Result file name: GANresultsportsweep477688iter82try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.906
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 84
+Result file name: GANresultsportsweep477688iter84try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.887
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 88
+Result file name: GANresultsportsweep477688iter88try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.520
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 89
+Result file name: GANresultsportsweep477688iter89try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.891
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 92
+Result file name: GANresultsportsweep477688iter92try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.625
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 94
+Result file name: GANresultsportsweep477688iter94try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.527
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 95
+Result file name: GANresultsportsweep477688iter95try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.887
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 96
+Result file name: GANresultsportsweep477688iter96try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.574
+Generator hidden layer 1 size: 47
+Generator hidden layer 2 size: 76
+Generator hidden layer 3 size: 88
+Iteration 98
+Result file name: GANresultsportsweep477688iter98try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.672
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 1
+Result file name: GANresultsportsweep21971iter1try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.938
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 2
+Result file name: GANresultsportsweep21971iter2try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.637
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 3
+Result file name: GANresultsportsweep21971iter3try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.984
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 4
+Result file name: GANresultsportsweep21971iter4try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.656
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 6
+Result file name: GANresultsportsweep21971iter6try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.539
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 7
+Result file name: GANresultsportsweep21971iter7try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.594
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 12
+Result file name: GANresultsportsweep21971iter12try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.984
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 13
+Result file name: GANresultsportsweep21971iter13try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.551
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 14
+Result file name: GANresultsportsweep21971iter14try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.906
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 15
+Result file name: GANresultsportsweep21971iter15try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.691
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 17
+Result file name: GANresultsportsweep21971iter17try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.906
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 19
+Result file name: GANresultsportsweep21971iter19try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.934
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 23
+Result file name: GANresultsportsweep21971iter23try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.645
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 25
+Result file name: GANresultsportsweep21971iter25try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.918
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 26
+Result file name: GANresultsportsweep21971iter26try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.926
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 27
+Result file name: GANresultsportsweep21971iter27try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.734
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 28
+Result file name: GANresultsportsweep21971iter28try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.684
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 29
+Result file name: GANresultsportsweep21971iter29try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.703
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 30
+Result file name: GANresultsportsweep21971iter30try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.699
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 32
+Result file name: GANresultsportsweep21971iter32try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.691
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 33
+Result file name: GANresultsportsweep21971iter33try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.984
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 35
+Result file name: GANresultsportsweep21971iter35try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 36
+Result file name: GANresultsportsweep21971iter36try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.742
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 40
+Result file name: GANresultsportsweep21971iter40try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.973
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 41
+Result file name: GANresultsportsweep21971iter41try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 42
+Result file name: GANresultsportsweep21971iter42try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.590
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 43
+Result file name: GANresultsportsweep21971iter43try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 44
+Result file name: GANresultsportsweep21971iter44try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.602
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 45
+Result file name: GANresultsportsweep21971iter45try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.859
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 46
+Result file name: GANresultsportsweep21971iter46try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 47
+Result file name: GANresultsportsweep21971iter47try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.793
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 48
+Result file name: GANresultsportsweep21971iter48try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.676
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 50
+Result file name: GANresultsportsweep21971iter50try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.848
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 52
+Result file name: GANresultsportsweep21971iter52try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.625
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 53
+Result file name: GANresultsportsweep21971iter53try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.863
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 54
+Result file name: GANresultsportsweep21971iter54try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.891
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 58
+Result file name: GANresultsportsweep21971iter58try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.766
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 60
+Result file name: GANresultsportsweep21971iter60try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.590
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 65
+Result file name: GANresultsportsweep21971iter65try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.578
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 66
+Result file name: GANresultsportsweep21971iter66try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 67
+Result file name: GANresultsportsweep21971iter67try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.863
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 68
+Result file name: GANresultsportsweep21971iter68try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.637
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 72
+Result file name: GANresultsportsweep21971iter72try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.617
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 73
+Result file name: GANresultsportsweep21971iter73try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.652
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 74
+Result file name: GANresultsportsweep21971iter74try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.520
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 75
+Result file name: GANresultsportsweep21971iter75try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.992
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 76
+Result file name: GANresultsportsweep21971iter76try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.863
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 77
+Result file name: GANresultsportsweep21971iter77try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.566
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 79
+Result file name: GANresultsportsweep21971iter79try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.824
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 80
+Result file name: GANresultsportsweep21971iter80try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.789
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 81
+Result file name: GANresultsportsweep21971iter81try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.930
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 83
+Result file name: GANresultsportsweep21971iter83try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.883
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 86
+Result file name: GANresultsportsweep21971iter86try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.617
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 87
+Result file name: GANresultsportsweep21971iter87try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.836
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 89
+Result file name: GANresultsportsweep21971iter89try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.637
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 90
+Result file name: GANresultsportsweep21971iter90try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.516
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 91
+Result file name: GANresultsportsweep21971iter91try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.793
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 94
+Result file name: GANresultsportsweep21971iter94try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.523
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 95
+Result file name: GANresultsportsweep21971iter95try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.551
+Generator hidden layer 1 size: 21
+Generator hidden layer 2 size: 9
+Generator hidden layer 3 size: 71
+Iteration 97
+Result file name: GANresultsportsweep21971iter97try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.594
+Generator hidden layer 1 size: 86
+Generator hidden layer 2 size: 69
+Generator hidden layer 3 size: 6
+Iteration 7
+Result file name: GANresultsportsweep86696iter7try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.523
+Generator hidden layer 1 size: 86
+Generator hidden layer 2 size: 69
+Generator hidden layer 3 size: 6
+Iteration 23
+Result file name: GANresultsportsweep86696iter23try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.996
+Generator hidden layer 1 size: 86
+Generator hidden layer 2 size: 69
+Generator hidden layer 3 size: 6
+Iteration 24
+Result file name: GANresultsportsweep86696iter24try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.668
+Generator hidden layer 1 size: 86
+Generator hidden layer 2 size: 69
+Generator hidden layer 3 size: 6
+Iteration 28
+Result file name: GANresultsportsweep86696iter28try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.941
+Generator hidden layer 1 size: 86
+Generator hidden layer 2 size: 69
+Generator hidden layer 3 size: 6
+Iteration 30
+Result file name: GANresultsportsweep86696iter30try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.645
+Generator hidden layer 1 size: 86
+Generator hidden layer 2 size: 69
+Generator hidden layer 3 size: 6
+Iteration 69
+Result file name: GANresultsportsweep86696iter69try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.680
+Generator hidden layer 1 size: 86
+Generator hidden layer 2 size: 69
+Generator hidden layer 3 size: 6
+Iteration 78
+Result file name: GANresultsportsweep86696iter78try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.551
+Generator hidden layer 1 size: 86
+Generator hidden layer 2 size: 69
+Generator hidden layer 3 size: 6
+Iteration 93
+Result file name: GANresultsportsweep86696iter93try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.723
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 0
+Result file name: GANresultsportsweep455781iter0try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 1
+Result file name: GANresultsportsweep455781iter1try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.512
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 2
+Result file name: GANresultsportsweep455781iter2try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.727
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 7
+Result file name: GANresultsportsweep455781iter7try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.781
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 8
+Result file name: GANresultsportsweep455781iter8try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.730
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 10
+Result file name: GANresultsportsweep455781iter10try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.504
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 12
+Result file name: GANresultsportsweep455781iter12try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.797
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 15
+Result file name: GANresultsportsweep455781iter15try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.711
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 16
+Result file name: GANresultsportsweep455781iter16try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.547
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 21
+Result file name: GANresultsportsweep455781iter21try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.820
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 22
+Result file name: GANresultsportsweep455781iter22try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.504
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 24
+Result file name: GANresultsportsweep455781iter24try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.824
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 26
+Result file name: GANresultsportsweep455781iter26try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.969
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 27
+Result file name: GANresultsportsweep455781iter27try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.703
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 29
+Result file name: GANresultsportsweep455781iter29try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.668
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 30
+Result file name: GANresultsportsweep455781iter30try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.812
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 34
+Result file name: GANresultsportsweep455781iter34try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.770
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 37
+Result file name: GANresultsportsweep455781iter37try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 38
+Result file name: GANresultsportsweep455781iter38try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.559
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 39
+Result file name: GANresultsportsweep455781iter39try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.555
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 42
+Result file name: GANresultsportsweep455781iter42try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.582
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 44
+Result file name: GANresultsportsweep455781iter44try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 45
+Result file name: GANresultsportsweep455781iter45try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.602
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 50
+Result file name: GANresultsportsweep455781iter50try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.832
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 51
+Result file name: GANresultsportsweep455781iter51try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.805
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 52
+Result file name: GANresultsportsweep455781iter52try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 53
+Result file name: GANresultsportsweep455781iter53try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.938
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 54
+Result file name: GANresultsportsweep455781iter54try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.848
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 56
+Result file name: GANresultsportsweep455781iter56try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.945
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 57
+Result file name: GANresultsportsweep455781iter57try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 59
+Result file name: GANresultsportsweep455781iter59try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.855
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 61
+Result file name: GANresultsportsweep455781iter61try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 62
+Result file name: GANresultsportsweep455781iter62try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.961
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 63
+Result file name: GANresultsportsweep455781iter63try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.742
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 64
+Result file name: GANresultsportsweep455781iter64try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.633
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 65
+Result file name: GANresultsportsweep455781iter65try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.590
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 67
+Result file name: GANresultsportsweep455781iter67try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.809
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 70
+Result file name: GANresultsportsweep455781iter70try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.742
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 71
+Result file name: GANresultsportsweep455781iter71try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 72
+Result file name: GANresultsportsweep455781iter72try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 1.000
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 73
+Result file name: GANresultsportsweep455781iter73try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.520
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 75
+Result file name: GANresultsportsweep455781iter75try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.715
+Generator hidden layer 1 size: 45
+Generator hidden layer 2 size: 57
+Generator hidden layer 3 size: 81
+Iteration 77
+Result file name: GANresultsportsweep455781iter77try2.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

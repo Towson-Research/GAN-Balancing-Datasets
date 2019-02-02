@@ -1,0 +1,19 @@
+
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.902
+Generator hidden layer 1 size: 63
+Generator hidden layer 2 size: 32
+Generator hidden layer 3 size: 71
+Iteration 0
+Result file name: GANresultsNeptune633271iter0.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Accuracy: 0.688
+Generator hidden layer 1 size: 63
+Generator hidden layer 2 size: 32
+Generator hidden layer 3 size: 71
+Iteration 4
+Result file name: GANresultsNeptune633271iter4.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

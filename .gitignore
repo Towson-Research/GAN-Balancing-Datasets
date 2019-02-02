@@ -1,0 +1,7 @@
+ML/mnist/
+ML/KDD99/
+ML/kdd_dataset.csv
+ML/normalAndNeptune.csv
+ML/smurfOnly.csv
+ML/smurfAndNormal.csv
+ML/venv/lib/python3.5/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so
