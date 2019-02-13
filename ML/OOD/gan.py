@@ -27,7 +27,7 @@ class GAN(object):
         epochs = 7000
         optimizer = Adam(0.0002, 0.5)
         
-        dataframe = pd.read_csv('../../CSV/kdd_neptune_only_5000.csv').sample(500) # sample 100 data points randomly from the csv
+        dataframe = pd.read_csv('../../../CSV/kdd_neptune_only_5000.csv').sample(500) # sample 100 data points randomly from the csv
         
         # apply "le.fit_transform" to every column (usually only works on 1 column)
         le = LabelEncoder()
@@ -106,12 +106,12 @@ class GAN(object):
                 break
                 
             if epoch % 20 == 0:
-                f = open("../../Results/GANresultsNeptune.txt", "a")
-                np.savetxt("../../Results/GANresultsNeptune.txt", gen_attacks, fmt="%.0f")
+                f = open("../../../Results/GANresultsNeptune.txt", "a")
+                np.savetxt("../../../Results/GANresultsNeptune.txt", gen_attacks, fmt="%.0f")
                 f.close()
                 
         # peek at our results
-        results = np.loadtxt("../../Results/GANresultsNeptune.txt")
+        results = np.loadtxt("../../../Results/GANresultsNeptune.txt")
         print("Generated Neptune attacks: ")
         print(results[:2])
         
