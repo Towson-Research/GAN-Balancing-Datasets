@@ -12,8 +12,34 @@ from generator import Generator
 import numpy as np
 import pandas as pd
 
+try:
+    import cPickle as pickle
+except:
+    import pickle
+from sklearn.metrics import confusion_matrix, classification_report
+
 
 class GAN(object):
+    
+    #######################################################
+    # Attributes.
+    #######################################################
+    attack_type = attack
+    discriminator = None
+    generator = None
+    gan = None
+
+    #######################################################
+    # Testing and analysis attributes.
+    #
+    # saved_states can be used to save states of a GAN, say
+    # 5 of them so that the best can be saved when breaking
+    # out.
+    #######################################################
+    saved_states = []
+    save_file = None
+    confusion_matrix = None
+    classification_report = None
 
     def __init__(self, attack):
         """ Constructor """
@@ -114,6 +140,53 @@ class GAN(object):
         results = np.loadtxt("../../../Results/GANresultsNeptune.txt")
         print("Generated Neptune attacks: ")
         print(results[:2])
+    
+    #############################################################################
+    # I'd suggest that we have a test method native to the object.
+    # I.e. a GAN should know how to test itself, at least basically
+    # and save its results into a confusion matrix.
+    # -Jon
+    #############################################################################
+    def test(self):
+        pass
+    #TODO
+
+    ##########################################################################################
+    # Uses Sklearn's confusion matrix maker
+    # https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html
+    ##########################################################################################
+    def make_confusion_matrix(self, y_true, y_pred):
+        self.y_true = y_true
+        self.y_pred = y_pred
+        self.confusion_matrix = confusion_matrix(y_true, y_pred)
+        self.classification_report = classification_report(y_true, y_pred)
+
+    ################################################################################
+    # Use these to save instances of a trained network with some desirable settings
+    # Suggestion to save and load from the object's __dict__ taken from:
+    # https://stackoverflow.com/questions/2709800/how-to-pickle-yourself
+    ################################################################################
+    def save_this(self, filename):
+        '''
+            Provide a basic filename to pickle this object for recovery later.
+            Unlike the load function, this requires a save file, so that it will
+            never accidentally overwrite a previous file.
+        '''
+        self.save_file = filename + ".pickle"
+        with open(self.save_file, 'wb') as f:
+            pickle.dump(self, f, pickle.HIGHEST_PROTOCOL)
+    
+    def load_state_from_file(self, filename = None):
+        if not filename:
+            filename = self.save_file
+            if not filename:
+                print("Error: No savefile for this object. \
+                    \n Using save_this(filename) will set the save filename.")
+                return
+        with open(filename, 'rb') as f:
+            tmp_dict = pickle.load(f)
+            self.__dict__.update(tmp_dict.__dict__)
+            f.close()
         
 
 
