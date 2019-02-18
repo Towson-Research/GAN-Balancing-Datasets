@@ -11,23 +11,23 @@ from keras.layers.advanced_activations import LeakyReLU
 
 class Generator(object):
 
-    def __init__(self, attack):
+    def __init__(self, attack, layer1 = 0, layer2 = 0, layer3 = 0):
         """ Constructor """
         self.attack_type = attack
-        self.layer1 = 0
-        self.layer2 = 0
-        self.layer3 = 0
+        self.layer1 = layer1
+        self.layer2 = layer2
+        self.layer3 = layer3
         self.generator = None
-        self.__setLayers__()
-        self.__build__()
+        self._setLayers()
+        self._build()
 
-    def __setLayers__(self):
+    def _setLayers(self):
         if(self.attack_type == "neptune"):
             self.layer1 = 10
             self.layer2 = 20
             self.layer3 = 30
 
-    def __build__(self):
+    def _build(self):
         """ Builds the generator """
         model = Sequential()
         model.add(Dense(self.layer1, input_dim=41))  # arbitrarily selected 100 for our input noise vector?

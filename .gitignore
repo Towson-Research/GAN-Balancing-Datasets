@@ -1,2 +1,4 @@
 *.swp
 ML/.ipynb_checkpoints/
+__pycache__/
+ML/OOD/__pycache__/

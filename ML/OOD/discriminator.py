@@ -11,10 +11,10 @@ class Discriminator(object):
     def __init__(self):
         """ Constructor """
         self.discriminator = None
-        self.__build__()
+        self._build()
 
 
-    def __build__(self):
+    def _build(self):
         """ Builds the discriminator """
         model = Sequential()
         model.add(Dense(41, input_dim=41, activation='relu'))  # discriminator takes 41 values from our dataset
