@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# Matt
 
 from keras.models import Sequential
 from keras.models import Model
@@ -22,10 +21,30 @@ class Generator(object):
         self._build()
 
     def _setLayers(self):
-        if(self.attack_type == "neptune"):
-            self.layer1 = 10
-            self.layer2 = 20
-            self.layer3 = 30
+        if(self.attack_type == "Port"):
+            self.layer1 = 30
+            self.layer2 = 49
+            self.layer3 = 62
+
+        if(self.attack_type == "IP"):
+            self.layer1 = 30
+            self.layer2 = 48
+            self.layer3 = 62
+
+        if(self.attack_type == "Neptune"):
+            self.layer1 = 63
+            self.layer2 = 32
+            self.layer3 = 71
+
+        if (self.attack_type == "Satan"):
+            self.layer1 = 26
+            self.layer2 = 99
+            self.layer3 = 22
+
+        if (self.attack_type == "Smurf"):
+            self.layer1 = 66
+            self.layer2 = 99
+            self.layer3 = 67
 
     def _build(self):
         """ Builds the generator """
@@ -45,7 +64,7 @@ class Generator(object):
         attack = model(noise)
         self.generator = Model(noise, attack)
 
-    
+
     def get(self):
         return self.generator
 
@@ -56,7 +75,7 @@ class Generator(object):
 
 def main():
     """ Auto run main method """
-    attack_type = "neptune"
+    attack_type = "Neptune"
     gen = Generator(attack_type)
     print(gen)
 
