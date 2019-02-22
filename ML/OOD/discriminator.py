@@ -14,7 +14,7 @@ class Discriminator(object):
         self._build()
 
 
-    def _build(self):
+    def _build(self): #paramertze first 3 TODO
         """ Builds the discriminator """
         model = Sequential()
         model.add(Dense(41, input_dim=41, activation='relu'))  # discriminator takes 41 values from our dataset

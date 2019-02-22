@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Matt
+# Team TJ-MAM
 
 import numpy as np
 import pandas as pd
@@ -13,7 +13,6 @@ from sklearn.metrics import confusion_matrix, classification_report
 from discriminator import Discriminator
 from generator import Generator
 
-
 try:
     import cPickle as pickle
 except:
@@ -23,41 +22,46 @@ except:
 
 class GAN(object):
 
-    #######################################################
-    # Attributes.
-    #######################################################
-    attack_type = attack
-    discriminator = None
-    generator = None
-    gan = None
-
-    #######################################################
-    # Testing and analysis attributes.
-    #
-    # saved_states can be used to save states of a GAN, say
-    # 5 of them so that the best can be saved when breaking
-    # out.
-    #######################################################
-    saved_states = []
-    save_file = None
-    confusion_matrix = None
-    classification_report = None
-
     def __init__(self, attack):
         """ Constructor """
+        # TODO add keywargs
         self.attack_type = attack
-        self.discriminator = None
+        self.discriminator = None  #default
         self.generator = None
         self.gan = None
+        
+        # saved_states can be used to save states of a GAN, say
+        # 5 of them so that the best can be saved when breaking out.
+        self.saved_states = []
+        self.save_file = None
+        self.confusion_matrix = None
+        self.classification_report = None
+        self._setup("../../../CSV")
 
+    def _sql_pull():
+        """ pulls down the data from the database """
+        #TODO
+        pass
+
+    def _sql_push():
+        """ pushes data up to the database """
+        #TODO
+        pass
+
+    def _setup(self):
+        """ setups the GAN """
+        self._sql_pull()
+        self._sql_push()
+        # TODO
+        pass
 
     def train(self):
-
-        csv_path = "../../../CSV/"
+        """ Trains the GAN system """
         results_path = "../../../Results/"
 
+        # TODO new mtohd  called from init opt passed
         batch_size = 256
-        epochs = 7000
+        max_epochs = 7000
         optimizer = Adam(0.0002, 0.5)
         # sample 500 data points randomly from the csv
         dataframe = pd.read_csv(csv_path + 'kdd_neptune_only_5000.csv').sample(500)
@@ -76,8 +80,8 @@ class GAN(object):
         Y_train = dataset[:, 41]
 
         # labels for data. 1 for valid attacks, 0 for fake (generated) attacks
-        valid = np.ones(batch_size, 1)
-        fake = np.zeros(batch_size, 1)
+        valid = np.ones((batch_size, 1))
+        fake = np.zeros((batch_size, 1))
 
         # build the discriminator portion
         self.discriminator = Discriminator().get()
@@ -99,7 +103,7 @@ class GAN(object):
         loss_increase_count = 0
         prev_g_loss = 0
 
-        for epoch in range(epochs):
+        for epoch in range(max_epochs):
 
             # ---------------------
             #  Train Discriminator
@@ -122,7 +126,6 @@ class GAN(object):
 
             # generator loss function
             g_loss = self.gan.train_on_batch(noise, valid)
-
             if epoch % 100 == 0:
                 print("%d [D loss: %f, acc.: %.2f%%] [G loss: %f] [Loss change:\
                       %.3f, Loss increases: %.0f]"\
@@ -141,24 +144,20 @@ class GAN(object):
                 break
 
             if epoch % 20 == 0:
-                f = open(result_path + "GANresultsNeptune.txt", "a")
-                np.savetxt(result_path + "GANresultsNeptune.txt", gen_attacks, fmt="%.0f")
+                f = open(results_path + "GANresultsNeptune.txt", "a")
+                np.savetxt(results_path + "GANresultsNeptune.txt", gen_attacks, fmt="%.0f")
                 f.close()
 
         # peek at our results
-        results = np.loadtxt(result_path + "GANresultsNeptune.txt")
+        results = np.loadtxt(results_path + "GANresultsNeptune.txt")
         print("Generated Neptune attacks: ")
         print(results[:2])
 
-    #############################################################################
-    # I'd suggest that we have a test method native to the object.
-    # I.e. a GAN should know how to test itself, at least basically
-    # and save its results into a confusion matrix.
-    # -Jon
-    #############################################################################
+    
     def test(self):
+        """ A GAN should know how to test itself and save its results into a confusion matrix. """
+        #TODO
         pass
-    #TODO
 
     ##########################################################################################
     # Uses Sklearn's confusion matrix maker
@@ -198,16 +197,13 @@ class GAN(object):
             f.close()
 
 
-
 def main():
     """ Auto run main method """
-    attack_type = "neptune"
+    attack_type = "Neptune"
     gan = GAN(attack_type)
-
     gan.train()
-    # print(gan.discriminator())
-
 
 
 if __name__ == "__main__":
     main()
+
