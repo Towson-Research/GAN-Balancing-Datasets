@@ -50,19 +50,24 @@ class GAN(object):
         self.generator = None
         self.gan = None
 
+
     def train(self):
+
+        csv_path = "../../../CSV/"
+        results_path = "../../../Results/"
+
         batch_size = 256
         epochs = 7000
         optimizer = Adam(0.0002, 0.5)
-        # sample 100 data points randomly from the csv
-        dataframe = pd.read_csv('../../../CSV/kdd_neptune_only_5000.csv').sample(500)
+        # sample 500 data points randomly from the csv
+        dataframe = pd.read_csv(csv_path + 'kdd_neptune_only_5000.csv').sample(500)
 
         # apply "le.fit_transform" to every column (usually only works on 1 column)
         le = LabelEncoder()
         dataframe_encoded = dataframe.apply(le.fit_transform)
         dataset = dataframe_encoded.values
 
-        #to visually judge results
+        # to visually judge results
         print("Real neptune attacks:")
         print(dataset[:2])
 
@@ -71,8 +76,8 @@ class GAN(object):
         Y_train = dataset[:, 41]
 
         # labels for data. 1 for valid attacks, 0 for fake (generated) attacks
-        valid = np.ones((batch_size, 1))
-        fake = np.zeros((batch_size, 1))
+        valid = np.ones(batch_size, 1)
+        fake = np.zeros(batch_size, 1)
 
         # build the discriminator portion
         self.discriminator = Discriminator().get()
@@ -136,12 +141,12 @@ class GAN(object):
                 break
 
             if epoch % 20 == 0:
-                f = open("../../../Results/GANresultsNeptune.txt", "a")
-                np.savetxt("../../../Results/GANresultsNeptune.txt", gen_attacks, fmt="%.0f")
+                f = open(result_path + "GANresultsNeptune.txt", "a")
+                np.savetxt(result_path + "GANresultsNeptune.txt", gen_attacks, fmt="%.0f")
                 f.close()
 
         # peek at our results
-        results = np.loadtxt("../../../Results/GANresultsNeptune.txt")
+        results = np.loadtxt(result_path + "GANresultsNeptune.txt")
         print("Generated Neptune attacks: ")
         print(results[:2])
 
