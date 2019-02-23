@@ -12,6 +12,7 @@ from sklearn.metrics import confusion_matrix, classification_report
 
 from discriminator import Discriminator
 from generator import Generator
+from mysql import SQLConnector
 
 try:
     import cPickle as pickle
@@ -22,7 +23,7 @@ except:
 
 class GAN(object):
 
-    def __init__(self, attack):
+    def __init__(self, attack, csv_name = 'kdd_neptune_only_5000.csv', results_name = 'GANresultsNeptune.txt', ):
         """ Constructor """
         # TODO add keywargs
         self.attack_type = attack
@@ -36,38 +37,32 @@ class GAN(object):
         self.save_file = None
         self.confusion_matrix = None
         self.classification_report = None
-        self._setup("../../../CSV")
+        
+        self.csv_path = "../../../CSV/"
+        self.results_path = "../../../Results/"
+        self.csv_name = csv_name
+        self.results_name = results_name
 
-    def _sql_pull():
-        """ pulls down the data from the database """
-        #TODO
-        pass
+        self.optimizer = None
+        self.max_epochs = None
+        self.valid = None
+        self.fake = None
+        self.batch_size = None
+        self.X_train = None
 
-    def _sql_push():
-        """ pushes data up to the database """
-        #TODO
-        pass
+        self.setup()
+        self.build()
 
-    def _setup(self):
+
+    def setup(self):
         """ setups the GAN """
-        self._sql_pull()
-        self._sql_push()
-        # TODO
-        pass
-
-    def train(self):
-        """ Trains the GAN system """
-        results_path = "../../../Results/"
-
-        # TODO SETUP
-
         # TODO new mtohd  called from init opt passed
-        # parametsers TODO
-        batch_size = 256
-        max_epochs = 7000
-        optimizer = Adam(0.0002, 0.5)
+
+        self.batch_size = 256
+        self.max_epochs = 7000
+        self.optimizer = Adam(0.0002, 0.5)
         # sample 500 data points randomly from the csv
-        dataframe = pd.read_csv(csv_path + 'kdd_neptune_only_5000.csv').sample(500)
+        dataframe = pd.read_csv(self.csv_path + self.csv_name).sample(500)
 
         # apply "le.fit_transform" to every column (usually only works on 1 column)
         le = LabelEncoder()
@@ -79,18 +74,19 @@ class GAN(object):
         print(dataset[:2])
 
         # Set X as our input data and Y as our label
-        X_train = dataset[:, 0:41].astype(float)
+        self.X_train = dataset[:, 0:41].astype(float)
         Y_train = dataset[:, 41]
 
         # labels for data. 1 for valid attacks, 0 for fake (generated) attacks
-        valid = np.ones(batch_size, 1)
-        fake = np.zeros(batch_size, 1)
+        self.valid = np.ones((self.batch_size, 1))
+        self.fake = np.zeros((self.batch_size, 1))
 
-        #TODO BUILD
 
+    def build(self):
+        """ Build the GAN """
         # build the discriminator portion
         self.discriminator = Discriminator().get()
-        self.discriminator.compile(loss='binary_crossentropy', optimizer=optimizer, metrics=['accuracy'])
+        self.discriminator.compile(loss='binary_crossentropy', optimizer=self.optimizer, metrics=['accuracy'])
 
         # build the generator portion
         self.generator = Generator(self.attack_type).get()
@@ -102,37 +98,38 @@ class GAN(object):
 
         # build combined model from generator and discriminator
         self.gan = Model(z, validity)
-        self.gan.compile(loss='binary_crossentropy', optimizer=optimizer)
+        self.gan.compile(loss='binary_crossentropy', optimizer=self.optimizer)
 
-        # TODO TRAINING
 
+    def train(self):
+        """ Trains the GAN system """
         #break condition for training (when diverging)
         loss_increase_count = 0
         prev_g_loss = 0
 
-        for epoch in range(max_epochs):
+        for epoch in range(self.max_epochs):
 
             # ---------------------
             #  Train Discriminator
             # ---------------------
 
             # selecting batch_size random attacks from our training data
-            idx = np.random.randint(0, X_train.shape[0], batch_size)
-            attacks = X_train[idx]
+            idx = np.random.randint(0, self.X_train.shape[0], self.batch_size)
+            attacks = self.X_train[idx]
 
             # generate a matrix of noise vectors
-            noise = np.random.normal(0, 1, (batch_size, 41))
+            noise = np.random.normal(0, 1, (self.batch_size, 41))
 
             # create an array of generated attacks
             gen_attacks = self.generator.predict(noise)
 
             # loss functions, based on what metrics we specify at model compile time
-            d_loss_real = self.discriminator.train_on_batch(attacks, valid)
-            d_loss_fake = self.discriminator.train_on_batch(gen_attacks, fake)
+            d_loss_real = self.discriminator.train_on_batch(attacks, self.valid)
+            d_loss_fake = self.discriminator.train_on_batch(gen_attacks, self.fake)
             d_loss = 0.5 * np.add(d_loss_real, d_loss_fake)
 
             # generator loss function
-            g_loss = self.gan.train_on_batch(noise, valid)
+            g_loss = self.gan.train_on_batch(noise, self.valid)
             if epoch % 100 == 0:
                 print("%d [D loss: %f, acc.: %.2f%%] [G loss: %f] [Loss change:\
                       %.3f, Loss increases: %.0f]"\
@@ -151,12 +148,12 @@ class GAN(object):
                 break
 
             if epoch % 20 == 0:
-                f = open(results_path + "GANresultsNeptune.txt", "a")
-                np.savetxt(results_path + "GANresultsNeptune.txt", gen_attacks, fmt="%.0f")
+                f = open(self.results_path + self.results_name, "a")
+                np.savetxt(self.results_path + self.results_name, gen_attacks, fmt="%.0f")
                 f.close()
 
         # peek at our results
-        results = np.loadtxt(results_path + "GANresultsNeptune.txt")
+        results = np.loadtxt(self.results_path + self.results_name)
         print("Generated Neptune attacks: ")
         print(results[:2])
 

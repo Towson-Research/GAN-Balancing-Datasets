@@ -3,6 +3,12 @@
 from mysql import SQLConnector
 
 conn = SQLConnector()
-conn.
 
+attack = 'neptune'
+
+json = conn.pull_best(attack)
+json2 = conn.pull_best(attack, True)
+
+print(json)
+print(json2)
 

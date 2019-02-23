@@ -297,42 +297,33 @@ class SQLConnector(object):
             pass
 
 
-    def pull_attack(self, attack):
+    def pull_best(self, attack, all=False):
         """ Reads the joined table at a specific id and iteration """
         try:
             with self.connection.cursor() as cursor:
-                sql = """
-                        select * 
-                        from hypers, attacks
-                        where hypers.attack = attacks.id 
-                        and name = %s
-                        and accuracy = (
-                            select max(accuracy)
-                            from hypers
-                        );
-                    """
-                cursor.execute(sql, (str(attack)))
-                result = cursor.fetchall()
-                return result
-        finally:
-            pass
-
-
-    def pull_heavy_attack(self, attack):
-        """ Reads the joined table at a specific id and iteration """
-        try:
-            with self.connection.cursor() as cursor:
-                sql = """
-                        select * 
-                        from gens, hypers, attacks
-                        where gens.modelnum = hypers.id 
-                        and gens.iteration = hypers.iteration
-                        and hypers.attack = attacks.id 
-                        and name = %s  
-                        and accuracy = (
-                            select max(accuracy)
-                        );
-                    """
+                if not all:
+                    sql = """
+                            select *
+                            from hypers, attacks
+                            where hypers.attack = attacks.id
+                            and name = %s
+                            and accuracy = (
+                                select max(accuracy)
+                                from hypers
+                            );
+                        """
+                else:
+                    sql = """
+                            select *
+                            from gens, hypers, attacks
+                            where gens.modelnum = hypers.id
+                            and gens.iteration = hypers.iteration
+                            and hypers.attack = attacks.id
+                            and name = %s
+                            and accuracy = (
+                                select max(accuracy)
+                            );
+                        """
                 cursor.execute(sql, (str(attack)))
                 result = cursor.fetchall()
                 return result
