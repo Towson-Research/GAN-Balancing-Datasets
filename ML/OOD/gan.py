@@ -59,7 +59,10 @@ class GAN(object):
         """ Trains the GAN system """
         results_path = "../../../Results/"
 
+        # TODO SETUP
+
         # TODO new mtohd  called from init opt passed
+        # parametsers TODO
         batch_size = 256
         max_epochs = 7000
         optimizer = Adam(0.0002, 0.5)
@@ -80,8 +83,10 @@ class GAN(object):
         Y_train = dataset[:, 41]
 
         # labels for data. 1 for valid attacks, 0 for fake (generated) attacks
-        valid = np.ones((batch_size, 1))
-        fake = np.zeros((batch_size, 1))
+        valid = np.ones(batch_size, 1)
+        fake = np.zeros(batch_size, 1)
+
+        #TODO BUILD
 
         # build the discriminator portion
         self.discriminator = Discriminator().get()
@@ -98,6 +103,8 @@ class GAN(object):
         # build combined model from generator and discriminator
         self.gan = Model(z, validity)
         self.gan.compile(loss='binary_crossentropy', optimizer=optimizer)
+
+        # TODO TRAINING
 
         #break condition for training (when diverging)
         loss_increase_count = 0
