@@ -296,6 +296,49 @@ class SQLConnector(object):
         finally:
             pass
 
+
+    def pull_attack(self, attack):
+        """ Reads the joined table at a specific id and iteration """
+        try:
+            with self.connection.cursor() as cursor:
+                sql = """
+                        select * 
+                        from hypers, attacks
+                        where hypers.attack = attacks.id 
+                        and name = %s
+                        and accuracy = (
+                            select max(accuracy)
+                            from hypers
+                        );
+                    """
+                cursor.execute(sql, (str(attack)))
+                result = cursor.fetchall()
+                return result
+        finally:
+            pass
+
+
+    def pull_heavy_attack(self, attack):
+        """ Reads the joined table at a specific id and iteration """
+        try:
+            with self.connection.cursor() as cursor:
+                sql = """
+                        select * 
+                        from gens, hypers, attacks
+                        where gens.modelnum = hypers.id 
+                        and gens.iteration = hypers.iteration
+                        and hypers.attack = attacks.id 
+                        and name = %s  
+                        and accuracy = (
+                            select max(accuracy)
+                        );
+                    """
+                cursor.execute(sql, (str(attack)))
+                result = cursor.fetchall()
+                return result
+        finally:
+            pass
+
     #====================================================
 
     def _create_attacks(self):
@@ -393,6 +436,9 @@ def main():
     """ Auto run main method """
     conn = SQLConnector()
 
+    # print(conn.pull_attack("neptune"))
+    print(conn.pull_heavy_attack("neptune"))
+
     #print(conn.read_joined())
     #print(conn.read_specific_joined(1,1))
 
@@ -403,7 +449,7 @@ def main():
     #conn._fill_attacks()
 
 
-    #conn.write_hyper(1, "2,3,4", 5, 40.3)
+    #conn.write_hyper(1, "2,3,4", 5, 80.3)
     #conn.write_gens(1, 1, 1, 0, "tcp", "ftp_data", "REJ", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0.00, 171, 62, 0.27, 0.02, 0.01, 0.03, 0.01, 0, 0.29, 0.02, 10)
 
     #print(conn.read_gens())
