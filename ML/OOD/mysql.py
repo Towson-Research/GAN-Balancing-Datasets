@@ -16,11 +16,11 @@ class SQLConnector(object):
                 charset='utf8mb4',
                 cursorclass=pymysql.cursors.DictCursor)
 
-    def create_hyper(self):
+    def _create_hyper(self):
         """ Creates the hypers table """
         try:
             with self.connection.cursor() as cursor:
-                sql = "CREATE TABLE hypers (id int, iteration int, layers varchar(255), attack varchar(255), accuracy float(20));"
+                sql = "CREATE TABLE hypers (id int, iteration int, layers varchar(255), attack int, accuracy float(20));"
                 cursor.execute(sql)
             self.connection.commit()
         finally:
@@ -71,11 +71,11 @@ class SQLConnector(object):
 
     #=====================================================
 
-    def create_gens(self):
+    def _create_gens(self):
         """ Creates the gen table """
         try:
             with self.connection.cursor() as cursor:
-                sql = "CREATE TABLE gens (id int, modelnum int, iteration int, duration int, protocol_type varchar(10), service varchar(50), flag varchar(100), src_bytes int, dst_bytes int, land int, wrong_fragment int, urgent int, hot int, num_failed_logins int, logged_in int, num_compromised int, root_shell int, su_attempted int, num_root int, num_file_creations int, num_shells int, num_access_files int, num_outbound_cmds int, is_host_login int, is_guest_login int, count int, srv_count int, serror_rate int, srv_serror_rate int, rerror_rate int, srv_rerror_rate int, same_srv_rate int, diff_srv_rate int, srv_diff_host_rate int, dst_host_count int, dst_host_srv_count int, dst_host_same_srv_rate int, dst_host_diff_srv_rate float(20), dst_host_same_src_port_rate float(20), dst_host_srv_diff_host_rate int, dst_host_serror_rate int, dst_host_srv_serror_rate int, dst_host_rerror_rate int, dst_host_srv_rerror_rate int, attack_type varchar(50));"
+                sql = "CREATE TABLE gens (id int, modelnum int, iteration int, duration int, protocol_type varchar(10), service varchar(50), flag varchar(100), src_bytes int, dst_bytes int, land int, wrong_fragment int, urgent int, hot int, num_failed_logins int, logged_in int, num_compromised int, root_shell int, su_attempted int, num_root int, num_file_creations int, num_shells int, num_access_files int, num_outbound_cmds int, is_host_login int, is_guest_login int, count int, srv_count int, serror_rate int, srv_serror_rate int, rerror_rate int, srv_rerror_rate int, same_srv_rate int, diff_srv_rate int, srv_diff_host_rate int, dst_host_count int, dst_host_srv_count int, dst_host_same_srv_rate int, dst_host_diff_srv_rate float(20), dst_host_same_src_port_rate float(20), dst_host_srv_diff_host_rate int, dst_host_serror_rate int, dst_host_srv_serror_rate int, dst_host_rerror_rate int, dst_host_srv_rerror_rate int, attack_type int);"
                 cursor.execute(sql)
             self.connection.commit()
         finally:
@@ -148,7 +148,7 @@ class SQLConnector(object):
         """ Reads the joined table dependent on the accuracy """
         try:
             with self.connection.cursor() as cursor:
-                sql = "select gens.id, modelnum, gens.iteration, layers, attack_type, accuracy from gens join hypers on gens.modelnum = hypers.id and gens.iteration = hypers.iteration where accuracy > %s"
+                sql = "select gens.id, modelnum, gens.iteration, layers, attack_type, name from gens join hypers on gens.modelnum = hypers.id and gens.iteration = hypers.iteration join attacks where hypers.attack = attacks.id;"
                 cursor.execute(sql, (str(acc)))
                 result = cursor.fetchall()
                 return result
@@ -157,8 +157,7 @@ class SQLConnector(object):
 
     #====================================================
 
-    
-    def create_attacks(self):
+    def _create_attacks(self):
         """ Creates the hypers table """
         try:
             with self.connection.cursor() as cursor:
@@ -169,17 +168,42 @@ class SQLConnector(object):
             pass
 
 
-    def write_attacks(self, theid, attack):
+    def _write_attacks(self, theid, attack):
         """ Writes to the attacks table """
         try:
             with self.connection.cursor() as cursor:
-                sql = "insert into attacks (id, attack) values (%s, %s);"
+                sql = "insert into attacks (id, name) values (%s, %s);"
                 cursor.execute(sql, (str(theid), str(attack)))
             # connection is not autocommit by default. So you must commit to save
             # your changes.
             self.connection.commit()
         finally:
             pass
+
+    def _fill_attacks(self):
+        conn.write_attacks(1, "normal")
+        conn.write_attacks(2, "buffer_overflow")
+        conn.write_attacks(3, "loadmodule")
+        conn.write_attacks(4, "perl")
+        conn.write_attacks(5, "neptune")
+        conn.write_attacks(6, "smurf")
+        conn.write_attacks(7, "guess_passwd")
+        conn.write_attacks(8, "pod")
+        conn.write_attacks(9, "teardrop")
+        conn.write_attacks(10, "portsweep")
+        conn.write_attacks(11, "ipsweep")
+        conn.write_attacks(12, "land")
+        conn.write_attacks(13, "ftp_write")
+        conn.write_attacks(14, "back")
+        conn.write_attacks(15, "imap")
+        conn.write_attacks(16, "satan")
+        conn.write_attacks(17, "phf")
+        conn.write_attacks(18, "nmap")
+        conn.write_attacks(19, "multihop")
+        conn.write_attacks(20, "warezmaster")
+        conn.write_attacks(21, "warezclient")
+        conn.write_attacks(22, "spy")
+        conn.write_attacks(23, "rootkit")
 
     #====================================================
 
@@ -207,24 +231,15 @@ class SQLConnector(object):
 def main():
     """ Auto run main method """
     conn = SQLConnector()
-    
-    #conn.create_attacks()
-    conn.write_attacks(1, "Neptune")
-    conn.write_attacks(2, "Neptune")
-    conn.write_attacks(3, "Neptune")
-    conn.write_attacks(4, "Neptune")
-    conn.write_attacks(5, "Neptune")
-    conn.write_attacks(6, "Neptune")
-    conn.write_attacks(7, "Neptune")
-    conn.write_attacks(8, "Neptune")
-    conn.write_attacks(9, "Neptune")
-    conn.write_attacks(10, "Neptune")
-    conn.write_attacks(11, "Neptune")
-    conn.write_attacks(12, "Neptune")
-    
+    #conn._create_gens()
+    #conn._create_hyper()
 
-    #conn.write_hyper(1, "2,3,4", "neptune", 40.3)
-    #conn.write_gens(1, 1, 1, 0, "tcp", "ftp_data", "REJ", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0.00, 171, 62, 0.27, 0.02, 0.01, 0.03, 0.01, 0, 0.29, 0.02, "portsweep")
+    #conn._create_attacks()
+    #conn._fill_attacks()
+
+
+    #conn.write_hyper(1, "2,3,4", 5, 40.3)
+    #conn.write_gens(1, 1, 1, 0, "tcp", "ftp_data", "REJ", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0.00, 171, 62, 0.27, 0.02, 0.01, 0.03, 0.01, 0, 0.29, 0.02, 10)
 
     #print(conn.read_gens())
     #print(conn.read_hyper())
