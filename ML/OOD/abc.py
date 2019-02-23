@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
-import mysql
+from mysql import SQLConnector
+
+conn = SQLConnector()
+conn.
 
 

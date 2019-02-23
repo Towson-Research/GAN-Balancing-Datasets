@@ -20,7 +20,15 @@ class SQLConnector(object):
         """ Creates the hypers table """
         try:
             with self.connection.cursor() as cursor:
-                sql = "CREATE TABLE hypers (id int, iteration int, layers varchar(255), attack int, accuracy float(20));"
+                sql = """
+                        create table hypers (
+                            id int, 
+                            iteration int, 
+                            layers varchar(255), 
+                            attack int, 
+                            accuracy float(20)
+                        );
+                    """
                 cursor.execute(sql)
             self.connection.commit()
         finally:
@@ -30,12 +38,19 @@ class SQLConnector(object):
         """ Writes to the hypers table """
         try:
             with self.connection.cursor() as cursor:
-                sql1 = "select MAX(iteration) from hypers where id = %s;"
-                sql2 = "insert into hypers (id, iteration, layers, attack, accuracy) values (%s, %s, %s, %s, %s);"
+                sql1 = """
+                            select max(iteration) 
+                            from hypers 
+                            where id = %s;
+                        """
+                sql2 = """ 
+                            insert into hypers (id, iteration, layers, attack, accuracy) 
+                            values (%s, %s, %s, %s, %s); 
+                        """
 
                 cursor.execute(sql1, (str(theid)))
                 dicti = cursor.fetchall()[0]
-                maxnum = dicti.get('MAX(iteration)')
+                maxnum = dicti.get('max(iteration)')
                 if maxnum is None:
                     maxnum = 0
                 maxnum += 1
@@ -52,7 +67,10 @@ class SQLConnector(object):
         """ Reorders the hypers table based off of id """
         try:
             with self.connection.cursor() as cursor:
-                sql = "alter table hypers order by id asc;"
+                sql = """
+                        alter table hypers 
+                        order by id asc;
+                    """
                 cursor.execute(sql)
             self.connection.commit()
         finally:
@@ -62,7 +80,10 @@ class SQLConnector(object):
         """ Reads from the hypers table dependent on accuracy """
         try:
             with self.connection.cursor() as cursor:
-                sql = "select * from hypers where accuracy > %s;"
+                sql = """
+                        select * from hypers 
+                        where accuracy > %s;
+                    """
                 cursor.execute(sql, (str(acc)))
                 result = cursor.fetchall()
                 return result
@@ -75,7 +96,55 @@ class SQLConnector(object):
         """ Creates the gen table """
         try:
             with self.connection.cursor() as cursor:
-                sql = "CREATE TABLE gens (id int, modelnum int, iteration int, duration int, protocol_type varchar(10), service varchar(50), flag varchar(100), src_bytes int, dst_bytes int, land int, wrong_fragment int, urgent int, hot int, num_failed_logins int, logged_in int, num_compromised int, root_shell int, su_attempted int, num_root int, num_file_creations int, num_shells int, num_access_files int, num_outbound_cmds int, is_host_login int, is_guest_login int, count int, srv_count int, serror_rate int, srv_serror_rate int, rerror_rate int, srv_rerror_rate int, same_srv_rate int, diff_srv_rate int, srv_diff_host_rate int, dst_host_count int, dst_host_srv_count int, dst_host_same_srv_rate int, dst_host_diff_srv_rate float(20), dst_host_same_src_port_rate float(20), dst_host_srv_diff_host_rate int, dst_host_serror_rate int, dst_host_srv_serror_rate int, dst_host_rerror_rate int, dst_host_srv_rerror_rate int, attack_type int);"
+                sql = """ 
+                        create table gens (
+                            id int, 
+                            modelnum int, 
+                            iteration int, 
+                            duration int, 
+                            protocol_type varchar(10), 
+                            service varchar(50), 
+                            flag varchar(100), 
+                            src_bytes int, 
+                            dst_bytes int, 
+                            land int, 
+                            wrong_fragment int, 
+                            urgent int, 
+                            hot int, 
+                            num_failed_logins int, 
+                            logged_in int, 
+                            num_compromised int, 
+                            root_shell int, 
+                            su_attempted int, 
+                            num_root int, 
+                            num_file_creations int, 
+                            num_shells int, 
+                            num_access_files int, 
+                            num_outbound_cmds int, 
+                            is_host_login int, 
+                            is_guest_login int, 
+                            count int, 
+                            srv_count int, 
+                            serror_rate int, 
+                            srv_serror_rate int, 
+                            rerror_rate int, 
+                            srv_rerror_rate int, 
+                            same_srv_rate int, 
+                            diff_srv_rate int, 
+                            srv_diff_host_rate int, 
+                            dst_host_count int, 
+                            dst_host_srv_count int, 
+                            dst_host_same_srv_rate int, 
+                            dst_host_diff_srv_rate float(20), 
+                            dst_host_same_src_port_rate float(20), 
+                            dst_host_srv_diff_host_rate int, 
+                            dst_host_serror_rate int, 
+                            dst_host_srv_serror_rate int, 
+                            dst_host_rerror_rate int, 
+                            dst_host_srv_rerror_rate int, 
+                            attack_type int
+                        );
+                    """
                 cursor.execute(sql)
             self.connection.commit()
         finally:
@@ -93,7 +162,61 @@ class SQLConnector(object):
         """ Writes to the gens table """
         try:
             with self.connection.cursor() as cursor:
-                sql = "insert into gens (id, modelnum, iteration, duration, protocol_type, service, flag, src_bytes, dst_bytes, land, wrong_fragment, urgent, hot, num_failed_logins, logged_in, num_compromised, root_shell, su_attempted, num_root, num_file_creations, num_shells, num_access_files, num_outbound_cmds, is_host_login, is_guest_login, count, srv_count, serror_rate, srv_serror_rate, rerror_rate, srv_rerror_rate, same_srv_rate, diff_srv_rate, srv_diff_host_rate, dst_host_count, dst_host_srv_count, dst_host_same_srv_rate, dst_host_diff_srv_rate, dst_host_same_src_port_rate, dst_host_srv_diff_host_rate, dst_host_serror_rate, dst_host_srv_serror_rate, dst_host_rerror_rate, dst_host_srv_rerror_rate, attack_type) values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                sql = """
+                        insert into gens (
+                            id, 
+                            modelnum, 
+                            iteration, 
+                            duration, 
+                            protocol_type, 
+                            service, 
+                            flag, 
+                            src_bytes, 
+                            dst_bytes, 
+                            land, 
+                            wrong_fragment, 
+                            urgent, 
+                            hot, 
+                            num_failed_logins, 
+                            logged_in, 
+                            num_compromised, 
+                            root_shell, 
+                            su_attempted, 
+                            num_root, 
+                            num_file_creations, 
+                            num_shells, 
+                            num_access_files, 
+                            num_outbound_cmds, 
+                            is_host_login, 
+                            is_guest_login, 
+                            count, 
+                            srv_count, 
+                            serror_rate, 
+                            srv_serror_rate, 
+                            rerror_rate, 
+                            srv_rerror_rate, 
+                            same_srv_rate, 
+                            diff_srv_rate, 
+                            srv_diff_host_rate, 
+                            dst_host_count, 
+                            dst_host_srv_count, 
+                            dst_host_same_srv_rate, 
+                            dst_host_diff_srv_rate, 
+                            dst_host_same_src_port_rate, 
+                            dst_host_srv_diff_host_rate, 
+                            dst_host_serror_rate, 
+                            dst_host_srv_serror_rate, 
+                            dst_host_rerror_rate, 
+                            dst_host_srv_rerror_rate, 
+                            attack_type
+                        ) values (
+                            %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, 
+                            %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, 
+                            %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, 
+                            %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, 
+                            %s, %s, %s, %s, %s
+                        );
+                    """
 
                 cursor.execute(sql, (str(theid), str(modelnum), str(iteration), str(duration),
                     str(protocol_type), str(service), str(flag), str(src_bytes),
@@ -124,7 +247,10 @@ class SQLConnector(object):
         """ Reads from the gens table dependent on accuracy """
         try:
             with self.connection.cursor() as cursor:
-                sql = "select id, modelnum, iteration, attack_type from gens;"
+                sql = """
+                        select id, modelnum, iteration, attack_type 
+                        from gens;
+                    """
                 cursor.execute(sql)
                 result = cursor.fetchall()
                 return result
@@ -137,18 +263,33 @@ class SQLConnector(object):
         """ Reads the joined table at a specific id and iteration """
         try:
             with self.connection.cursor() as cursor:
-                sql = "select gens.id, modelnum, gens.iteration, layers, attack_type, accuracy from gens join hypers on gens.modelnum = hypers.id and gens.iteration = hypers.iteration where gens.id = %s and gens.iteration = %s;"
+                sql = """
+                        select gens.id, modelnum, gens.iteration, layers, attack_type, name, accuracy 
+                        from gens, hypers, attacks
+                        where gens.modelnum = hypers.id 
+                        and gens.iteration = hypers.iteration
+                        and hypers.attack = attacks.id
+                        and gens.id = %s 
+                        and gens.iteration = %s;
+                    """
                 cursor.execute(sql, (str(theid), str(theiter)))
                 result = cursor.fetchall()
                 return result
         finally:
             pass
 
-    def read_joined(self, acc):
+    def read_joined(self, acc=0):
         """ Reads the joined table dependent on the accuracy """
         try:
             with self.connection.cursor() as cursor:
-                sql = "select gens.id, modelnum, gens.iteration, layers, attack_type, name from gens join hypers on gens.modelnum = hypers.id and gens.iteration = hypers.iteration join attacks where hypers.attack = attacks.id;"
+                sql = """
+                        select gens.id, modelnum, gens.iteration, layers, attack_type, name, accuracy 
+                        from gens, hypers, attacks 
+                        where gens.modelnum = hypers.id 
+                        and gens.iteration = hypers.iteration 
+                        and hypers.attack = attacks.id 
+                        and accuracy > %s;
+                    """
                 cursor.execute(sql, (str(acc)))
                 result = cursor.fetchall()
                 return result
@@ -161,7 +302,12 @@ class SQLConnector(object):
         """ Creates the hypers table """
         try:
             with self.connection.cursor() as cursor:
-                sql = "CREATE TABLE attacks (id int, name varchar(255));"
+                sql = """
+                        create table attacks (
+                            id int, 
+                            name varchar(255)
+                        );
+                    """
                 cursor.execute(sql)
             self.connection.commit()
         finally:
@@ -172,7 +318,10 @@ class SQLConnector(object):
         """ Writes to the attacks table """
         try:
             with self.connection.cursor() as cursor:
-                sql = "insert into attacks (id, name) values (%s, %s);"
+                sql = """
+                        insert into attacks (id, name)
+                        values (%s, %s);
+                    """
                 cursor.execute(sql, (str(theid), str(attack)))
             # connection is not autocommit by default. So you must commit to save
             # your changes.
@@ -205,6 +354,18 @@ class SQLConnector(object):
         self.write_attacks(22, "spy")
         self.write_attacks(23, "rootkit")
 
+
+    def read_attacks(self, num=1):
+        """ Reads from the attack table dependent on num """
+        try:
+            with self.connection.cursor() as cursor:
+                sql = "select id, name from attacks;"
+                cursor.execute(sql)
+                result = cursor.fetchall()
+                return result
+        finally:
+            pass
+
     #====================================================
 
     def output_to_csv(self, dictionaryarray, filename = "stats.csv"):
@@ -231,6 +392,10 @@ class SQLConnector(object):
 def main():
     """ Auto run main method """
     conn = SQLConnector()
+
+    #print(conn.read_joined())
+    #print(conn.read_specific_joined(1,1))
+
     #conn._create_gens()
     #conn._create_hyper()
 
