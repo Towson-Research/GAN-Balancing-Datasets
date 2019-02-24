@@ -43,13 +43,10 @@ class GAN(object):
         self.confusion_matrix = None
         self.classification_report = None
 
-        # will be deprecated
-        self.csv_path = "../../../CSV/"
-        self.results_path = "../../../Results/"
-        self.csv_name = 'kdd_neptune_only_5000.csv'
-        self.results_name = 'GANresultsNeptune.txt'
-
-        self.optimizer = Adam(0.0002, 0.5)
+        self.optimizer_learning_rate = 0.0002
+        self.optimizer_beta = 0.5
+        self.optimizer = Adam(self.optimizer_learning_rate, self.optimizer_beta)
+        
         self.max_epochs = 7000
         self.batch_size = 255
         self.sample_size = 500
@@ -58,17 +55,45 @@ class GAN(object):
         self.fake = None
         self.X_train = None
 
+        self.discriminator_layers = [
+            (30, 'relu'), 
+            (15, 'relu')
+        ]
+        self.generator_layers = [0, 0, 0]
+        self.generator_alpha: 0.5
+        self.generator_momentum: 0.8
+
+
+        # will be deprecated
+        self.csv_path = "../../../CSV/"
+        self.results_path = "../../../Results/"
+        self.csv_name = 'kdd_neptune_only_5000.csv'
+        self.results_name = 'GANresultsNeptune.txt'
+
     def _args(self, kwargs):
         """ kwargs handler """
         for key, value in kwargs.items():
-            if key == "attack_type":
+            if key == 'attack_type':
                 self.attack_type = value
-            elif key == "max_epochs":
+            elif key == 'max_epochs':
                 self.max_epochs = value
-            elif key == "batch_size":
+            elif key == 'batch_size':
                 self.batch_size = value
-            elif key == "sample_size":
+            elif key == 'sample_size':
                 self.sample_size = value
+            elif key == 'optimizer_learning_rate': 
+                self.optimizer_learning_rate = value
+            elif key == 'optimizer_beta':
+                self.optimizer_beta = value
+            elif key == 'discriminator_layers': 
+                self.discriminator_layers = value
+            elif key == 'generator_layers': 
+                self.generator_layers = value
+            elif key == 'generator_alpha':
+                self.generator_alpha = value
+            elif key == 'generator_momentum':
+                self.generator_momentum = value
+
             elif key == "csv_path":  # will be deprecated v
                 self.csv_path = value
             elif key == "results_path":
@@ -106,19 +131,17 @@ class GAN(object):
     def build(self):
         """ Build the GAN """
         # build the discriminator portion
-        layers = [(30, 'relu'), (15, 'relu')]  # optional
-        self.discriminator = Discriminator(layers).get_model()
+        
+        self.discriminator = Discriminator(self.discriminator_layers).get_model()
         self.discriminator.compile(
             loss='binary_crossentropy', optimizer=self.optimizer, metrics=['accuracy'])
 
         # build the generator portion
         gen_args = {
             'attack_type': self.attack_type,
-            'layer1': 0,   #optional v
-            'layer2': 0,
-            'layer3': 0,
-            'alpha': 0.2,
-            'momentum': 0.8
+            'layers': self.generator_layers,
+            'alpha': self.generator_alpha,
+            'momentum': self.generator_momentum
         }
         self.generator = Generator(**gen_args).get_model()
 
@@ -194,7 +217,9 @@ class GAN(object):
     def push_results(self):
         """ Pushes results into database """
         conn = SQLConnector()
-        #conn.write_hyper(1, "2,3,4", 5, 80.3)
+        #conn.write_hyper(1, "2,3,4", 5, 80.3)        self.max_epochs = 7000
+        self.batch_size = 255
+        self.sample_size = 500
         #conn.write_gens(1, 1, 1, 0, "tcp", "ftp_data", "REJ", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0.00, 171, 62, 0.27, 0.02, 0.01, 0.03, 0.01, 0, 0.29, 0.02, 10)
 
 
@@ -244,9 +269,16 @@ class GAN(object):
 def main():
     """ Auto run main method """
     args = {
-        'attack_type': "neptune",
-        'csv_name': 'kdd_neptune_only_5000.csv',
-        'results_name': 'GANresultsNeptune.txt'
+        'attack_type': "neptune",    # optional v
+        'max_epochs': 7000,
+        'batch_size': 255,
+        'sample_size': 500,
+        'optimizer_learning_rate': 0.0002,
+        'optimizer_beta': 0.5,
+        'discriminator_layers': [(30, 'relu'), (15, 'relu')],
+        'generator_layers': [0, 0, 0],
+        'generator_alpha': 0.5,
+        'generator_momentum': 0.8
     }
     gan = GAN(**args)
     gan.train()
