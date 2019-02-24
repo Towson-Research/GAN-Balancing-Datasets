@@ -297,7 +297,7 @@ class SQLConnector(object):
             pass
 
 
-    def pull_best(self, attack, all=False):
+    def pull_best(self, attack, num=1, all=False):
         """ Reads the joined table at a specific id and iteration """
         try:
             with self.connection.cursor() as cursor:
@@ -307,10 +307,8 @@ class SQLConnector(object):
                             from hypers, attacks
                             where hypers.attack = attacks.id
                             and name = %s
-                            and accuracy = (
-                                select max(accuracy)
-                                from hypers
-                            );
+                            order by accuracy desc
+                            limit %s;
                         """
                 else:
                     sql = """
@@ -320,11 +318,10 @@ class SQLConnector(object):
                             and gens.iteration = hypers.iteration
                             and hypers.attack = attacks.id
                             and name = %s
-                            and accuracy = (
-                                select max(accuracy)
-                            );
+                            order by accuracy desc
+                            limit %s;
                         """
-                cursor.execute(sql, (str(attack)))
+                cursor.execute(sql, (str(attack), num))
                 result = cursor.fetchall()
                 return result
         finally:
@@ -364,32 +361,32 @@ class SQLConnector(object):
             pass
 
     def _fill_attacks(self):
-        self.write_attacks(1, "normal")
-        self.write_attacks(2, "buffer_overflow")
-        self.write_attacks(3, "loadmodule")
-        self.write_attacks(4, "perl")
-        self.write_attacks(5, "neptune")
-        self.write_attacks(6, "smurf")
-        self.write_attacks(7, "guess_passwd")
-        self.write_attacks(8, "pod")
-        self.write_attacks(9, "teardrop")
-        self.write_attacks(10, "portsweep")
-        self.write_attacks(11, "ipsweep")
-        self.write_attacks(12, "land")
-        self.write_attacks(13, "ftp_write")
-        self.write_attacks(14, "back")
-        self.write_attacks(15, "imap")
-        self.write_attacks(16, "satan")
-        self.write_attacks(17, "phf")
-        self.write_attacks(18, "nmap")
-        self.write_attacks(19, "multihop")
-        self.write_attacks(20, "warezmaster")
-        self.write_attacks(21, "warezclient")
-        self.write_attacks(22, "spy")
-        self.write_attacks(23, "rootkit")
+        self._write_attacks(1, "normal")
+        self._write_attacks(2, "buffer_overflow")
+        self._write_attacks(3, "loadmodule")
+        self._write_attacks(4, "perl")
+        self._write_attacks(5, "neptune")
+        self._write_attacks(6, "smurf")
+        self._write_attacks(7, "guess_passwd")
+        self._write_attacks(8, "pod")
+        self._write_attacks(9, "teardrop")
+        self._write_attacks(10, "portsweep")
+        self._write_attacks(11, "ipsweep")
+        self._write_attacks(12, "land")
+        self._write_attacks(13, "ftp_write")
+        self._write_attacks(14, "back")
+        self._write_attacks(15, "imap")
+        self._write_attacks(16, "satan")
+        self._write_attacks(17, "phf")
+        self._write_attacks(18, "nmap")
+        self._write_attacks(19, "multihop")
+        self._write_attacks(20, "warezmaster")
+        self._write_attacks(21, "warezclient")
+        self._write_attacks(22, "spy")
+        self._write_attacks(23, "rootkit")
 
 
-    def read_attacks(self, num=1):
+    def read_attacks(self):
         """ Reads from the attack table dependent on num """
         try:
             with self.connection.cursor() as cursor:
@@ -428,7 +425,7 @@ def main():
     conn = SQLConnector()
 
     # print(conn.pull_attack("neptune"))
-    print(conn.pull_heavy_attack("neptune"))
+    print(conn.pull_best("neptune"))
 
     #print(conn.read_joined())
     #print(conn.read_specific_joined(1,1))

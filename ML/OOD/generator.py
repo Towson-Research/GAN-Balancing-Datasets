@@ -22,13 +22,15 @@ class Generator(object):
         self._build()
 
     def _setLayers(self):
+        """ Sets layers """
 
+        # pull layers from database
         conn = SQLConnector()
-        jsonlist = conn.pull_best(self.attack_type)
+        jsonlist = conn.pull_best(self.attack_type, True)
         json = jsonlist[0]
         layersstr = json['layers']
 
-
+        # parse ints from string
         comma_index = layersstr.index(",")
         num1 = int(layersstr[:layersstr.index(",")])
         layersstr = layersstr[comma_index + 1:]
@@ -64,7 +66,8 @@ class Generator(object):
         self.generator = Model(noise, attack)
 
 
-    def get(self):
+    def get_model(self):
+        """ Returns generator model """
         return self.generator
 
     def __str__(self):

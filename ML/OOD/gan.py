@@ -80,7 +80,7 @@ class GAN(object):
 
 
     def setup(self):
-        """ setups the GAN """
+        """ Setups the GAN """
         # TODO new method  called from init opt passed
 
         # sample 500 data points randomly from the csv
@@ -107,12 +107,12 @@ class GAN(object):
     def build(self):
         """ Build the GAN """
         # build the discriminator portion
-        self.discriminator = Discriminator().get()
+        self.discriminator = Discriminator().get_model()
         self.discriminator.compile(
             loss='binary_crossentropy', optimizer=self.optimizer, metrics=['accuracy'])
 
         # build the generator portion
-        self.generator = Generator(self.attack_type).get()
+        self.generator = Generator(self.attack_type).get_model()
 
         # input and output of our combined model
         z = Input(shape=(41,))
@@ -227,13 +227,11 @@ class GAN(object):
 
 def main():
     """ Auto run main method """
-
     args = {
         'attack_type': "neptune",
         'csv_name': 'kdd_neptune_only_5000.csv',
         'results_name': 'GANresultsNeptune.txt'
     }
-
     gan = GAN(**args)
     gan.train()
 

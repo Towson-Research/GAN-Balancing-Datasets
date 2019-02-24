@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# Matt
 
 from keras.models import Sequential
 from keras.models import Model
@@ -27,7 +26,8 @@ class Discriminator(object):
 
         self.discriminator = Model(attack, validity)
 
-    def get(self):
+    def get_model(self):
+        """ Returns discriminator model """
         return self.discriminator
 
     def __str__(self):
