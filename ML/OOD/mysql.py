@@ -63,7 +63,7 @@ class SQLConnector(object):
         finally:
             pass
 
-    def sort_hyper(self):
+    def _sort_hyper(self):
         """ Reorders the hypers table based off of id """
         try:
             with self.connection.cursor() as cursor:
@@ -76,7 +76,7 @@ class SQLConnector(object):
         finally:
             pass
 
-    def read_hyper(self, acc=0):
+    def _read_hyper(self, acc=0):
         """ Reads from the hypers table dependent on accuracy """
         try:
             with self.connection.cursor() as cursor:
@@ -243,7 +243,7 @@ class SQLConnector(object):
         finally:
             pass
 
-    def read_gens(self, acc=0):
+    def _read_gens(self, acc=0):
         """ Reads from the gens table dependent on accuracy """
         try:
             with self.connection.cursor() as cursor:
@@ -259,7 +259,7 @@ class SQLConnector(object):
 
     #=============================================
 
-    def read_specific_joined(self, theid, theiter):
+    def _read_specific_joined(self, theid, theiter):
         """ Reads the joined table at a specific id and iteration """
         try:
             with self.connection.cursor() as cursor:
@@ -278,7 +278,7 @@ class SQLConnector(object):
         finally:
             pass
 
-    def read_joined(self, acc=0):
+    def _read_joined(self, acc=0):
         """ Reads the joined table dependent on the accuracy """
         try:
             with self.connection.cursor() as cursor:
@@ -296,9 +296,32 @@ class SQLConnector(object):
         finally:
             pass
 
+    def _use_datasets(self):
+        """ Select datasets database """
+        try:
+            with self.connection.cursor() as cursor:
+                sql = "use datasets;"
+                cursor.execute(sql)
+                result = cursor.fetchall()
+                return result
+        finally:
+            pass
 
-    def pull_best(self, attack, num=1, all=False):
+    def _use_results(self):
+        """ Select results database """
+        try:
+            with self.connection.cursor() as cursor:
+                sql = "use results;"
+                cursor.execute(sql)
+                result = cursor.fetchall()
+                return result
+        finally:
+            pass
+
+
+    def pull_best_results(self, attack, num=1, all=False):
         """ Reads the joined table at a specific id and iteration """
+        self._use_results()
         try:
             with self.connection.cursor() as cursor:
                 if not all:
@@ -322,6 +345,24 @@ class SQLConnector(object):
                             limit %s;
                         """
                 cursor.execute(sql, (str(attack), num))
+                result = cursor.fetchall()
+                return result
+        finally:
+            pass
+
+    def pull_kdd99(self, attack, num):
+        """ Returns randomly shuffled data by attack type """
+        self._use_datasets()
+        try:
+            with self.connection.cursor() as cursor:
+                sql = """
+                        select *
+                        from kdd99
+                        where attack_type like %s
+                        order by RAND ()
+                        limit %s;
+                    """
+                cursor.execute(sql, ('%'+str(attack)+'%', num))
                 result = cursor.fetchall()
                 return result
         finally:
@@ -386,7 +427,7 @@ class SQLConnector(object):
         self._write_attacks(23, "rootkit")
 
 
-    def read_attacks(self):
+    def _read_attacks(self):
         """ Reads from the attack table dependent on num """
         try:
             with self.connection.cursor() as cursor:
@@ -397,38 +438,16 @@ class SQLConnector(object):
         finally:
             pass
 
-    #====================================================
-
-    def output_to_csv(self, dictionaryarray, filename = "stats.csv"):
-        """ Writes a csv file output from a given dictionary """
-
-        string = ""
-        for dictionary in dictionaryarray:  # just i in resiults?
-            count = 0
-            for _, value in dictionary.items():
-                string += str(value)
-                count = count + 1
-                if count < len(dictionary.items()):
-                    string += ","
-            string += "\n"
-
-        f = open(filename, "w")
-        f.write(string)
-
-    def close(self):
-        self.connection.close()
-
-
 
 def main():
     """ Auto run main method """
     conn = SQLConnector()
 
-    # print(conn.pull_best("neptune"), 5, True)
-    print(conn.pull_best("neptune"))
+    # print(conn.pull_best_results("neptune"), 5, True)
+    print(conn.pull_best_results("neptune"))
 
-    #print(conn.read_joined())
-    #print(conn.read_specific_joined(1,1))
+    #print(conn._read_joined())
+    #print(conn._read_specific_joined(1,1))
 
     #conn._create_gens()
     #conn._create_hyper()
@@ -440,14 +459,14 @@ def main():
     #conn.write_hyper(1, "2,3,4", 5, 80.3)
     #conn.write_gens(1, 1, 1, 0, "tcp", "ftp_data", "REJ", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0.00, 171, 62, 0.27, 0.02, 0.01, 0.03, 0.01, 0, 0.29, 0.02, 10)
 
-    #print(conn.read_gens())
-    #print(conn.read_hyper())
+    #print(conn._read_gens())
+    #print(conn._read_hyper())
 
-    #conn.sort_hyper()
+    #conn._sort_hyper()
 
-    #print(conn.read_specific_joined(1, 1))
-    #print(conn.read_joined(20))
-    #conn.output_to_csv(conn.read_joined(20))
+    #print(conn._read_specific_joined(1, 1))
+    #print(conn._read_joined(20))
+    #conn._output_to_csv(conn.read_joined(20))
 
 if __name__ == "__main__":
     main()

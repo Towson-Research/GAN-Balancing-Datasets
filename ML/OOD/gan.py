@@ -14,6 +14,7 @@ from discriminator import Discriminator
 from generator import Generator
 from mysql import SQLConnector
 
+
 try:
     import cPickle as pickle
 except:
@@ -64,12 +65,6 @@ class GAN(object):
         self.generator_momentum: 0.8
 
 
-        # will be deprecated
-        self.csv_path = "../../../CSV/"
-        self.results_path = "../../../Results/"
-        self.csv_name = 'kdd_neptune_only_5000.csv'
-        self.results_name = 'GANresultsNeptune.txt'
-
     def _args(self, kwargs):
         """ kwargs handler """
         for key, value in kwargs.items():
@@ -94,27 +89,26 @@ class GAN(object):
             elif key == 'generator_momentum':
                 self.generator_momentum = value
 
-            elif key == "csv_path":  # will be deprecated v
-                self.csv_path = value
-            elif key == "results_path":
-                self.results_path = value
-            elif key == "csv_name":
-                self.csv_name = value
-            elif key == "results_name":
-                self.results_name = value
-
     def setup(self):
         """ Setups the GAN """
         # TODO new method  called from init opt passed
 
-        # sample 500 data points randomly from the csv
-        dataframe = pd.read_csv(
-            self.csv_path + self.csv_name).sample(self.sample_size)
+        conn = SQLConnector()
+        #data = conn.pull_best_results(attack='neptune', all=True)
+        data = conn.pull_kdd99(self.attack_type, 500)
+        dataframe = pd.DataFrame(data)
 
         # apply "le.fit_transform" to every column (usually only works on 1 column)
         le = LabelEncoder()
         dataframe_encoded = dataframe.apply(le.fit_transform)
         dataset = dataframe_encoded.values
+
+        '''
+        print("ffffffffffffffffffffffffffffffffffffffffffffff")
+        print(dataset)
+        dad = dataframe_encoded.apply(le.inverse_transform)
+        print(dad)
+        '''
 
         # to visually judge results
         print("Real " + self.attack_type + " attacks:")
@@ -127,6 +121,7 @@ class GAN(object):
         # labels for data. 1 for valid attacks, 0 for fake (generated) attacks
         self.valid = np.ones((self.batch_size, 1))
         self.fake = np.zeros((self.batch_size, 1))
+
 
     def build(self):
         """ Build the GAN """
@@ -203,22 +198,31 @@ class GAN(object):
                 break
 
             if epoch % 20 == 0:
-                f = open(self.results_path + self.results_name, "a")
-                np.savetxt(self.results_path + self.results_name,
-                           gen_attacks, fmt="%.0f")
-                f.close()
+                self._push_results(epoch, gen_attacks)
 
         # peek at our results
-        results = np.loadtxt(self.results_path + self.results_name)
-        print("Generated Neptune attacks: ")
+        results = self._pull_results(epoch)
+        print("Generated " + self.attack_type + " attacks: ")
         print(results[:2])
 
 
-    def push_results(self):
+    def _push_results(self, epoch, gen_attacks):
         """ Pushes results into database """
         conn = SQLConnector()
+        print(gen_attacks)
+        #conn.write_gens(gen_attacks)
         #conn.write_hyper(1, "2,3,4", 5, 80.3)
         #conn.write_gens(1, 1, 1, 0, "tcp", "ftp_data", "REJ", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0.00, 171, 62, 0.27, 0.02, 0.01, 0.03, 0.01, 0, 0.29, 0.02, 10)
+
+    def _pull_results(self, epoch):
+        """ Pulls results from database, returns list of lists """
+        conn = SQLConnector()
+        #TODO mysql sorts keys alphabetically 
+        results = {}
+        return results
+        #conn.write_hyper(1, "2,3,4", 5, 80.3)
+        #conn.write_gens(1, 1, 1, 0, "tcp", "ftp_data", "REJ", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0.00, 171, 62, 0.27, 0.02, 0.01, 0.03, 0.01, 0, 0.29, 0.02, 10)
+        #np.loadtxt(self.results_path + self.results_name)
 
 
     def test(self):
@@ -274,7 +278,7 @@ def main():
         'optimizer_learning_rate': 0.0002,
         'optimizer_beta': 0.5,
         'discriminator_layers': [(30, 'relu'), (15, 'relu')],
-        'generator_layers': [0, 0, 0],
+        'generator_layers': [20, 40, 30],
         'generator_alpha': 0.5,
         'generator_momentum': 0.8
     }

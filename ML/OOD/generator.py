@@ -11,7 +11,6 @@ from mysql import SQLConnector
 
 class Generator(object):
 
-    # add kwargs?
     def __init__(self, **kwargs):
         """ Constructor """
         self._defaults()
@@ -48,7 +47,9 @@ class Generator(object):
 
         # pull layers from database
         conn = SQLConnector()
-        jsonlist = conn.pull_best(self.attack_type, True)
+        jsonlist = conn.pull_best_results(self.attack_type, True)
+        if len(jsonlist) == 0:
+            raise Exception('Hyper data does not exist for ' + self.attack_type)
         json = jsonlist[0]
         layersstr = json['layers']
 
