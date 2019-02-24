@@ -13,6 +13,7 @@ from sklearn.metrics import confusion_matrix, classification_report
 from discriminator import Discriminator
 from generator import Generator
 from mysql import SQLConnector
+from collections import defaultdict
 
 
 try:
@@ -98,17 +99,22 @@ class GAN(object):
         data = conn.pull_kdd99(self.attack_type, 500)
         dataframe = pd.DataFrame(data)
 
-        # apply "le.fit_transform" to every column (usually only works on 1 column)
-        le = LabelEncoder()
-        dataframe_encoded = dataframe.apply(le.fit_transform)
-        dataset = dataframe_encoded.values
+        # https://stackoverflow.com/questions/24458645/label-encoding-across-multiple-columns-in-scikit-learn
+        d = defaultdict(LabelEncoder)
 
-        '''
-        print("ffffffffffffffffffffffffffffffffffffffffffffff")
-        print(dataset)
-        dad = dataframe_encoded.apply(le.inverse_transform)
-        print(dad)
-        '''
+        # fit is the encoded dataframe
+        fit = dataframe.apply(lambda x: d[x.name].fit_transform(x))
+        # dataset is fit as an ndarray (changing this cuases issues)
+        dataset = fit.values
+
+
+        # How to decode:
+        print("===============================================")
+        print("decoded:")
+        print("===============================================")
+        decoded = fit.apply(lambda x: d[x.name].inverse_transform(x))
+        print(decoded)
+
 
         # to visually judge results
         print("Real " + self.attack_type + " attacks:")
@@ -203,7 +209,7 @@ class GAN(object):
         # peek at our results
         results = self._pull_results(epoch)
         print("Generated " + self.attack_type + " attacks: ")
-        print(results[:2])
+        print(results.iloc[:2])
 
 
     def _push_results(self, epoch, gen_attacks):
