@@ -7,18 +7,22 @@ from keras.layers import Input
 
 class Discriminator(object):
 
-    def __init__(self):
+    def __init__(self, layers = [(30, 'relu'), (15, 'relu')]):
         """ Constructor """
         self.discriminator = None
+        # list of tuples
+        self.layers = layers
         self._build()
 
 
-    def _build(self): #paramertze first 3 TODO
+    def _build(self):
         """ Builds the discriminator """
         model = Sequential()
+
+        # needs 41 for input and needs 1 for output
         model.add(Dense(41, input_dim=41, activation='relu'))  # discriminator takes 41 values from our dataset
-        model.add(Dense(30, activation='relu'))
-        model.add(Dense(15, activation='relu'))
+        for lay in self.layers:
+            model.add(Dense(lay[0], activation=lay[1]))
         model.add(Dense(1, activation='sigmoid'))  # outputs 0 to 1, 1 being read and 0 being fake
 
         attack = Input(shape=(41,))

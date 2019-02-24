@@ -25,16 +25,13 @@ class GAN(object):
     def __init__(self, **kwargs):
         """ Constructor """
         self._defaults()
-        self._args(kwargs)
+        self._args(kwargs)  # override defaults with args passed
         self.setup()
         self.build()
 
     def _defaults(self):
         """ Sets default variable values """
         self.attack_type = 'neptune'
-        self.csv_name = 'kdd_neptune_only_5000.csv'
-        self.results_name = 'GANresultsNeptune.txt'
-
         self.discriminator = None
         self.generator = None
         self.gan = None
@@ -46,8 +43,11 @@ class GAN(object):
         self.confusion_matrix = None
         self.classification_report = None
 
+        # will be deprecated
         self.csv_path = "../../../CSV/"
         self.results_path = "../../../Results/"
+        self.csv_name = 'kdd_neptune_only_5000.csv'
+        self.results_name = 'GANresultsNeptune.txt'
 
         self.optimizer = Adam(0.0002, 0.5)
         self.max_epochs = 7000
@@ -63,21 +63,20 @@ class GAN(object):
         for key, value in kwargs.items():
             if key == "attack_type":
                 self.attack_type = value
-            elif key == "csv_name":
-                self.csv_name = value
-            elif key == "results_name":
-                self.results_name = value
             elif key == "max_epochs":
                 self.max_epochs = value
             elif key == "batch_size":
                 self.batch_size = value
             elif key == "sample_size":
                 self.sample_size = value
-            elif key == "csv_path":
+            elif key == "csv_path":  # will be deprecated v
                 self.csv_path = value
             elif key == "results_path":
                 self.results_path = value
-
+            elif key == "csv_name":
+                self.csv_name = value
+            elif key == "results_name":
+                self.results_name = value
 
     def setup(self):
         """ Setups the GAN """
@@ -107,12 +106,21 @@ class GAN(object):
     def build(self):
         """ Build the GAN """
         # build the discriminator portion
-        self.discriminator = Discriminator().get_model()
+        layers = [(30, 'relu'), (15, 'relu')]  # optional
+        self.discriminator = Discriminator(layers).get_model()
         self.discriminator.compile(
             loss='binary_crossentropy', optimizer=self.optimizer, metrics=['accuracy'])
 
         # build the generator portion
-        self.generator = Generator(self.attack_type).get_model()
+        gen_args = {
+            'attack_type': self.attack_type,
+            'layer1': 0,   #optional v
+            'layer2': 0,
+            'layer3': 0,
+            'alpha': 0.2,
+            'momentum': 0.8
+        }
+        self.generator = Generator(**gen_args).get_model()
 
         # input and output of our combined model
         z = Input(shape=(41,))
@@ -159,7 +167,7 @@ class GAN(object):
                       %.3f, Loss increases: %.0f]"
                       % (epoch, d_loss[0], 100 * d_loss[1], g_loss, g_loss - prev_g_loss, loss_increase_count))
 
-            # if our generator loss icreased this iteration, increment the counter by 1
+            # if our generator loss increased this iteration, increment the counter by 1
             if (g_loss - prev_g_loss) > 0:
                 loss_increase_count = loss_increase_count + 1
             else:
@@ -181,6 +189,14 @@ class GAN(object):
         results = np.loadtxt(self.results_path + self.results_name)
         print("Generated Neptune attacks: ")
         print(results[:2])
+
+
+    def push_results(self):
+        """ Pushes results into database """
+        conn = SQLConnector()
+        #conn.write_hyper(1, "2,3,4", 5, 80.3)
+        #conn.write_gens(1, 1, 1, 0, "tcp", "ftp_data", "REJ", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0.00, 171, 62, 0.27, 0.02, 0.01, 0.03, 0.01, 0, 0.29, 0.02, 10)
+
 
     def test(self):
         """ A GAN should know how to test itself and save its results into a confusion matrix. """

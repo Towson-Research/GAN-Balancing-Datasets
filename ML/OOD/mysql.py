@@ -424,7 +424,7 @@ def main():
     """ Auto run main method """
     conn = SQLConnector()
 
-    # print(conn.pull_attack("neptune"))
+    # print(conn.pull_best("neptune"), 5, True)
     print(conn.pull_best("neptune"))
 
     #print(conn.read_joined())
