@@ -20,47 +20,63 @@ except:
     import pickle
 
 
-
 class GAN(object):
 
     def __init__(self, **kwargs):
         """ Constructor """
-        
-        # kwargs handle
-        for key, value in kwargs.items():
-            print("The value of {} is {}".format(key, value))
-            if key == "attack_type":
-                self.attack_type = value
-            elif key == "csv_name":
-                self.csv_name = value
-            elif key == "results_name":
-                self.results_name = value
-            
+        self._defaults()
+        self._args(kwargs)
+        self.setup()
+        self.build()
+
+    def _defaults(self):
+        """ Sets default variable values """
+        self.attack_type = 'neptune'
+        self.csv_name = 'kdd_neptune_only_5000.csv'
+        self.results_name = 'GANresultsNeptune.txt'
+
         self.discriminator = None
         self.generator = None
         self.gan = None
-        
+
         # saved_states can be used to save states of a GAN, say
         # 5 of them so that the best can be saved when breaking out.
         self.saved_states = []
         self.save_file = None
         self.confusion_matrix = None
         self.classification_report = None
-        
+
         self.csv_path = "../../../CSV/"
         self.results_path = "../../../Results/"
 
         self.optimizer = Adam(0.0002, 0.5)
         self.max_epochs = 7000
-        self.batch_size = 256
+        self.batch_size = 255
         self.sample_size = 500
-        
+
         self.valid = None
         self.fake = None
         self.X_train = None
 
-        self.setup()
-        self.build()
+    def _args(self, kwargs):
+        """ kwargs handler """
+        for key, value in kwargs.items():
+            if key == "attack_type":
+                self.attack_type = value
+            elif key == "csv_name":
+                self.csv_name = value
+            elif key == "results_name":
+                self.results_name = value
+            elif key == "max_epochs":
+                self.max_epochs = value
+            elif key == "batch_size":
+                self.batch_size = value
+            elif key == "sample_size":
+                self.sample_size = value
+            elif key == "csv_path":
+                self.csv_path = value
+            elif key == "results_path":
+                self.results_path = value
 
 
     def setup(self):
@@ -68,7 +84,8 @@ class GAN(object):
         # TODO new method  called from init opt passed
 
         # sample 500 data points randomly from the csv
-        dataframe = pd.read_csv(self.csv_path + self.csv_name).sample(self.sample_size)
+        dataframe = pd.read_csv(
+            self.csv_path + self.csv_name).sample(self.sample_size)
 
         # apply "le.fit_transform" to every column (usually only works on 1 column)
         le = LabelEncoder()
@@ -87,17 +104,17 @@ class GAN(object):
         self.valid = np.ones((self.batch_size, 1))
         self.fake = np.zeros((self.batch_size, 1))
 
-
     def build(self):
         """ Build the GAN """
         # build the discriminator portion
         self.discriminator = Discriminator().get()
-        self.discriminator.compile(loss='binary_crossentropy', optimizer=self.optimizer, metrics=['accuracy'])
+        self.discriminator.compile(
+            loss='binary_crossentropy', optimizer=self.optimizer, metrics=['accuracy'])
 
         # build the generator portion
         self.generator = Generator(self.attack_type).get()
 
-        #input and output of our combined model
+        # input and output of our combined model
         z = Input(shape=(41,))
         attack = self.generator(z)
         validity = self.discriminator(attack)
@@ -106,10 +123,9 @@ class GAN(object):
         self.gan = Model(z, validity)
         self.gan.compile(loss='binary_crossentropy', optimizer=self.optimizer)
 
-
     def train(self):
         """ Trains the GAN system """
-        #break condition for training (when diverging)
+        # break condition for training (when diverging)
         loss_increase_count = 0
         prev_g_loss = 0
 
@@ -130,15 +146,17 @@ class GAN(object):
             gen_attacks = self.generator.predict(noise)
 
             # loss functions, based on what metrics we specify at model compile time
-            d_loss_real = self.discriminator.train_on_batch(attacks, self.valid)
-            d_loss_fake = self.discriminator.train_on_batch(gen_attacks, self.fake)
+            d_loss_real = self.discriminator.train_on_batch(
+                attacks, self.valid)
+            d_loss_fake = self.discriminator.train_on_batch(
+                gen_attacks, self.fake)
             d_loss = 0.5 * np.add(d_loss_real, d_loss_fake)
 
             # generator loss function
             g_loss = self.gan.train_on_batch(noise, self.valid)
             if epoch % 100 == 0:
                 print("%d [D loss: %f, acc.: %.2f%%] [G loss: %f] [Loss change:\
-                      %.3f, Loss increases: %.0f]"\
+                      %.3f, Loss increases: %.0f]"
                       % (epoch, d_loss[0], 100 * d_loss[1], g_loss, g_loss - prev_g_loss, loss_increase_count))
 
             # if our generator loss icreased this iteration, increment the counter by 1
@@ -155,7 +173,8 @@ class GAN(object):
 
             if epoch % 20 == 0:
                 f = open(self.results_path + self.results_name, "a")
-                np.savetxt(self.results_path + self.results_name, gen_attacks, fmt="%.0f")
+                np.savetxt(self.results_path + self.results_name,
+                           gen_attacks, fmt="%.0f")
                 f.close()
 
         # peek at our results
@@ -163,10 +182,9 @@ class GAN(object):
         print("Generated Neptune attacks: ")
         print(results[:2])
 
-    
     def test(self):
         """ A GAN should know how to test itself and save its results into a confusion matrix. """
-        #TODO
+        # TODO
         pass
 
     ##########################################################################################
@@ -209,10 +227,10 @@ class GAN(object):
 
 def main():
     """ Auto run main method """
-    
+
     args = {
-        'attack_type': "neptune", 
-        'csv_name': 'kdd_neptune_only_5000.csv', 
+        'attack_type': "neptune",
+        'csv_name': 'kdd_neptune_only_5000.csv',
         'results_name': 'GANresultsNeptune.txt'
     }
 
@@ -222,4 +240,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

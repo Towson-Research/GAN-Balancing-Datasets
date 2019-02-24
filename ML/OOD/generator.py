@@ -7,6 +7,7 @@ from keras.layers import Input
 from keras.layers import BatchNormalization
 from keras.layers.advanced_activations import LeakyReLU
 
+from mysql import SQLConnector
 
 class Generator(object):
 
@@ -21,30 +22,28 @@ class Generator(object):
         self._build()
 
     def _setLayers(self):
-        if(self.attack_type == "port"):
-            self.layer1 = 30
-            self.layer2 = 49
-            self.layer3 = 62
 
-        if(self.attack_type == "ip"):
-            self.layer1 = 30
-            self.layer2 = 48
-            self.layer3 = 62
+        conn = SQLConnector()
+        jsonlist = conn.pull_best(self.attack_type)
+        json = jsonlist[0]
+        layersstr = json['layers']
 
-        if(self.attack_type == "neptune"):
-            self.layer1 = 63
-            self.layer2 = 32
-            self.layer3 = 71
 
-        if (self.attack_type == "satan"):
-            self.layer1 = 26
-            self.layer2 = 99
-            self.layer3 = 22
+        comma_index = layersstr.index(",")
+        num1 = int(layersstr[:layersstr.index(",")])
+        layersstr = layersstr[comma_index + 1:]
 
-        if (self.attack_type == "smurf"):
-            self.layer1 = 66
-            self.layer2 = 99
-            self.layer3 = 67
+        comma_index = layersstr.index(",")
+        num2 = int(layersstr[:layersstr.index(",")])
+        layersstr = layersstr[comma_index + 1:]
+
+        num3 = int(layersstr)
+        
+
+        self.layer1 = num1
+        self.layer2 = num2
+        self.layer3 = num3
+
 
     def _build(self):
         """ Builds the generator """
