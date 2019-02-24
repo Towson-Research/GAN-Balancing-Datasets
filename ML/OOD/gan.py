@@ -23,11 +23,20 @@ except:
 
 class GAN(object):
 
-    def __init__(self, attack, csv_name = 'kdd_neptune_only_5000.csv', results_name = 'GANresultsNeptune.txt', ):
+    def __init__(self, **kwargs):
         """ Constructor """
-        # TODO add keywargs
-        self.attack_type = attack
-        self.discriminator = None  #default
+        
+        # kwargs handle
+        for key, value in kwargs.items():
+            print("The value of {} is {}".format(key, value))
+            if key == "attack_type":
+                self.attack_type = value
+            elif key == "csv_name":
+                self.csv_name = value
+            elif key == "results_name":
+                self.results_name = value
+            
+        self.discriminator = None
         self.generator = None
         self.gan = None
         
@@ -40,14 +49,14 @@ class GAN(object):
         
         self.csv_path = "../../../CSV/"
         self.results_path = "../../../Results/"
-        self.csv_name = csv_name
-        self.results_name = results_name
 
-        self.optimizer = None
-        self.max_epochs = None
+        self.optimizer = Adam(0.0002, 0.5)
+        self.max_epochs = 7000
+        self.batch_size = 256
+        self.sample_size = 500
+        
         self.valid = None
         self.fake = None
-        self.batch_size = None
         self.X_train = None
 
         self.setup()
@@ -56,13 +65,10 @@ class GAN(object):
 
     def setup(self):
         """ setups the GAN """
-        # TODO new mtohd  called from init opt passed
+        # TODO new method  called from init opt passed
 
-        self.batch_size = 256
-        self.max_epochs = 7000
-        self.optimizer = Adam(0.0002, 0.5)
         # sample 500 data points randomly from the csv
-        dataframe = pd.read_csv(self.csv_path + self.csv_name).sample(500)
+        dataframe = pd.read_csv(self.csv_path + self.csv_name).sample(self.sample_size)
 
         # apply "le.fit_transform" to every column (usually only works on 1 column)
         le = LabelEncoder()
@@ -70,7 +76,7 @@ class GAN(object):
         dataset = dataframe_encoded.values
 
         # to visually judge results
-        print("Real neptune attacks:")
+        print("Real " + self.attack_type + " attacks:")
         print(dataset[:2])
 
         # Set X as our input data and Y as our label
@@ -203,8 +209,14 @@ class GAN(object):
 
 def main():
     """ Auto run main method """
-    attack_type = "Neptune"
-    gan = GAN(attack_type)
+    
+    args = {
+        'attack_type': "neptune", 
+        'csv_name': 'kdd_neptune_only_5000.csv', 
+        'results_name': 'GANresultsNeptune.txt'
+    }
+
+    gan = GAN(**args)
     gan.train()
 
 

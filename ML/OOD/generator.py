@@ -21,27 +21,27 @@ class Generator(object):
         self._build()
 
     def _setLayers(self):
-        if(self.attack_type == "Port"):
+        if(self.attack_type == "port"):
             self.layer1 = 30
             self.layer2 = 49
             self.layer3 = 62
 
-        if(self.attack_type == "IP"):
+        if(self.attack_type == "ip"):
             self.layer1 = 30
             self.layer2 = 48
             self.layer3 = 62
 
-        if(self.attack_type == "Neptune"):
+        if(self.attack_type == "neptune"):
             self.layer1 = 63
             self.layer2 = 32
             self.layer3 = 71
 
-        if (self.attack_type == "Satan"):
+        if (self.attack_type == "satan"):
             self.layer1 = 26
             self.layer2 = 99
             self.layer3 = 22
 
-        if (self.attack_type == "Smurf"):
+        if (self.attack_type == "smurf"):
             self.layer1 = 66
             self.layer2 = 99
             self.layer3 = 67
@@ -75,7 +75,7 @@ class Generator(object):
 
 def main():
     """ Auto run main method """
-    attack_type = "Neptune"
+    attack_type = "neptune"
     gen = Generator(attack_type)
     print(gen)
 
