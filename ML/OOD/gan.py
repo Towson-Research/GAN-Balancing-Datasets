@@ -217,9 +217,7 @@ class GAN(object):
     def push_results(self):
         """ Pushes results into database """
         conn = SQLConnector()
-        #conn.write_hyper(1, "2,3,4", 5, 80.3)        self.max_epochs = 7000
-        self.batch_size = 255
-        self.sample_size = 500
+        #conn.write_hyper(1, "2,3,4", 5, 80.3)
         #conn.write_gens(1, 1, 1, 0, "tcp", "ftp_data", "REJ", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0.00, 171, 62, 0.27, 0.02, 0.01, 0.03, 0.01, 0, 0.29, 0.02, 10)
 
 
