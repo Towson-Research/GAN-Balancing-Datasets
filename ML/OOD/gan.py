@@ -107,14 +107,14 @@ class GAN(object):
         # dataset is fit as an ndarray (changing this cuases issues)
         dataset = fit.values
 
-
+        '''
         # How to decode:
         print("===============================================")
         print("decoded:")
         print("===============================================")
         decoded = fit.apply(lambda x: d[x.name].inverse_transform(x))
         print(decoded)
-
+        '''
 
         # to visually judge results
         print("Real " + self.attack_type + " attacks:")
@@ -204,18 +204,25 @@ class GAN(object):
                 break
 
             if epoch % 20 == 0:
-                self._push_results(epoch, gen_attacks)
+                f = open("Results.txt", "a")
+                np.savetxt("Results.txt", gen_attacks, fmt="%.0f")
+                f.close()
+                #self._push_results(epoch, gen_attacks)
 
         # peek at our results
-        results = self._pull_results(epoch)
+        #results = self._pull_results(epoch)
+        results = np.loadtxt(self.results_path + self.results_name)
         print("Generated " + self.attack_type + " attacks: ")
-        print(results.iloc[:2])
+        print(results[:2])
 
-
+    '''
     def _push_results(self, epoch, gen_attacks):
         """ Pushes results into database """
         conn = SQLConnector()
         print(gen_attacks)
+        d = defaultdict(LabelEncoder)
+        decoded = gen_attacks.apply(lambda x: d[x.name].inverse_transform(x))
+        print(decoded)
         #conn.write_gens(gen_attacks)
         #conn.write_hyper(1, "2,3,4", 5, 80.3)
         #conn.write_gens(1, 1, 1, 0, "tcp", "ftp_data", "REJ", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0.00, 171, 62, 0.27, 0.02, 0.01, 0.03, 0.01, 0, 0.29, 0.02, 10)
@@ -229,7 +236,7 @@ class GAN(object):
         #conn.write_hyper(1, "2,3,4", 5, 80.3)
         #conn.write_gens(1, 1, 1, 0, "tcp", "ftp_data", "REJ", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0.00, 171, 62, 0.27, 0.02, 0.01, 0.03, 0.01, 0, 0.29, 0.02, 10)
         #np.loadtxt(self.results_path + self.results_name)
-
+    '''
 
     def test(self):
         """ A GAN should know how to test itself and save its results into a confusion matrix. """
