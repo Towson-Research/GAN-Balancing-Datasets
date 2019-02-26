@@ -211,7 +211,7 @@ class GAN(object):
 
         # peek at our results
         #results = self._pull_results(epoch)
-        results = np.loadtxt(self.results_path + self.results_name)
+        results = np.loadtxt("Results.txt")
         print("Generated " + self.attack_type + " attacks: ")
         print(results[:2])
 
