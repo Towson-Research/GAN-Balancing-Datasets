@@ -16,7 +16,7 @@ class Generator(object):
         self._defaults()
         self._args(kwargs)   # override defaults with args passed
         self.generator = None
-        
+
         # if no layer values are passed pull from sql
         if self.layers[0] == 0 and self.layers[1] == 0 and self.layers[2] == 0:
             self._pull_layers()
@@ -48,7 +48,7 @@ class Generator(object):
         # pull layers from database
         conn = SQLConnector()
         jsonlist = conn.pull_best_results(self.attack_type, True)
-        if len(jsonlist) == 0:
+        if jsonlist:
             raise Exception('Hyper data does not exist for ' + self.attack_type)
         json = jsonlist[0]
         layersstr = json['layers']
@@ -63,7 +63,7 @@ class Generator(object):
         layersstr = layersstr[comma_index + 1:]
 
         num3 = int(layersstr)
-        
+
         self.layers = [num1, num2, num3]
 
 
@@ -79,7 +79,8 @@ class Generator(object):
         model.add(Dense(self.layers[2]))
         model.add(LeakyReLU(alpha=self.alpha))
         model.add(BatchNormalization(momentum=self.momentum))
-        model.add(Dense(41, activation='relu'))  # outputs a generated vector of the same size as our data (41)
+        model.add(Dense(41, activation='relu'))
+        # outputs a generated vector of the same size as our data (41)
 
         noise = Input(shape=(41,))
         attack = model(noise)
@@ -92,7 +93,8 @@ class Generator(object):
 
     def __str__(self):
         """ toString """
-        return "Layer 1: " + str(self.layers[0]) +"\nLayer 2: " + str(self.layers[1]) + "\nLayer 3: " + str(self.layers[2]) + "\n"
+        return "Layer 1: " + str(self.layers[0]) +"\nLayer 2: " + str(self.layers[1]) +\
+        "\nLayer 3: " + str(self.layers[2]) + "\n"
 
 
 def main():

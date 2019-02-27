@@ -9,12 +9,12 @@ class SQLConnector(object):
         """ Constructor """
         # Connect to the database
         self.connection = pymysql.connect(host='localhost',
-                port=3306,
-                user='ldeng',
-                password='cs*titanML',
-                db='results',
-                charset='utf8mb4',
-                cursorclass=pymysql.cursors.DictCursor)
+                                          port=3306,
+                                          user='ldeng',
+                                          password='cs*titanML',
+                                          db='results',
+                                          charset='utf8mb4',
+                                          cursorclass=pymysql.cursors.DictCursor)
 
     def _create_hyper(self):
         """ Creates the hypers table """
@@ -151,14 +151,14 @@ class SQLConnector(object):
             pass
 
     def write_gens(self, theid, modelnum, iteration, duration, protocol_type, service, flag,
-            src_bytes, dst_bytes, land, wrong_fragment, urgent, hot, num_failed_logins, logged_in,
-            num_compromised, root_shell, su_attempted, num_root, num_file_creations, num_shells,
-            num_access_files, num_outbound_cmds, is_host_login, is_guest_login, count, srv_count,
-            serror_rate, srv_serror_rate, rerror_rate, srv_rerror_rate, same_srv_rate,
-            diff_srv_rate, srv_diff_host_rate, dst_host_count, dst_host_srv_count,
-            dst_host_same_srv_rate, dst_host_diff_srv_rate, dst_host_same_src_port_rate,
-            dst_host_srv_diff_host_rate, dst_host_serror_rate, dst_host_srv_serror_rate,
-            dst_host_rerror_rate, dst_host_srv_rerror_rate, attack_type):
+                   src_bytes, dst_bytes, land, wrong_fragment, urgent, hot, num_failed_logins, logged_in,
+                   num_compromised, root_shell, su_attempted, num_root, num_file_creations, num_shells,
+                   num_access_files, num_outbound_cmds, is_host_login, is_guest_login, count, srv_count,
+                   serror_rate, srv_serror_rate, rerror_rate, srv_rerror_rate, same_srv_rate,
+                   diff_srv_rate, srv_diff_host_rate, dst_host_count, dst_host_srv_count,
+                   dst_host_same_srv_rate, dst_host_diff_srv_rate, dst_host_same_src_port_rate,
+                   dst_host_srv_diff_host_rate, dst_host_serror_rate, dst_host_srv_serror_rate,
+                   dst_host_rerror_rate, dst_host_srv_rerror_rate, attack_type):
         """ Writes to the gens table """
         try:
             with self.connection.cursor() as cursor:
@@ -219,22 +219,22 @@ class SQLConnector(object):
                     """
 
                 cursor.execute(sql, (str(theid), str(modelnum), str(iteration), str(duration),
-                    str(protocol_type), str(service), str(flag), str(src_bytes),
-                    str(dst_bytes), str(land), str(wrong_fragment), str(urgent),
-                    str(hot), str(num_failed_logins), str(logged_in),
-                    str(num_compromised), str(root_shell), str(su_attempted),
-                    str(num_root), str(num_file_creations), str(num_shells),
-                    str(num_access_files), str(num_outbound_cmds),
-                    str(is_host_login), str(is_guest_login), str(count),
-                    str(srv_count), str(serror_rate), str(srv_serror_rate),
-                    str(rerror_rate), str(srv_rerror_rate), str(same_srv_rate),
-                    str(diff_srv_rate), str(srv_diff_host_rate),
-                    str(dst_host_count), str(dst_host_srv_count),
-                    str(dst_host_same_srv_rate), str(dst_host_diff_srv_rate),
-                    str(dst_host_same_src_port_rate),
-                    str(dst_host_srv_diff_host_rate), str(dst_host_serror_rate),
-                    str(dst_host_srv_serror_rate), str(dst_host_rerror_rate),
-                    str(dst_host_srv_rerror_rate), str(attack_type)))
+                                     str(protocol_type), str(service), str(flag), str(src_bytes),
+                                     str(dst_bytes), str(land), str(wrong_fragment), str(urgent),
+                                     str(hot), str(num_failed_logins), str(logged_in),
+                                     str(num_compromised), str(root_shell), str(su_attempted),
+                                     str(num_root), str(num_file_creations), str(num_shells),
+                                     str(num_access_files), str(num_outbound_cmds),
+                                     str(is_host_login), str(is_guest_login), str(count),
+                                     str(srv_count), str(serror_rate), str(srv_serror_rate),
+                                     str(rerror_rate), str(srv_rerror_rate), str(same_srv_rate),
+                                     str(diff_srv_rate), str(srv_diff_host_rate),
+                                     str(dst_host_count), str(dst_host_srv_count),
+                                     str(dst_host_same_srv_rate), str(dst_host_diff_srv_rate),
+                                     str(dst_host_same_src_port_rate),
+                                     str(dst_host_srv_diff_host_rate), str(dst_host_serror_rate),
+                                     str(dst_host_srv_serror_rate), str(dst_host_rerror_rate),
+                                     str(dst_host_srv_rerror_rate), str(attack_type)))
 
                 # connection is not autocommit by default. So you must commit to save
             # your changes.
@@ -250,7 +250,7 @@ class SQLConnector(object):
                 sql = """
                         select id, modelnum, iteration, attack_type 
                         from gens;
-                    """
+                    """ #Does not return correct output for accuracies
                 cursor.execute(sql)
                 result = cursor.fetchall()
                 return result
@@ -319,12 +319,12 @@ class SQLConnector(object):
             pass
 
 
-    def pull_best_results(self, attack, num=1, all=False):
+    def pull_best_results(self, attack, num=1, doAll=False):
         """ Reads the joined table at a specific id and iteration """
         self._use_results()
         try:
             with self.connection.cursor() as cursor:
-                if not all:
+                if not doAll:
                     sql = """
                             select *
                             from hypers, attacks

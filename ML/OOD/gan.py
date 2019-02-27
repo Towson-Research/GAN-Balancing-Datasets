@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Team TJ-MAM
-
+from collections import defaultdict
 import numpy as np
 import pandas as pd
 
@@ -13,7 +13,6 @@ from sklearn.metrics import confusion_matrix, classification_report
 from discriminator import Discriminator
 from generator import Generator
 from mysql import SQLConnector
-from collections import defaultdict
 
 
 try:
@@ -48,7 +47,7 @@ class GAN(object):
         self.optimizer_learning_rate = 0.0002
         self.optimizer_beta = 0.5
         self.optimizer = Adam(self.optimizer_learning_rate, self.optimizer_beta)
-        
+
         self.max_epochs = 7000
         self.batch_size = 255
         self.sample_size = 500
@@ -58,12 +57,19 @@ class GAN(object):
         self.X_train = None
 
         self.discriminator_layers = [
-            (30, 'relu'), 
+            (30, 'relu'),
             (15, 'relu')
         ]
         self.generator_layers = [0, 0, 0]
         self.generator_alpha: 0.5
         self.generator_momentum: 0.8
+
+        self.y_true = None
+        self.y_pred = None
+        self.confusion_matrix = None
+        self.classification_report = None
+
+        self.save_file = None
 
 
     def _args(self, kwargs):
@@ -77,13 +83,13 @@ class GAN(object):
                 self.batch_size = value
             elif key == 'sample_size':
                 self.sample_size = value
-            elif key == 'optimizer_learning_rate': 
+            elif key == 'optimizer_learning_rate':
                 self.optimizer_learning_rate = value
             elif key == 'optimizer_beta':
                 self.optimizer_beta = value
-            elif key == 'discriminator_layers': 
+            elif key == 'discriminator_layers':
                 self.discriminator_layers = value
-            elif key == 'generator_layers': 
+            elif key == 'generator_layers':
                 self.generator_layers = value
             elif key == 'generator_alpha':
                 self.generator_alpha = value
@@ -132,7 +138,7 @@ class GAN(object):
     def build(self):
         """ Build the GAN """
         # build the discriminator portion
-        
+
         self.discriminator = Discriminator(self.discriminator_layers).get_model()
         self.discriminator.compile(
             loss='binary_crossentropy', optimizer=self.optimizer, metrics=['accuracy'])
