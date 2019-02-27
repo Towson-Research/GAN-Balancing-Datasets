@@ -271,8 +271,9 @@ class GAN(object):
 
     def load_state_from_file(self, filename=None):
         if not filename:
-            filename = self.save_file
-            if not filename:
+            if self.save_file:
+                filename = self.save_file
+            else:
                 print("Error: No savefile for this object. \
                     \n Using save_this(filename) will set the save filename.")
                 return
