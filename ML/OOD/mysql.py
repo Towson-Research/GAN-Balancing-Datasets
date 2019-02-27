@@ -319,12 +319,12 @@ class SQLConnector(object):
             pass
 
 
-    def pull_best_results(self, attack, num=1, doAll=False):
+    def pull_best_results(self, attack, num=1, verbose=False):
         """ Reads the joined table at a specific id and iteration """
         self._use_results()
         try:
             with self.connection.cursor() as cursor:
-                if not doAll:
+                if not verbose:
                     sql = """
                             select *
                             from hypers, attacks
@@ -376,7 +376,7 @@ class SQLConnector(object):
             with self.connection.cursor() as cursor:
                 sql = """
                         create table attacks (
-                            id int, 
+                            id int,
                             name varchar(255)
                         );
                     """
