@@ -32,7 +32,7 @@ class GAN(object):
 
     def _defaults(self):
         """ Sets default variable values """
-        self.attack_type = 'neptune'
+        self.attack_type = None
         self.discriminator = None
         self.generator = None
         self.gan = None
@@ -40,7 +40,6 @@ class GAN(object):
         # saved_states can be used to save states of a GAN, say
         # 5 of them so that the best can be saved when breaking out.
         self.saved_states = []
-        self.save_file = None
         self.confusion_matrix = None
         self.classification_report = None
 
@@ -64,13 +63,11 @@ class GAN(object):
         self.generator_alpha: 0.5
         self.generator_momentum: 0.8
 
-        self.y_true = None
-        self.y_pred = None
         self.confusion_matrix = None
         self.classification_report = None
 
-        self.save_file = None
 
+        self.save_file = None
 
     def _args(self, kwargs):
         """ kwargs handler """
@@ -254,8 +251,6 @@ class GAN(object):
     # https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html
     ##########################################################################################
     def make_confusion_matrix(self, y_true, y_pred):
-        self.y_true = y_true
-        self.y_pred = y_pred
         self.confusion_matrix = confusion_matrix(y_true, y_pred)
         self.classification_report = classification_report(y_true, y_pred)
 
@@ -270,7 +265,7 @@ class GAN(object):
             Unlike the load function, this requires a save file, so that it will
             never accidentally overwrite a previous file.
         '''
-        self.save_file = filename + ".pickle"
+        self.save_file = filename + '.pickle'
         with open(self.save_file, 'wb') as f:
             pickle.dump(self, f, pickle.HIGHEST_PROTOCOL)
 
