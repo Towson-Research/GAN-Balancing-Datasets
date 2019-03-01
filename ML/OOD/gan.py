@@ -100,7 +100,11 @@ class GAN(object):
         conn = SQLConnector()
         #data = conn.pull_best_results(attack='neptune', all=True)
         data = conn.pull_kdd99(self.attack_type, 500)
+        data_test = conn.pull_kdd99(self.attack_type, 1) # get rid of
         dataframe = pd.DataFrame(data)
+
+        print(dataframe.attack_type.unique)
+        dataframe_test = pd.DataFrame(data_test) # rid 
 
         # https://stackoverflow.com/questions/24458645/label-encoding-across-multiple-columns-in-scikit-learn
         d = defaultdict(LabelEncoder)
@@ -110,14 +114,22 @@ class GAN(object):
         # dataset is fit as an ndarray (changing this cuases issues)
         dataset = fit.values
 
-        '''
+
+        print("===============================================")
+        print("encoded:")
+        print("===============================================")
+        print(dataframe_test)
+
         # How to decode:
         print("===============================================")
         print("decoded:")
         print("===============================================")
-        decoded = fit.apply(lambda x: d[x.name].inverse_transform(x))
-        print(decoded)
-        '''
+        #decoded = fit.apply(lambda x: d[x.name].inverse_transform(x))
+        #print(decoded)
+        dataframe_test_decoded = dataframe_test.apply(lambda x:
+                d[x.name].inverse_transform(x))
+        print(dataframe_test_decoded)
+
 
         # to visually judge results
         print("Real " + self.attack_type + " attacks:")
