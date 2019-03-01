@@ -100,35 +100,48 @@ class GAN(object):
         conn = SQLConnector()
         #data = conn.pull_best_results(attack='neptune', all=True)
         data = conn.pull_kdd99(self.attack_type, 500)
-        data_test = conn.pull_kdd99(self.attack_type, 1) # get rid of
-        dataframe = pd.DataFrame(data)
+        dataframe = pd.DataFrame.from_records(data=data, columns=['duration', 'protocol_type', 'service', 'flag', 'src_bytes',
+                                                                 'dst_bytes', 'land', 'wrong_fragment', 'urgent', 'hot', 'num_failed_logins',
+                                                                 'logged_in', 'num_compromised', 'root_shell', 'su_attempted', 'num_root',
+                                                                 'num_file_creations', 'num_shells', 'num_access_files', 'num_outbound_cmds',
+                                                                 'is_host_login', 'is_guest_login', 'count', 'srv_count', 'serror_rate',
+                                                                 'srv_serror_rate', 'rerror_rate', 'srv_rerror_rate', 'same_srv_rate', 'diff_srv_rate',
+                                                                 'srv_diff_host_rate', 'dst_host_count', 'dst_host_srv_count', 'dst_host_same_srv_rate',
+                                                                 'dst_host_diff_srv_rate', 'dst_host_same_src_port_rate', 'dst_host_srv_diff_host_rate',
+                                                                 'dst_host_serror_rate', 'dst_host_srv_serror_rate', 'dst_host_rerror_rate',
+                                                                 'dst_host_srv_rerror_rate', 'attack_type'])
+        columns = dataframe.columns
 
-        print(dataframe.attack_type.unique)
-        dataframe_test = pd.DataFrame(data_test) # rid 
-
+        # ==========
+        # ENCODING
+        # ==========
         # https://stackoverflow.com/questions/24458645/label-encoding-across-multiple-columns-in-scikit-learn
+
         d = defaultdict(LabelEncoder)
 
-        # fit is the encoded dataframe
-        fit = dataframe.apply(lambda x: d[x.name].fit_transform(x))
-        # dataset is fit as an ndarray (changing this cuases issues)
+        fit = dataframe.apply(lambda x: d[x.name].fit_transform(x))  # fit is encoded dataframe
+        # transform to ndarray
         dataset = fit.values
 
-
-        print("===============================================")
-        print("encoded:")
-        print("===============================================")
-        print(dataframe_test)
-
+        # ==========
+        # DECODING
+        # ==========
         # How to decode:
         print("===============================================")
         print("decoded:")
         print("===============================================")
-        #decoded = fit.apply(lambda x: d[x.name].inverse_transform(x))
-        #print(decoded)
-        dataframe_test_decoded = dataframe_test.apply(lambda x:
-                d[x.name].inverse_transform(x))
-        print(dataframe_test_decoded)
+        decode_test = dataset[:5]  # take a slice from the ndarray that we want to decode
+        decode_test_df = pd.DataFrame(decode_test, columns=columns)  # turn that ndarray into a dataframe with correct column names and order
+        decoded = decode_test_df.apply(lambda x: d[x.name].inverse_transform(x))  # decode that dataframe
+        print(decoded)  # print
+        
+        # to visually judge results
+        print("Real " + self.attack_type + " attacks:")
+        test = dataset[:2]
+
+        print(test)
+
+        #===========================================
 
 
         # to visually judge results
