@@ -98,19 +98,8 @@ class GAN(object):
         # TODO new method  called from init opt passed
 
         conn = SQLConnector()
-        #data = conn.pull_best_results(attack='neptune', all=True)
-        data = conn.pull_kdd99(self.attack_type, 500)
-        dataframe = pd.DataFrame.from_records(data=data, columns=['duration', 'protocol_type', 'service', 'flag', 'src_bytes',
-                                                                 'dst_bytes', 'land', 'wrong_fragment', 'urgent', 'hot', 'num_failed_logins',
-                                                                 'logged_in', 'num_compromised', 'root_shell', 'su_attempted', 'num_root',
-                                                                 'num_file_creations', 'num_shells', 'num_access_files', 'num_outbound_cmds',
-                                                                 'is_host_login', 'is_guest_login', 'count', 'srv_count', 'serror_rate',
-                                                                 'srv_serror_rate', 'rerror_rate', 'srv_rerror_rate', 'same_srv_rate', 'diff_srv_rate',
-                                                                 'srv_diff_host_rate', 'dst_host_count', 'dst_host_srv_count', 'dst_host_same_srv_rate',
-                                                                 'dst_host_diff_srv_rate', 'dst_host_same_src_port_rate', 'dst_host_srv_diff_host_rate',
-                                                                 'dst_host_serror_rate', 'dst_host_srv_serror_rate', 'dst_host_rerror_rate',
-                                                                 'dst_host_srv_rerror_rate', 'attack_type'])
-        columns = dataframe.columns
+        data = conn.pull_kdd99(attack=self.attack_type, num=500)
+        dataframe = pd.DataFrame.from_records(data=data, columns=conn.pull_kdd99_columns())
 
         # ==========
         # ENCODING
@@ -120,26 +109,21 @@ class GAN(object):
         d = defaultdict(LabelEncoder)
 
         fit = dataframe.apply(lambda x: d[x.name].fit_transform(x))  # fit is encoded dataframe
-        # transform to ndarray
-        dataset = fit.values
+        dataset = fit.values   # transform to ndarray
+
+        #print(fit)
+
 
         # ==========
         # DECODING
         # ==========
-        # How to decode:
         print("===============================================")
         print("decoded:")
         print("===============================================")
         decode_test = dataset[:5]  # take a slice from the ndarray that we want to decode
-        decode_test_df = pd.DataFrame(decode_test, columns=columns)  # turn that ndarray into a dataframe with correct column names and order
+        decode_test_df = pd.DataFrame(decode_test, columns=conn.pull_kdd99_columns())  # turn that ndarray into a dataframe with correct column names and order
         decoded = decode_test_df.apply(lambda x: d[x.name].inverse_transform(x))  # decode that dataframe
-        print(decoded)  # print
-        
-        # to visually judge results
-        print("Real " + self.attack_type + " attacks:")
-        test = dataset[:2]
-
-        print(test)
+        #print(decoded)
 
         #===========================================
 

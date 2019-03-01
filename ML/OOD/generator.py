@@ -47,7 +47,7 @@ class Generator(object):
 
         # pull layers from database
         conn = SQLConnector()
-        jsonlist = conn.pull_best_results(self.attack_type, True)
+        jsonlist = conn.pull_best_results(attack=self.attack_type, verbose=True)
         if jsonlist:
             raise Exception('Hyper data does not exist for ' + self.attack_type)
         json = jsonlist[0]
