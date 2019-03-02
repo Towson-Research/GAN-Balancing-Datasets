@@ -20,7 +20,7 @@ class Generator(object):
         # if no layer values are passed pull from sql
         if self.layers[0] == 0 and self.layers[1] == 0 and self.layers[2] == 0:
             self._pull_layers()
-        print(self.layers)
+        print("Generator Layers: " + str(self.layers) + "\n")
         self._build()
 
     def _defaults(self):
@@ -47,7 +47,7 @@ class Generator(object):
 
         # pull layers from database
         conn = SQLConnector()
-        jsonlist = conn.pull_best_results(attack=self.attack_type, verbose=True)
+        jsonlist = conn.pull_best_results(attack=self.attack_type, num=5, verbose=False)
         if jsonlist:
             raise Exception('Hyper data does not exist for ' + self.attack_type)
         json = jsonlist[0]

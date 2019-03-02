@@ -97,9 +97,11 @@ class GAN(object):
         """ Setups the GAN """
         # TODO new method  called from init opt passed
 
+        print("Attack type: " + self.attack_type)
+
         conn = SQLConnector()
         data = conn.pull_kdd99(attack=self.attack_type, num=500)
-        dataframe = pd.DataFrame.from_records(data=data, columns=conn.pull_kdd99_columns())
+        dataframe = pd.DataFrame.from_records(data=data, columns=conn.pull_kdd99_columns(all=True))
 
         # ==========
         # ENCODING
@@ -117,20 +119,20 @@ class GAN(object):
         # ==========
         # DECODING
         # ==========
+        '''
         print("===============================================")
         print("decoded:")
         print("===============================================")
         decode_test = dataset[:5]  # take a slice from the ndarray that we want to decode
         decode_test_df = pd.DataFrame(decode_test, columns=conn.pull_kdd99_columns())  # turn that ndarray into a dataframe with correct column names and order
         decoded = decode_test_df.apply(lambda x: d[x.name].inverse_transform(x))  # decode that dataframe
-        #print(decoded)
-
-        #===========================================
+        print(decoded)
+        '''
 
 
         # to visually judge results
         print("Real " + self.attack_type + " attacks:")
-        print(dataset[:2])
+        print(dataset[:1])
 
         # Set X as our input data and Y as our label
         self.X_train = dataset[:, 0:41].astype(float)
@@ -173,6 +175,8 @@ class GAN(object):
         loss_increase_count = 0
         prev_g_loss = 0
 
+        conn = SQLConnector()
+
         for epoch in range(self.max_epochs):
 
             # ---------------------
@@ -196,12 +200,13 @@ class GAN(object):
                 gen_attacks, self.fake)
             d_loss = 0.5 * np.add(d_loss_real, d_loss_fake)
 
+
             # generator loss function
             g_loss = self.gan.train_on_batch(noise, self.valid)
             if epoch % 100 == 0:
-                print("%d [D loss: %f, acc.: %.2f%%] [G loss: %f] [Loss change:\
-                      %.3f, Loss increases: %.0f]"
-                      % (epoch, d_loss[0], 100 * d_loss[1], g_loss, g_loss - prev_g_loss, loss_increase_count))
+                if(epoch == 0):
+                    print("\n")
+                print("%d [D loss: %f, acc.: %.2f%%] [G loss: %f] [Loss change: %.3f, Loss increases: %.0f]" % (epoch, d_loss[0], 100 * d_loss[1], g_loss, g_loss - prev_g_loss, loss_increase_count))
 
             # if our generator loss increased this iteration, increment the counter by 1
             if (g_loss - prev_g_loss) > 0:
@@ -216,16 +221,339 @@ class GAN(object):
                 break
 
             if epoch % 20 == 0:
-                f = open("Results.txt", "a")
-                np.savetxt("Results.txt", gen_attacks, fmt="%.0f")
+
+                
+                decode = gen_attacks[:1]  # take a slice from the ndarray that we want to decode
+                #decode_ints = decode.astype(int)
+
+                #print("decoded floats ======= " + str(decode))
+                #print("decoded ints ======= " + str(decode_ints))
+
+                self.decode_gen(decode)
+
+                '''
+                f = open("ABC.txt", "a")
+                np.savetxt("ABC.txt", gen_attacks, fmt="%.0f")
                 f.close()
                 #self._push_results(epoch, gen_attacks)
+                '''
 
         # peek at our results
         #results = self._pull_results(epoch)
         results = np.loadtxt("Results.txt")
         print("Generated " + self.attack_type + " attacks: ")
         print(results[:2])
+
+    def decode_gen(self, array):
+
+        # index 24 - 39 floats
+        rows = array.shape[0]
+        cols = array.shape[1]
+
+        list_of_lists = []
+
+        for r in range(rows):
+            details = []  # list
+            for c in range(cols):
+                #print(int_ndarray[r][c])
+                if(c == 0):   # duration
+                    details.append(int(array[r][c]))
+                elif(c == 1):   # protocol type
+                    if(int(array[r][c]) == 0):
+                        details.append('tcp')
+                    elif(int(array[r][c]) == 1):
+                        details.append('udp')
+                    elif(int(array[r][c]) == 2):
+                        details.append('icmp')
+                elif(c == 2):   # service
+                    if(int(array[r][c]) == 0):
+                        details.append('http')
+                    elif(int(array[r][c]) == 1):
+                        details.append('smtp')
+                    elif(int(array[r][c]) == 2):
+                        details.append('domain_u')
+                    elif(int(array[r][c]) == 3):
+                        details.append('auth')
+                    elif(int(array[r][c]) == 4):
+                        details.append('finger')
+                    elif(int(array[r][c]) == 5):
+                        details.append('telnet')
+                    elif(int(array[r][c]) == 6):
+                        details.append('eco_i')
+                    elif(int(array[r][c]) == 7):
+                        details.append('ftp')
+                    elif(int(array[r][c]) == 8):
+                        details.append('ntp_u')
+                    elif(int(array[r][c]) == 9):
+                        details.append('ecr_i')
+                    elif(int(array[r][c]) == 10):
+                        details.append('other')
+                    elif(int(array[r][c]) == 11):
+                        details.append('urp_i')
+                    elif(int(array[r][c]) == 12):
+                        details.append('private')
+                    elif(int(array[r][c]) == 13):
+                        details.append('pop_3')
+                    elif(int(array[r][c]) == 14):
+                        details.append('ftp_data')
+                    elif(int(array[r][c]) == 15):
+                        details.append('netstat')
+                    elif(int(array[r][c]) == 16):
+                        details.append('daytime')
+                    elif(int(array[r][c]) == 17):
+                        details.append('ssh')
+                    elif(int(array[r][c]) == 18):
+                        details.append('echo')
+                    elif(int(array[r][c]) == 19):
+                        details.append('time')
+                    elif(int(array[r][c]) == 20):
+                        details.append('name')
+                    elif(int(array[r][c]) == 21):
+                        details.append('whois')
+                    elif(int(array[r][c]) == 22):
+                        details.append('domain')
+                    elif(int(array[r][c]) == 23):
+                        details.append('mtp')
+                    elif(int(array[r][c]) == 24):
+                        details.append('gopher')
+                    elif(int(array[r][c]) == 25):
+                        details.append('remote_job')
+                    elif(int(array[r][c]) == 26):
+                        details.append('rje')
+                    elif(int(array[r][c]) == 27):
+                        details.append('ctf')
+                    elif(int(array[r][c]) == 28):
+                        details.append('supdup')
+                    elif(int(array[r][c]) == 29):
+                        details.append('link')
+                    elif(int(array[r][c]) == 30):
+                        details.append('systat')
+                    elif(int(array[r][c]) == 31): 
+                        details.append('discard')
+                    elif(int(array[r][c]) == 32):
+                        details.append('X11')
+                    elif(int(array[r][c]) == 33):
+                        details.append('shell')
+                    elif(int(array[r][c]) == 34):
+                        details.append('login')
+                    elif(int(array[r][c]) == 35):
+                        details.append('imap4')
+                    elif(int(array[r][c]) == 36):
+                        details.append('nntp')
+                    elif(int(array[r][c]) == 37):
+                        details.append('uucp')
+                    elif(int(array[r][c]) == 38):
+                        details.append('pm_dump')
+                    elif(int(array[r][c]) == 39):
+                        details.append('IRC')
+                    elif(int(array[r][c]) == 40):
+                        details.append('Z39_50')
+                    elif(int(array[r][c]) == 41):
+                        details.append('netbios_dgm')
+                    elif(int(array[r][c]) == 42):
+                        details.append('ldap')
+                    elif(int(array[r][c]) == 43):
+                        details.append('sunrpc')
+                    elif(int(array[r][c]) == 44):
+                        details.append('courier')
+                    elif(int(array[r][c]) == 45):
+                        details.append('exec')
+                    elif(int(array[r][c]) == 46):
+                        details.append('bgp')
+                    elif(int(array[r][c]) == 47):
+                        details.append('csnet_ns')
+                    elif(int(array[r][c]) == 48):
+                        details.append('http_443')
+                    elif(int(array[r][c]) == 49):
+                        details.append('klogin')
+                    elif(int(array[r][c]) == 50):
+                        details.append('printer')
+                    elif(int(array[r][c]) == 51):
+                        details.append('netbios_ssn')
+                    elif(int(array[r][c]) == 52):
+                        details.append('pop_2')
+                    elif(int(array[r][c]) == 53):
+                        details.append('nnsp')
+                    elif(int(array[r][c]) == 54):
+                        details.append('efs')
+                    elif(int(array[r][c]) == 55):
+                        details.append('hostnames')
+                    elif(int(array[r][c]) == 56):
+                        details.append('uucp_path')
+                    elif(int(array[r][c]) == 57):
+                        details.append('sql_net')
+                    elif(int(array[r][c]) == 58):
+                        details.append('vmnet')
+                    elif(int(array[r][c]) == 59):
+                        details.append('iso_tsap')
+                    elif(int(array[r][c]) == 60):
+                        details.append('netbios_ns')
+                    elif(int(array[r][c]) == 61):
+                        details.append('kshell')
+                    elif(int(array[r][c]) == 62):
+                        details.append('urh_i')
+                    elif(int(array[r][c]) == 63):
+                        details.append('http_2784')
+                    elif(int(array[r][c]) == 64):
+                        details.append('harvest')
+                    elif(int(array[r][c]) == 65):
+                        details.append('aol')
+                    elif(int(array[r][c]) == 66):
+                        details.append('tftp_u')
+                    elif(int(array[r][c]) == 67):
+                        details.append('http_8001')
+                    elif(int(array[r][c]) == 68):
+                        details.append('tim_i')
+                    elif(int(array[r][c]) == 69):
+                        details.append('red_i')
+                elif(c == 2):   # flag
+                    if(int(array[r][c]) == 0):
+                        details.append('SF')
+                    elif(int(array[r][c]) == 1):
+                        details.append('S2')
+                    elif(int(array[r][c]) == 2):
+                        details.append('S1')
+                    elif(int(array[r][c]) == 3):
+                        details.append('S3')
+                    elif(int(array[r][c]) == 4):
+                        details.append('OTH')
+                    elif(int(array[r][c]) == 5):
+                        details.append('REJ')
+                    elif(int(array[r][c]) == 6):
+                        details.append('RSTO')
+                    elif(int(array[r][c]) == 7):
+                        details.append('S0')
+                    elif(int(array[r][c]) == 8):
+                        details.append('RSTR')
+                    elif(int(array[r][c]) == 9):
+                        details.append('RSTOS0')
+                    elif(int(array[r][c]) == 10):
+                        details.append('SH')
+                elif(c == 3):
+                    details.append(int(array[r][c]))
+                elif(c == 4):
+                    details.append(int(array[r][c]))
+                elif(c == 5):
+                    details.append(int(array[r][c]))
+                elif(c == 6):
+                    details.append(int(array[r][c]))
+                elif(c == 7):
+                    details.append(int(array[r][c]))
+                elif(c == 8):
+                    details.append(int(array[r][c]))
+                elif(c == 9):
+                    details.append(int(array[r][c]))
+                elif(c == 10):
+                    details.append(int(array[r][c]))
+                elif(c == 11):
+                    details.append(int(array[r][c]))
+                elif(c == 12):
+                    details.append(int(array[r][c]))
+                elif(c == 13):
+                    details.append(int(array[r][c]))
+                elif(c == 14):
+                    details.append(int(array[r][c]))
+                elif(c == 15):
+                    details.append(int(array[r][c]))
+                elif(c == 16):
+                    details.append(int(array[r][c]))
+                elif(c == 17):
+                    details.append(int(array[r][c]))
+                elif(c == 18):
+                    details.append(int(array[r][c]))
+                elif(c == 19):
+                    details.append(int(array[r][c]))
+                elif(c == 20):
+                    details.append(int(array[r][c]))
+                elif(c == 21):
+                    details.append(int(array[r][c]))
+                elif(c == 22):
+                    details.append(int(array[r][c]))
+                elif(c == 23):
+                    details.append(int(array[r][c]))
+                elif(c == 24):  # floats
+                    details.append(float("%0.2f" % array[r][c]))
+                elif(c == 25):
+                    details.append(float("%0.2f" % array[r][c]))
+                elif(c == 26):
+                    details.append(float("%0.2f" % array[r][c]))
+                elif(c == 27):
+                    details.append(float("%0.2f" % array[r][c]))
+                elif(c == 28):
+                    details.append(float("%0.2f" % array[r][c]))
+                elif(c == 29):
+                    details.append(float("%0.2f" % array[r][c]))
+                elif(c == 30):
+                    details.append(float("%0.2f" % array[r][c]))
+                elif(c == 31):
+                    details.append(float("%0.2f" % array[r][c]))
+                elif(c == 32):
+                    details.append(float("%0.2f" % array[r][c]))
+                elif(c == 33):
+                    details.append(float("%0.2f" % array[r][c]))
+                elif(c == 34):
+                    details.append(float("%0.2f" % array[r][c]))
+                elif(c == 35):
+                    details.append(float("%0.2f" % array[r][c]))
+                elif(c == 36):
+                    details.append(float("%0.2f" % array[r][c]))
+                elif(c == 37):
+                    details.append(float("%0.2f" % array[r][c]))
+                elif(c == 38):
+                    details.append(float("%0.2f" % array[r][c]))
+                elif(c == 39):
+                    details.append(float("%0.2f" % array[r][c]))
+                elif(c == 40):
+                    if(int(array[r][c]) == 0):
+                        details.append('normal')
+                    elif(int(array[r][c]) == 1):
+                        details.append('buffer_overflow')
+                    elif(int(array[r][c]) == 2):
+                        details.append('loadmodule')
+                    elif(int(array[r][c]) == 3):
+                        details.append('perl')
+                    elif(int(array[r][c]) == 4):
+                        details.append('neptune')
+                    elif(int(array[r][c]) == 5):
+                        details.append('smurf')
+                    elif(int(array[r][c]) == 6):
+                        details.append('guess_passwd')
+                    elif(int(array[r][c]) == 7):
+                        details.append('pod')
+                    elif(int(array[r][c]) == 8):
+                        details.append('teardrop')
+                    elif(int(array[r][c]) == 9):
+                        details.append('portsweep')
+                    elif(int(array[r][c]) == 10):
+                        details.append('ipsweep')
+                    elif(int(array[r][c]) == 11):
+                        details.append('land')
+                    elif(int(array[r][c]) == 12):
+                        details.append('ftp_write')
+                    elif(int(array[r][c]) == 13):
+                        details.append('back')
+                    elif(int(array[r][c]) == 14):
+                        details.append('imap')
+                    elif(int(array[r][c]) == 15):
+                        details.append('satan')
+                    elif(int(array[r][c]) == 16):
+                        details.append('phf')
+                    elif(int(array[r][c]) == 17):
+                        details.append('nmap')
+                    elif(int(array[r][c]) == 18):
+                        details.append('multihop')
+                    elif(int(array[r][c]) == 19):
+                        details.append('warezmaster')
+                    elif(int(array[r][c]) == 20):
+                        details.append('warezclient')
+                    elif(int(array[r][c]) == 21):
+                        details.append('spy')
+                    elif(int(array[r][c]) == 22):
+                        details.append('rootkit')
+
+            list_of_lists.append(details)
+        
+        print("LOL: " + str(list_of_lists))
 
     '''
     def _push_results(self, epoch, gen_attacks):
