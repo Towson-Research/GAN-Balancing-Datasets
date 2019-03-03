@@ -10,6 +10,9 @@ from keras.optimizers import Adam
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import confusion_matrix, classification_report
 
+import signal
+import sys
+
 from discriminator import Discriminator
 from generator import Generator
 from mysql import SQLConnector
@@ -234,24 +237,24 @@ class GAN(object):
                     print(list_of_lists)
 
                     # ??????
-                    theid = 0  # pickle
-                    modelnum = 0
-                    iteration = 0
+                    gennum = 1  # pickle
+                    modelnum = 1
 
                     layersstr = str(self.generator_layers[0]) + "," + str(self.generator_layers[1]) + "," + str(self.generator_layers[2])
                     attack_num = util.attacks_to_num(self.attack_type)
 
                     # send all to database
                     for lis in list_of_lists:
-                        conn.write(id=theid, modelnum=modelnum, iteration=iteration, layersstr=layersstr, 
+                        print(len(lis))
+                        conn.write(gennum=gennum, modelnum=modelnum, layersstr=layersstr, 
                             attack_type=attack_num, accuracy=accuracy, gen_list=lis)
 
         # peek at our results
         hypers = conn.read_hyper()  # by epoch?
         gens = conn.read_gens()   # by epoch?
-        print("\nGenerated " + self.attack_type + " attacks: ")
-        print(hypers)
-        print("\n" + str(gens) + "\n")
+        print("\n\nMYSQL DATA:\n==============")
+        print("hypers  " + str(hypers))
+        print("\ngens  " + str(gens) + "\n")
 
 
     def test(self):
@@ -296,6 +299,18 @@ class GAN(object):
             f.close()
 
 
+def signal_handler(sig, frame):
+    """ Catches Crl-C command to print from database before ending """
+    conn = SQLConnector()
+    hypers = conn.read_hyper()  # by epoch?
+    gens = conn.read_gens()   # by epoch?
+    print("\n\nMYSQL DATA:\n==============")
+    print("hypers  " + str(hypers))
+    print("\ngens  " + str(gens) + "\n")
+    sys.exit(0)
+signal.signal(signal.SIGINT, signal_handler)
+
+
 def main():
     """ Auto run main method """
     args = {
@@ -316,3 +331,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
