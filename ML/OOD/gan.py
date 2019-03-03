@@ -128,8 +128,8 @@ class GAN(object):
         print(decoded)
         '''
 
-        # to visually judge results
-        print("Real " + self.attack_type + " attacks:")
+        # to visually judge encoded dataset
+        print("Real encoded " + self.attack_type + " attacks:")
         print(dataset[:1])
 
         # Set X as our input data and Y as our label
@@ -248,10 +248,10 @@ class GAN(object):
 
         # peek at our results
         hypers = conn.read_hyper()  # by epoch?
-        gens = conn.read_gens()
-        print("Generated " + self.attack_type + " attacks: ")
+        gens = conn.read_gens()   # by epoch?
+        print("\nGenerated " + self.attack_type + " attacks: ")
         print(hypers)
-        print(gens)
+        print("\n" + str(gens) + "\n")
 
 
     def test(self):
