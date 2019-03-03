@@ -34,7 +34,7 @@ class SQLConnector(object):
         finally:
             pass
 
-    def write_hyper(self, theid, layersstr, attack, acc):
+    def _write_hyper(self, theid, layersstr, attack, acc):
         """ Writes to the hypers table """
         try:
             with self.connection.cursor() as cursor:
@@ -63,6 +63,18 @@ class SQLConnector(object):
         finally:
             pass
 
+    def write(self, id, modelnum, iteration, layersstr, accuracy, attack_type, gen_list):
+        """ Writes to the hypers and gens table """
+        self._write_hyper(id, layersstr, attack_type, accuracy)
+        self._write_gens(id, modelnum, iteration, gen_list[0], gen_list[1], gen_list[2], gen_list[3],
+                   gen_list[4], gen_list[5], gen_list[6], gen_list[7], gen_list[8], gen_list[9], gen_list[10], 
+                   gen_list[11], gen_list[12], gen_list[13], gen_list[14], gen_list[15], gen_list[16], gen_list[17], 
+                   gen_list[18], gen_list[19], gen_list[20], gen_list[21], gen_list[22], gen_list[23], gen_list[24], 
+                   gen_list[25], gen_list[26], gen_list[27], gen_list[28], gen_list[29], gen_list[30], gen_list[31], 
+                   gen_list[32], gen_list[33], gen_list[34], gen_list[35], gen_list[36], gen_list[37], gen_list[38],
+                   gen_list[39], gen_list[40], attack_type)
+
+
     def _sort_hyper(self):
         """ Reorders the hypers table based off of id """
         try:
@@ -76,7 +88,7 @@ class SQLConnector(object):
         finally:
             pass
 
-    def _read_hyper(self, acc=0):
+    def read_hyper(self, acc=0):
         """ Reads from the hypers table dependent on accuracy """
         try:
             with self.connection.cursor() as cursor:
@@ -150,7 +162,7 @@ class SQLConnector(object):
         finally:
             pass
 
-    def write_gens(self, theid, modelnum, iteration, duration, protocol_type, service, flag,
+    def _write_gens(self, theid, modelnum, iteration, duration, protocol_type, service, flag,
                    src_bytes, dst_bytes, land, wrong_fragment, urgent, hot, num_failed_logins, logged_in,
                    num_compromised, root_shell, su_attempted, num_root, num_file_creations, num_shells,
                    num_access_files, num_outbound_cmds, is_host_login, is_guest_login, count, srv_count,
@@ -243,7 +255,7 @@ class SQLConnector(object):
         finally:
             pass
 
-    def _read_gens(self, acc=0):
+    def read_gens(self, acc=0):
         """ Reads from the gens table dependent on accuracy """
         try:
             with self.connection.cursor() as cursor:

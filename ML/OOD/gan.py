@@ -15,7 +15,6 @@ from generator import Generator
 from mysql import SQLConnector
 from utilities import Utilities as util
 
-
 try:
     import cPickle as pickle
 except:
@@ -116,7 +115,6 @@ class GAN(object):
 
         #print(fit)
 
-
         # ==========
         # DECODING
         # ==========
@@ -129,7 +127,6 @@ class GAN(object):
         decoded = decode_test_df.apply(lambda x: d[x.name].inverse_transform(x))  # decode that dataframe
         print(decoded)
         '''
-
 
         # to visually judge results
         print("Real " + self.attack_type + " attacks:")
@@ -236,53 +233,26 @@ class GAN(object):
                     list_of_lists = util.decode_gen(decode)
                     print(list_of_lists)
 
-                    theid = 0
+                    # ??????
+                    theid = 0  # pickle
                     modelnum = 0
                     iteration = 0
 
-                    print(self.generator_layers)
+                    layersstr = str(self.generator_layers[0]) + "," + str(self.generator_layers[1]) + "," + str(self.generator_layers[2])
+                    attack_num = util.attacks_to_num(self.attack_type)
 
-                    # iterate list from list_of_lists
                     # send all to database
                     for lis in list_of_lists:
-                        conn.write_hyper(theid, str(self.generator_layers[0]) + "," + str(self.generator_layers[1]) + "," + str(self.generator_layers[2]), util.attacks_to_num(self.attack_type), accuracy)
-                        conn.write_gens(theid, modelnum, iteration, lis[0], lis[1], lis[2], lis[3], lis[4], lis[5], lis[6], lis[7], lis[8], lis[9], lis[10], lis[11], lis[12], 
-                            lis[13], lis[14], lis[15], lis[16], lis[17], lis[18], lis[19], lis[20], lis[21], lis[22], lis[23], lis[24], lis[25], lis[26], lis[27], lis[28], lis[29],
-                            lis[30], lis[31], lis[32], lis[33], lis[34], lis[35], lis[36], lis[37], lis[38], lis[39], lis[40], util.attacks_to_num(self.attack_type))
-
+                        conn.write(id=theid, modelnum=modelnum, iteration=iteration, layersstr=layersstr, 
+                            attack_type=attack_num, accuracy=accuracy, gen_list=lis)
 
         # peek at our results
-        #results = self._pull_results(epoch)
-        #results = np.loadtxt("Results.txt")
-        hypers = conn._read_hyper()
-        gens = conn._read_gens()
+        hypers = conn.read_hyper()  # by epoch?
+        gens = conn.read_gens()
         print("Generated " + self.attack_type + " attacks: ")
         print(hypers)
         print(gens)
 
-
-    '''
-    def _push_results(self, epoch, gen_attacks):
-        """ Pushes results into database """
-        conn = SQLConnector()
-        print(gen_attacks)
-        d = defaultdict(LabelEncoder)
-        decoded = gen_attacks.apply(lambda x: d[x.name].inverse_transform(x))
-        print(decoded)
-        #conn.write_gens(gen_attacks)
-        #conn.write_hyper(1, "2,3,4", 5, 80.3)
-        #conn.write_gens(1, 1, 1, 0, "tcp", "ftp_data", "REJ", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0.00, 171, 62, 0.27, 0.02, 0.01, 0.03, 0.01, 0, 0.29, 0.02, 10)
-
-    def _pull_results(self, epoch):
-        """ Pulls results from database, returns list of lists """
-        conn = SQLConnector()
-        #TODO mysql sorts keys alphabetically 
-        results = {}
-        return results
-        #conn.write_hyper(1, "2,3,4", 5, 80.3)
-        #conn.write_gens(1, 1, 1, 0, "tcp", "ftp_data", "REJ", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0.00, 171, 62, 0.27, 0.02, 0.01, 0.03, 0.01, 0, 0.29, 0.02, 10)
-        #np.loadtxt(self.results_path + self.results_name)
-    '''
 
     def test(self):
         """ A GAN should know how to test itself and save its results into a confusion matrix. """
