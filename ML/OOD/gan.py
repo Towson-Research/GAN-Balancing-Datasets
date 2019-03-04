@@ -10,10 +10,13 @@ from keras.optimizers import Adam
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import confusion_matrix, classification_report
 
+import signal
+import sys
+
 from discriminator import Discriminator
 from generator import Generator
 from mysql import SQLConnector
-
+from utilities import Utilities as util
 
 try:
     import cPickle as pickle
@@ -97,31 +100,40 @@ class GAN(object):
         """ Setups the GAN """
         # TODO new method  called from init opt passed
 
-        conn = SQLConnector()
-        #data = conn.pull_best_results(attack='neptune', all=True)
-        data = conn.pull_kdd99(self.attack_type, 500)
-        dataframe = pd.DataFrame(data)
+        print("Attack type: " + self.attack_type)
 
+        conn = SQLConnector()
+        data = conn.pull_kdd99(attack=self.attack_type, num=500)
+        dataframe = pd.DataFrame.from_records(data=data, columns=conn.pull_kdd99_columns(all=True))
+
+        # ==========
+        # ENCODING
+        # ==========
         # https://stackoverflow.com/questions/24458645/label-encoding-across-multiple-columns-in-scikit-learn
+
         d = defaultdict(LabelEncoder)
 
-        # fit is the encoded dataframe
-        fit = dataframe.apply(lambda x: d[x.name].fit_transform(x))
-        # dataset is fit as an ndarray (changing this cuases issues)
-        dataset = fit.values
+        fit = dataframe.apply(lambda x: d[x.name].fit_transform(x))  # fit is encoded dataframe
+        dataset = fit.values   # transform to ndarray
 
+        #print(fit)
+
+        # ==========
+        # DECODING
+        # ==========
         '''
-        # How to decode:
         print("===============================================")
         print("decoded:")
         print("===============================================")
-        decoded = fit.apply(lambda x: d[x.name].inverse_transform(x))
+        decode_test = dataset[:5]  # take a slice from the ndarray that we want to decode
+        decode_test_df = pd.DataFrame(decode_test, columns=conn.pull_kdd99_columns())  # turn that ndarray into a dataframe with correct column names and order
+        decoded = decode_test_df.apply(lambda x: d[x.name].inverse_transform(x))  # decode that dataframe
         print(decoded)
         '''
 
-        # to visually judge results
-        print("Real " + self.attack_type + " attacks:")
-        print(dataset[:2])
+        # to visually judge encoded dataset
+        print("Real encoded " + self.attack_type + " attacks:")
+        print(dataset[:1])
 
         # Set X as our input data and Y as our label
         self.X_train = dataset[:, 0:41].astype(float)
@@ -164,6 +176,8 @@ class GAN(object):
         loss_increase_count = 0
         prev_g_loss = 0
 
+        conn = SQLConnector()
+
         for epoch in range(self.max_epochs):
 
             # ---------------------
@@ -187,12 +201,13 @@ class GAN(object):
                 gen_attacks, self.fake)
             d_loss = 0.5 * np.add(d_loss_real, d_loss_fake)
 
+
             # generator loss function
             g_loss = self.gan.train_on_batch(noise, self.valid)
             if epoch % 100 == 0:
-                print("%d [D loss: %f, acc.: %.2f%%] [G loss: %f] [Loss change:\
-                      %.3f, Loss increases: %.0f]"
-                      % (epoch, d_loss[0], 100 * d_loss[1], g_loss, g_loss - prev_g_loss, loss_increase_count))
+                if(epoch == 0):
+                    print("\n")
+                print("%d [D loss: %f, acc.: %.2f%%] [G loss: %f] [Loss change: %.3f, Loss increases: %.0f]" % (epoch, d_loss[0], 100 * d_loss[1], g_loss, g_loss - prev_g_loss, loss_increase_count))
 
             # if our generator loss increased this iteration, increment the counter by 1
             if (g_loss - prev_g_loss) > 0:
@@ -207,39 +222,40 @@ class GAN(object):
                 break
 
             if epoch % 20 == 0:
-                f = open("Results.txt", "a")
-                np.savetxt("Results.txt", gen_attacks, fmt="%.0f")
-                f.close()
-                #self._push_results(epoch, gen_attacks)
+                
+                decode = gen_attacks[:1]  # take a slice from the ndarray that we want to decode
+                #decode_ints = decode.astype(int)
+
+                #print("decoded floats ======= " + str(decode))
+                #print("decoded ints ======= " + str(decode_ints))
+
+                accuracy_threshold = 55
+                accuracy = (d_loss[1] * 100)
+                if(accuracy > accuracy_threshold):
+                    # print out first result
+                    list_of_lists = util.decode_gen(decode)
+                    print(list_of_lists)
+
+                    # ??????
+                    gennum = 1  # pickle
+                    modelnum = 1
+
+                    layersstr = str(self.generator_layers[0]) + "," + str(self.generator_layers[1]) + "," + str(self.generator_layers[2])
+                    attack_num = util.attacks_to_num(self.attack_type)
+
+                    # send all to database
+                    for lis in list_of_lists:
+                        print(len(lis))
+                        conn.write(gennum=gennum, modelnum=modelnum, layersstr=layersstr, 
+                            attack_type=attack_num, accuracy=accuracy, gen_list=lis)
 
         # peek at our results
-        #results = self._pull_results(epoch)
-        results = np.loadtxt("Results.txt")
-        print("Generated " + self.attack_type + " attacks: ")
-        print(results[:2])
+        hypers = conn.read_hyper()  # by epoch?
+        gens = conn.read_gens()   # by epoch?
+        print("\n\nMYSQL DATA:\n==============")
+        print("hypers  " + str(hypers))
+        print("\ngens  " + str(gens) + "\n")
 
-    '''
-    def _push_results(self, epoch, gen_attacks):
-        """ Pushes results into database """
-        conn = SQLConnector()
-        print(gen_attacks)
-        d = defaultdict(LabelEncoder)
-        decoded = gen_attacks.apply(lambda x: d[x.name].inverse_transform(x))
-        print(decoded)
-        #conn.write_gens(gen_attacks)
-        #conn.write_hyper(1, "2,3,4", 5, 80.3)
-        #conn.write_gens(1, 1, 1, 0, "tcp", "ftp_data", "REJ", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0.00, 171, 62, 0.27, 0.02, 0.01, 0.03, 0.01, 0, 0.29, 0.02, 10)
-
-    def _pull_results(self, epoch):
-        """ Pulls results from database, returns list of lists """
-        conn = SQLConnector()
-        #TODO mysql sorts keys alphabetically 
-        results = {}
-        return results
-        #conn.write_hyper(1, "2,3,4", 5, 80.3)
-        #conn.write_gens(1, 1, 1, 0, "tcp", "ftp_data", "REJ", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0.00, 171, 62, 0.27, 0.02, 0.01, 0.03, 0.01, 0, 0.29, 0.02, 10)
-        #np.loadtxt(self.results_path + self.results_name)
-    '''
 
     def test(self):
         """ A GAN should know how to test itself and save its results into a confusion matrix. """
@@ -283,6 +299,18 @@ class GAN(object):
             f.close()
 
 
+def signal_handler(sig, frame):
+    """ Catches Crl-C command to print from database before ending """
+    conn = SQLConnector()
+    hypers = conn.read_hyper()  # by epoch?
+    gens = conn.read_gens()   # by epoch?
+    print("\n\nMYSQL DATA:\n==============")
+    print("hypers  " + str(hypers))
+    print("\ngens  " + str(gens) + "\n")
+    sys.exit(0)
+signal.signal(signal.SIGINT, signal_handler)
+
+
 def main():
     """ Auto run main method """
     args = {
@@ -303,3 +331,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

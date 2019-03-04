@@ -34,27 +34,16 @@ class SQLConnector(object):
         finally:
             pass
 
-    def write_hyper(self, theid, layersstr, attack, acc):
+    def _write_hyper(self, theid, iteration, layersstr, attack, acc):
         """ Writes to the hypers table """
+
         try:
             with self.connection.cursor() as cursor:
-                sql1 = """
-                            select max(iteration) 
-                            from hypers 
-                            where id = %s;
-                        """
-                sql2 = """ 
+                sql = """ 
                             insert into hypers (id, iteration, layers, attack, accuracy) 
                             values (%s, %s, %s, %s, %s); 
                         """
-
-                cursor.execute(sql1, (str(theid)))
-                dicti = cursor.fetchall()[0]
-                maxnum = dicti.get('max(iteration)')
-                if maxnum is None:
-                    maxnum = 0
-                maxnum += 1
-                cursor.execute(sql2, (str(theid), str(maxnum), str(layersstr), str(attack), str(acc)))
+                cursor.execute(sql, (str(theid), str(iteration), str(layersstr), str(attack), str(acc)))
 
             # connection is not autocommit by default. So you must commit to save
             # your changes.
@@ -62,6 +51,40 @@ class SQLConnector(object):
 
         finally:
             pass
+
+    def _get_max_iter(self, modelnum):
+        try:
+            with self.connection.cursor() as cursor:
+                sql1 = """
+                            select max(iteration) 
+                            from hypers 
+                            where id = %s;
+                        """
+
+                cursor.execute(sql1, (str(modelnum)))
+                dicti = cursor.fetchall()[0]
+                maxnum = dicti.get('max(iteration)')
+                if maxnum is None:
+                    maxnum = 0
+                maxnum += 1
+
+            return maxnum
+
+        finally:
+            pass
+
+    def write(self, gennum, modelnum, layersstr, accuracy, attack_type, gen_list):
+        """ Writes to the hypers and gens table """
+        iteration = self._get_max_iter(modelnum)
+        self._write_hyper(modelnum, iteration, layersstr, attack_type, accuracy)
+        self._write_gens(gennum, modelnum, iteration, gen_list[0], gen_list[1], gen_list[2], gen_list[3],
+                   gen_list[4], gen_list[5], gen_list[6], gen_list[7], gen_list[8], gen_list[9], gen_list[10], 
+                   gen_list[11], gen_list[12], gen_list[13], gen_list[14], gen_list[15], gen_list[16], gen_list[17], 
+                   gen_list[18], gen_list[19], gen_list[20], gen_list[21], gen_list[22], gen_list[23], gen_list[24], 
+                   gen_list[25], gen_list[26], gen_list[27], gen_list[28], gen_list[29], gen_list[30], gen_list[31], 
+                   gen_list[32], gen_list[33], gen_list[34], gen_list[35], gen_list[36], gen_list[37], gen_list[38],
+                   gen_list[39], gen_list[40], attack_type)
+
 
     def _sort_hyper(self):
         """ Reorders the hypers table based off of id """
@@ -76,7 +99,7 @@ class SQLConnector(object):
         finally:
             pass
 
-    def _read_hyper(self, acc=0):
+    def read_hyper(self, acc=0):
         """ Reads from the hypers table dependent on accuracy """
         try:
             with self.connection.cursor() as cursor:
@@ -150,7 +173,7 @@ class SQLConnector(object):
         finally:
             pass
 
-    def write_gens(self, theid, modelnum, iteration, duration, protocol_type, service, flag,
+    def _write_gens(self, theid, modelnum, iteration, duration, protocol_type, service, flag,
                    src_bytes, dst_bytes, land, wrong_fragment, urgent, hot, num_failed_logins, logged_in,
                    num_compromised, root_shell, su_attempted, num_root, num_file_creations, num_shells,
                    num_access_files, num_outbound_cmds, is_host_login, is_guest_login, count, srv_count,
@@ -243,7 +266,7 @@ class SQLConnector(object):
         finally:
             pass
 
-    def _read_gens(self, acc=0):
+    def read_gens(self, acc=0):
         """ Reads from the gens table dependent on accuracy """
         try:
             with self.connection.cursor() as cursor:
@@ -368,6 +391,20 @@ class SQLConnector(object):
         finally:
             pass
 
+    def pull_kdd99_columns(self, all=True):
+        """ Returns kdd99 col names """
+        list = ["duration", "protocol_type", "service", "flag", "src_bytes", "dst_bytes", "land", "wrong_fragment", "urgent", 
+            "hot", "num_failed_logins", "logged_in", "num_compromised", "root_shell", "su_attempted", "num_root", "num_file_creations", 
+            "num_shells", "num_access_files", "num_outbound_cmds", "is_host_login", "is_guest_login", "count", "srv_count", "serror_rate", 
+            "srv_serror_rate", "rerror_rate", "srv_rerror_rate", "same_srv_rate", "diff_srv_rate", "srv_diff_host_rate", "dst_host_count", 
+            "dst_host_srv_count", "dst_host_same_srv_rate", "dst_host_diff_srv_rate", "dst_host_same_src_port_rate", 
+            "dst_host_srv_diff_host_rate", "dst_host_serror_rate", "dst_host_srv_serror_rate", "dst_host_rerror_rate", 
+            "dst_host_srv_rerror_rate"]
+        if(all):
+            list.append("attack_type")
+        return list
+    
+
     #====================================================
 
     def _create_attacks(self):
@@ -444,7 +481,7 @@ def main():
     conn = SQLConnector()
 
     # print(conn.pull_best_results("neptune"), 5, True)
-    print(conn.pull_best_results("neptune"))
+    #print(conn.pull_best_results("neptune"))
 
     #print(conn._read_joined())
     #print(conn._read_specific_joined(1,1))
