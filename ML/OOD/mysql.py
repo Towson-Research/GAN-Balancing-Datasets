@@ -78,12 +78,12 @@ class SQLConnector(object):
         iteration = self._get_max_iter(modelnum)
         self._write_hyper(modelnum, iteration, layersstr, attack_type, accuracy)
         self._write_gens(gennum, modelnum, iteration, gen_list[0], gen_list[1], gen_list[2], gen_list[3],
-                   gen_list[4], gen_list[5], gen_list[6], gen_list[7], gen_list[8], gen_list[9], gen_list[10], 
-                   gen_list[11], gen_list[12], gen_list[13], gen_list[14], gen_list[15], gen_list[16], gen_list[17], 
-                   gen_list[18], gen_list[19], gen_list[20], gen_list[21], gen_list[22], gen_list[23], gen_list[24], 
-                   gen_list[25], gen_list[26], gen_list[27], gen_list[28], gen_list[29], gen_list[30], gen_list[31], 
-                   gen_list[32], gen_list[33], gen_list[34], gen_list[35], gen_list[36], gen_list[37], gen_list[38],
-                   gen_list[39], gen_list[40], attack_type)
+                         gen_list[4], gen_list[5], gen_list[6], gen_list[7], gen_list[8], gen_list[9], gen_list[10],
+                         gen_list[11], gen_list[12], gen_list[13], gen_list[14], gen_list[15], gen_list[16], gen_list[17],
+                         gen_list[18], gen_list[19], gen_list[20], gen_list[21], gen_list[22], gen_list[23], gen_list[24],
+                         gen_list[25], gen_list[26], gen_list[27], gen_list[28], gen_list[29], gen_list[30], gen_list[31],
+                         gen_list[32], gen_list[33], gen_list[34], gen_list[35], gen_list[36], gen_list[37], gen_list[38],
+                         gen_list[39], gen_list[40], attack_type)
 
 
     def _sort_hyper(self):
@@ -174,14 +174,14 @@ class SQLConnector(object):
             pass
 
     def _write_gens(self, theid, modelnum, iteration, duration, protocol_type, service, flag,
-                   src_bytes, dst_bytes, land, wrong_fragment, urgent, hot, num_failed_logins, logged_in,
-                   num_compromised, root_shell, su_attempted, num_root, num_file_creations, num_shells,
-                   num_access_files, num_outbound_cmds, is_host_login, is_guest_login, count, srv_count,
-                   serror_rate, srv_serror_rate, rerror_rate, srv_rerror_rate, same_srv_rate,
-                   diff_srv_rate, srv_diff_host_rate, dst_host_count, dst_host_srv_count,
-                   dst_host_same_srv_rate, dst_host_diff_srv_rate, dst_host_same_src_port_rate,
-                   dst_host_srv_diff_host_rate, dst_host_serror_rate, dst_host_srv_serror_rate,
-                   dst_host_rerror_rate, dst_host_srv_rerror_rate, attack_type):
+                    src_bytes, dst_bytes, land, wrong_fragment, urgent, hot, num_failed_logins, logged_in,
+                    num_compromised, root_shell, su_attempted, num_root, num_file_creations, num_shells,
+                    num_access_files, num_outbound_cmds, is_host_login, is_guest_login, count, srv_count,
+                    serror_rate, srv_serror_rate, rerror_rate, srv_rerror_rate, same_srv_rate,
+                    diff_srv_rate, srv_diff_host_rate, dst_host_count, dst_host_srv_count,
+                    dst_host_same_srv_rate, dst_host_diff_srv_rate, dst_host_same_src_port_rate,
+                    dst_host_srv_diff_host_rate, dst_host_serror_rate, dst_host_srv_serror_rate,
+                    dst_host_rerror_rate, dst_host_srv_rerror_rate, attack_type):
         """ Writes to the gens table """
         try:
             with self.connection.cursor() as cursor:
@@ -266,7 +266,7 @@ class SQLConnector(object):
         finally:
             pass
 
-    def read_gens(self, acc=0):
+    def read_gens(self):
         """ Reads from the gens table dependent on accuracy """
         try:
             with self.connection.cursor() as cursor:
@@ -390,20 +390,19 @@ class SQLConnector(object):
                 return result
         finally:
             pass
-
-    def pull_kdd99_columns(self, all=True):
+    @staticmethod
+    def pull_kdd99_columns(allQ=True):
         """ Returns kdd99 col names """
-        list = ["duration", "protocol_type", "service", "flag", "src_bytes", "dst_bytes", "land", "wrong_fragment", "urgent", 
-            "hot", "num_failed_logins", "logged_in", "num_compromised", "root_shell", "su_attempted", "num_root", "num_file_creations", 
-            "num_shells", "num_access_files", "num_outbound_cmds", "is_host_login", "is_guest_login", "count", "srv_count", "serror_rate", 
-            "srv_serror_rate", "rerror_rate", "srv_rerror_rate", "same_srv_rate", "diff_srv_rate", "srv_diff_host_rate", "dst_host_count", 
-            "dst_host_srv_count", "dst_host_same_srv_rate", "dst_host_diff_srv_rate", "dst_host_same_src_port_rate", 
-            "dst_host_srv_diff_host_rate", "dst_host_serror_rate", "dst_host_srv_serror_rate", "dst_host_rerror_rate", 
-            "dst_host_srv_rerror_rate"]
-        if(all):
-            list.append("attack_type")
-        return list
-    
+        ls = ["duration", "protocol_type", "service", "flag", "src_bytes", "dst_bytes", "land", "wrong_fragment", "urgent",
+              "hot", "num_failed_logins", "logged_in", "num_compromised", "root_shell", "su_attempted", "num_root", "num_file_creations",
+              "num_shells", "num_access_files", "num_outbound_cmds", "is_host_login", "is_guest_login", "count", "srv_count", "serror_rate",
+              "srv_serror_rate", "rerror_rate", "srv_rerror_rate", "same_srv_rate", "diff_srv_rate", "srv_diff_host_rate", "dst_host_count",
+              "dst_host_srv_count", "dst_host_same_srv_rate", "dst_host_diff_srv_rate", "dst_host_same_src_port_rate",
+              "dst_host_srv_diff_host_rate", "dst_host_serror_rate", "dst_host_srv_serror_rate", "dst_host_rerror_rate",
+              "dst_host_srv_rerror_rate"]
+        if(allQ):
+            ls.append("attack_type")
+        return ls
 
     #====================================================
 

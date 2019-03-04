@@ -1,4 +1,5 @@
-
+#!/usr/bin/env python3
+#^Shabang, but not meant to be run
 class Utilities(object):
 
     @staticmethod
@@ -86,7 +87,7 @@ class Utilities(object):
                         details.append('link')
                     elif(int(array[r][c]) == 30):
                         details.append('systat')
-                    elif(int(array[r][c]) == 31): 
+                    elif(int(array[r][c]) == 31):
                         details.append('discard')
                     elif(int(array[r][c]) == 32):
                         details.append('X11')
@@ -229,7 +230,7 @@ class Utilities(object):
                     details.append(int(array[r][c]))
                 elif(c == 24):  # floats
                     details.append(abs(float("%0.2f" % array[r][c])))
-                elif(c == 25):  
+                elif(c == 25):
                     details.append(abs(float("%0.2f" % array[r][c])))
                 elif(c == 26):
                     details.append(abs(float("%0.2f" % array[r][c])))
@@ -263,7 +264,7 @@ class Utilities(object):
                     details.append(abs(float("%0.2f" % array[r][c])))
 
             list_of_lists.append(details)
-        
+
         return list_of_lists
 
     @staticmethod

@@ -104,7 +104,8 @@ class GAN(object):
 
         conn = SQLConnector()
         data = conn.pull_kdd99(attack=self.attack_type, num=500)
-        dataframe = pd.DataFrame.from_records(data=data, columns=conn.pull_kdd99_columns(all=True))
+        dataframe = pd.DataFrame.from_records(data=data,
+                                              columns=conn.pull_kdd99_columns(allQ=True))
 
         # ==========
         # ENCODING
@@ -222,7 +223,6 @@ class GAN(object):
                 break
 
             if epoch % 20 == 0:
-                
                 decode = gen_attacks[:1]  # take a slice from the ndarray that we want to decode
                 #decode_ints = decode.astype(int)
 
@@ -246,8 +246,8 @@ class GAN(object):
                     # send all to database
                     for lis in list_of_lists:
                         print(len(lis))
-                        conn.write(gennum=gennum, modelnum=modelnum, layersstr=layersstr, 
-                            attack_type=attack_num, accuracy=accuracy, gen_list=lis)
+                        conn.write(gennum=gennum, modelnum=modelnum, layersstr=layersstr,
+                                   attack_type=attack_num, accuracy=accuracy, gen_list=lis)
 
         # peek at our results
         hypers = conn.read_hyper()  # by epoch?

@@ -26,7 +26,7 @@ class Discriminator(object):
             model.add(Dense(lay[0], activation=lay[1]))
         model.add(Dense(1, activation='sigmoid'))  # outputs 0 to 1, 1 being read and 0 being fake
 
-        print("Discriminator: (41, 'relu'), " + str(self.layers) + ", (1, 'sigmoid')" )
+        print("Discriminator: (41, 'relu'), " + str(self.layers) + ", (1, 'sigmoid')")
         attack = Input(shape=(41,))
         validity = model(attack)
 
