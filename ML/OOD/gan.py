@@ -46,9 +46,8 @@ class GAN(object):
         self.confusion_matrix = None
         self.classification_report = None
 
-        self.optimizer_learning_rate = 0.0002
-        self.optimizer_beta = 0.5
-        self.optimizer = Adam(self.optimizer_learning_rate, self.optimizer_beta)
+        self.optimizer_learning_rate = 0.001
+        self.optimizer = Adam(self.optimizer_learning_rate)
 
         self.max_epochs = 7000
         self.batch_size = 255
@@ -58,17 +57,12 @@ class GAN(object):
         self.fake = None
         self.X_train = None
 
-        self.discriminator_layers = [
-            (30, 'relu'),
-            (15, 'relu')
-        ]
-        self.generator_layers = [0, 0, 0]
-        self.generator_alpha: 0.5
-        self.generator_momentum: 0.8
+        self.generator_alpha= 0.1
+        self.generator_momentum= 0.0
+        self.generator_layers = [8, 16, 32]
 
         self.confusion_matrix = None
         self.classification_report = None
-
 
         self.save_file = None
 
@@ -85,8 +79,6 @@ class GAN(object):
                 self.sample_size = value
             elif key == 'optimizer_learning_rate':
                 self.optimizer_learning_rate = value
-            elif key == 'optimizer_beta':
-                self.optimizer_beta = value
             elif key == 'discriminator_layers':
                 self.discriminator_layers = value
             elif key == 'generator_layers':
@@ -105,7 +97,7 @@ class GAN(object):
         conn = SQLConnector()
         data = conn.pull_kdd99(attack=self.attack_type, num=500)
         dataframe = pd.DataFrame.from_records(data=data,
-                                              columns=conn.pull_kdd99_columns(allQ=True))
+                columns=conn.pull_kdd99_columns(allQ=True))
 
         # ==========
         # ENCODING
@@ -122,15 +114,15 @@ class GAN(object):
         # ==========
         # DECODING
         # ==========
-        '''
-        print("===============================================")
-        print("decoded:")
-        print("===============================================")
-        decode_test = dataset[:5]  # take a slice from the ndarray that we want to decode
-        decode_test_df = pd.DataFrame(decode_test, columns=conn.pull_kdd99_columns())  # turn that ndarray into a dataframe with correct column names and order
-        decoded = decode_test_df.apply(lambda x: d[x.name].inverse_transform(x))  # decode that dataframe
-        print(decoded)
-        '''
+
+#         print("===============================================")
+#         print("decoded:")
+#         print("===============================================")
+#         decode_test = dataset[:5]  # take a slice from the ndarray that we want to decode
+#         decode_test_df = pd.DataFrame(decode_test, columns=conn.pull_kdd99_columns())  # turn that ndarray into a dataframe with correct column names and order
+#         decoded = decode_test_df.apply(lambda x: d[x.name].inverse_transform(x))  # decode that dataframe
+#         print(decoded)
+
 
         # to visually judge encoded dataset
         print("Real encoded " + self.attack_type + " attacks:")
@@ -149,18 +141,18 @@ class GAN(object):
         """ Build the GAN """
         # build the discriminator portion
 
-        self.discriminator = Discriminator(self.discriminator_layers).get_model()
+        self.discriminator = Discriminator().get_model()#self.discriminator_layers
         self.discriminator.compile(
-            loss='binary_crossentropy', optimizer=self.optimizer, metrics=['accuracy'])
+                loss='binary_crossentropy', optimizer=self.optimizer, metrics=['accuracy'])
 
         # build the generator portion
         gen_args = {
-            'attack_type': self.attack_type,
-            'layers': self.generator_layers,
-            'alpha': self.generator_alpha,
-            'momentum': self.generator_momentum
-        }
-        self.generator = Generator(**gen_args).get_model()
+                 'attack_type': self.attack_type,
+                 'layers': self.generator_layers,
+                 'alpha': self.generator_alpha,
+                 'momentum': self.generator_momentum
+                 }
+        self.generator = Generator().get_model()#**gen_args
 
         # input and output of our combined model
         z = Input(shape=(41,))
@@ -179,14 +171,11 @@ class GAN(object):
 
         conn = SQLConnector()
 
+        idx = np.arange(self.batch_size)
+
         for epoch in range(self.max_epochs):
-
-            # ---------------------
-            #  Train Discriminator
-            # ---------------------
-
-            # selecting batch_size random attacks from our training data
-            idx = np.random.randint(0, self.X_train.shape[0], self.batch_size)
+            #selecting batch_size random attacks from our training data
+            #idx = np.random.randint(0, X_train.shape[0], batch_size)
             attacks = self.X_train[idx]
 
             # generate a matrix of noise vectors
@@ -197,30 +186,17 @@ class GAN(object):
 
             # loss functions, based on what metrics we specify at model compile time
             d_loss_real = self.discriminator.train_on_batch(
-                attacks, self.valid)
+                    attacks, self.valid)
             d_loss_fake = self.discriminator.train_on_batch(
-                gen_attacks, self.fake)
+                    gen_attacks, self.fake)
             d_loss = 0.5 * np.add(d_loss_real, d_loss_fake)
-
 
             # generator loss function
             g_loss = self.gan.train_on_batch(noise, self.valid)
-            if epoch % 100 == 0:
-                if(epoch == 0):
-                    print("\n")
+
+            if epoch % 500 == 0:
                 print("%d [D loss: %f, acc.: %.2f%%] [G loss: %f] [Loss change: %.3f, Loss increases: %.0f]" % (epoch, d_loss[0], 100 * d_loss[1], g_loss, g_loss - prev_g_loss, loss_increase_count))
 
-            # if our generator loss increased this iteration, increment the counter by 1
-            if (g_loss - prev_g_loss) > 0:
-                loss_increase_count = loss_increase_count + 1
-            else:
-                loss_increase_count = 0  # otherwise, reset it to 0, we are still training effectively
-
-            prev_g_loss = g_loss
-
-            if loss_increase_count > 5:
-                print('Stoping on iteration: ', epoch)
-                break
 
             if epoch % 20 == 0:
                 decode = gen_attacks[:1]  # take a slice from the ndarray that we want to decode
@@ -230,7 +206,7 @@ class GAN(object):
                 #decode_ints = decode.astype(int)
                 #print("decoded floats ======= " + str(decode))
                 #print("decoded ints ======= " + str(decode_ints))
-                accuracy_threshold = 5
+                accuracy_threshold = 55
                 accuracy = (d_loss[1] * 100)
                 if(accuracy > accuracy_threshold):
                     # print out first result
@@ -249,9 +225,9 @@ class GAN(object):
                     for lis in list_of_lists:
                         #print(len(lis))
                         conn.write(gennum=gennum, modelnum=modelnum, layersstr=layersstr,
-                                   attack_type=attack_num, accuracy=accuracy, gen_list=lis)
+                                attack_type=attack_num, accuracy=accuracy, gen_list=lis)
 
-        # peek at our results
+                        # peek at our results
         hypers = conn.read_hyper()  # by epoch?
         gens = conn.read_gens()   # by epoch?
         print("\n\nMYSQL DATA:\n==============")
@@ -293,7 +269,7 @@ class GAN(object):
                 filename = self.save_file
             else:
                 print("Error: No savefile for this object. \
-                    \n Using save_this(filename) will set the save filename.")
+                        \n Using save_this(filename) will set the save filename.")
                 return
         with open(filename, 'rb') as f:
             tmp_dict = pickle.load(f)
@@ -316,17 +292,12 @@ signal.signal(signal.SIGINT, signal_handler)
 def main():
     """ Auto run main method """
     args = {
-        'attack_type': "neptune",    # optional v
-        'max_epochs': 7000,
-        'batch_size': 255,
-        'sample_size': 500,
-        'optimizer_learning_rate': 0.0002,
-        'optimizer_beta': 0.5,
-        'discriminator_layers': [(30, 'relu'), (15, 'relu')],
-        'generator_layers': [20, 40, 30],
-        'generator_alpha': 0.5,
-        'generator_momentum': 0.8
-    }
+            'attack_type': "neptune",    # optional v
+            'max_epochs': 7000,
+            'batch_size': 255,
+            'sample_size': 500,
+            'optimizer_learning_rate': 0.001
+            }
     gan = GAN(**args)
     gan.train()
 

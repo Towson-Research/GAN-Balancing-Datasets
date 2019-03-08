@@ -1,10 +1,7 @@
 #!/usr/bin/env python3
 
-from keras.models import Sequential
-from keras.models import Model
-from keras.layers import Dense
-from keras.layers import Input
-from keras.layers import BatchNormalization
+from keras.models import Sequential, Model
+from keras.layers import Dense, Input, BatchNormalization
 from keras.layers.advanced_activations import LeakyReLU
 
 from mysql import SQLConnector
@@ -18,17 +15,17 @@ class Generator(object):
         self.generator = None
 
         # if no layer values are passed pull from sql
-        if self.layers[0] == 0 and self.layers[1] == 0 and self.layers[2] == 0:
-            self._pull_layers()
+#         if self.layers[0] == 0 and self.layers[1] == 0 and self.layers[2] == 0:
+#             self._pull_layers()
         print("Generator Layers: " + str(self.layers) + "\n")
         self._build()
 
     def _defaults(self):
         """ Sets default variable values """
         self.attack_type = 'neptune'
-        self.layers = [0, 0, 0]
-        self.alpha = 0.2
-        self.momentum = 0.8
+        self.layers = [8, 16, 32]
+        self.alpha = 0.1
+        self.momentum = 0.0
 
     def _args(self, kwargs):
         """ kwargs handler """
@@ -71,14 +68,14 @@ class Generator(object):
         """ Builds the generator """
         model = Sequential()
         model.add(Dense(self.layers[0], input_dim=41))
-        model.add(LeakyReLU(alpha=self.alpha))
         model.add(BatchNormalization(momentum=self.momentum))
+        model.add(LeakyReLU(alpha=self.alpha))
         model.add(Dense(self.layers[1]))
-        model.add(LeakyReLU(alpha=self.alpha))
         model.add(BatchNormalization(momentum=self.momentum))
+        model.add(LeakyReLU(alpha=self.alpha))
         model.add(Dense(self.layers[2]))
-        model.add(LeakyReLU(alpha=self.alpha))
         model.add(BatchNormalization(momentum=self.momentum))
+        model.add(LeakyReLU(alpha=self.alpha))
         model.add(Dense(41, activation='relu'))
         # outputs a generated vector of the same size as our data (41)
 
@@ -101,9 +98,9 @@ def main():
     """ Auto run main method """
     gen_args = {
         'attack_type': 'neptune',
-        'layers': [0, 0, 0],   #optional v
-        'alpha': 0.2,
-        'momentum': 0.8
+        'layers': [8, 16, 32],   #optional v
+        'alpha': 0.1,
+        'momentum': 0.0
     }
     gen = Generator(**gen_args)
     print(gen)

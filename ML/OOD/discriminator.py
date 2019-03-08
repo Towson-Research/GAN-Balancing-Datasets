@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 
-from keras.models import Sequential
-from keras.models import Model
-from keras.layers import Dense
-from keras.layers import Input
+from keras.models import Sequential, Model
+from keras.layers import Dense, Dropout, Input
+from keras.layers.advanced_activations import LeakyReLU
 
 class Discriminator(object):
 
-    def __init__(self, layers=[(30, 'relu'), (15, 'relu')]):
+    def __init__(self):
         """ Constructor """
         self.discriminator = None
-        # list of tuples
-        self.layers = layers
+        self.layers = [32, 16, 8]
+        self.alpha = 0.1
+        self.dropout = 0.3
         self._build()
 
 
@@ -20,13 +20,17 @@ class Discriminator(object):
         model = Sequential()
 
         # needs 41 for input and needs 1 for output
-        model.add(Dense(41, input_dim=41, activation='relu'))
-        # discriminator takes 41 values from our dataset
-        for lay in self.layers:
-            model.add(Dense(lay[0], activation=lay[1]))
+        model.add(Dense(self.layers[0], input_dim=41, activation='relu'))
+        model.add(LeakyReLU(alpha=self.alpha))
+        model.add(Dropout(self.dropout))
+        model.add(Dense(self.layers[1]))
+        model.add(LeakyReLU(alpha=self.alpha))
+        model.add(Dropout(self.dropout))
+        model.add(Dense(self.layers[2]))
+        model.add(LeakyReLU(alpha=self.alpha))
+        model.add(Dropout(self.dropout))
         model.add(Dense(1, activation='sigmoid'))  # outputs 0 to 1, 1 being read and 0 being fake
 
-        print("Discriminator: (41, 'relu'), " + str(self.layers) + ", (1, 'sigmoid')")
         attack = Input(shape=(41,))
         validity = model(attack)
 
