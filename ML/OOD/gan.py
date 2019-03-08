@@ -224,12 +224,13 @@ class GAN(object):
 
             if epoch % 20 == 0:
                 decode = gen_attacks[:1]  # take a slice from the ndarray that we want to decode
+                #MAX QUESTION: Do we plan on changing the shape of this at some
+                #point? If not just do
+                #decode = gen_attacks[0]
                 #decode_ints = decode.astype(int)
-
                 #print("decoded floats ======= " + str(decode))
                 #print("decoded ints ======= " + str(decode_ints))
-
-                accuracy_threshold = 55
+                accuracy_threshold = 5
                 accuracy = (d_loss[1] * 100)
                 if(accuracy > accuracy_threshold):
                     # print out first result
@@ -244,8 +245,9 @@ class GAN(object):
                     attack_num = util.attacks_to_num(self.attack_type)
 
                     # send all to database
+                    print(np.shape(list_of_lists))
                     for lis in list_of_lists:
-                        print(len(lis))
+                        #print(len(lis))
                         conn.write(gennum=gennum, modelnum=modelnum, layersstr=layersstr,
                                    attack_type=attack_num, accuracy=accuracy, gen_list=lis)
 
