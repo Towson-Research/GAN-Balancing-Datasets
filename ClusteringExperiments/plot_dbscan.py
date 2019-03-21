@@ -22,9 +22,6 @@ import cl_encoder as enc
 # #############################################################################
 # Read in data
 
-X = []
-labels_true = []
-
 X, labels_true = enc.vecs_from_CSV("kdd_trimmed.data")
 
 X, labels_true = enc.encode(X, labels_true)
