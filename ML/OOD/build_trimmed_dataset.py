@@ -17,19 +17,23 @@ def build_trimmed_dataset(input_filename, output_filename, minimum, maximum, bal
     count = 0
     with open(output_filename, "a+") as f:
         for attack in all_attacks:
-            if len(attack) >= minimum:
-                if attack[-1] != "normal":
-                    random.shuffle(attack)
+            print(attack + ": "+ str(len(all_attacks[attack])))
+            if len(all_attacks[attack]) >= minimum:
+                if attack != "normal":
+                    random.shuffle(all_attacks[attack])
+                    print("Writing " + attack + " to dataset.")
                     for i in range(0, maximum):
-                        f.write(attack[i] + "\n")
+                        f.write(all_attacks[attack][i] + "\n")
                     count += 1
+        print("Wrote " + str(count*maximum) + " attacks.")
         # Write an appropriate number of normals
         if "normal" in all_attacks:
             normal = all_attacks["normal"]
             random.shuffle(normal)
-            lim = max((balance_normal * maximum * (count -1 )) + maximum, len(normal))
+            lim = min((balance_normal * maximum * (count -1 )) + maximum, len(normal))
             for i in range(0, lim):
                 f.write(normal[i] + "\n")
+        print("Wrote " + str(lim) + " normals.")
         f.close()
 
 def main(argv):
