@@ -1,4 +1,5 @@
 import sys
+from file_tools import *
 
 def file_to_setlist(filename, separator = "\n"):
     '''
@@ -16,12 +17,6 @@ def file_to_setlist(filename, separator = "\n"):
                 l.add(line)
         f.close()
     return list(l)
-
-def write_list_to_new_file(outfile, l):
-    with open(outfile, 'w') as f:
-        for item in l:
-            f.write(item + "\n")
-        f.close()
 
 def main(argv):
     if len(argv) < 3:
