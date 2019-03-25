@@ -18,6 +18,7 @@ from sklearn.datasets.samples_generator import make_blobs
 from sklearn.preprocessing import StandardScaler
 from sklearn import preprocessing
 import cl_encoder as enc
+from sklearn.decomposition import PCA
 
 # #############################################################################
 # Read in data
@@ -54,6 +55,10 @@ print("Silhouette Coefficient: %0.3f"
 # Plot result
 import matplotlib.pyplot as plt
 
+pca = PCA(n_components=2)
+pca.fit(X)
+X = pca.transform(X)
+
 # Black removed and is used for noise instead.
 unique_labels = set(labels)
 colors = [plt.cm.Spectral(each)
@@ -66,6 +71,7 @@ for k, col in zip(unique_labels, colors):
     class_member_mask = (labels == k)
 
     xy = X[class_member_mask & core_samples_mask]
+    
     plt.plot(xy[:, 0], xy[:, 1], 'o', markerfacecolor=tuple(col),
              markeredgecolor='k', markersize=14)
 
