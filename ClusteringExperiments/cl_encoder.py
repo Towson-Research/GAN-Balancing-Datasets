@@ -1,12 +1,11 @@
 from sklearn import preprocessing
-from sklearn.preprocessing import StandardScaler
 
-def vecs_from_CSV(filename, has_labels = True, label_last = True, separator = ","):
+def vecs_from_CSV(filename, has_labels=True, label_last=True, separator=","):
     '''
         Converts a CSV to X, y vector lists, where X is the data and
         y is the label. Each line is assumed to be a vector.
         Requires a filename.
-        Optional: 
+        Optional:
             has_labels: True if there are labels in the file. Default is true.
             label_last: True if the label is the last entry in a line. Default is true.
             separator: defaults to comma, otherwise supply.
@@ -35,9 +34,9 @@ def encode(X, y):
     '''
 
     le = preprocessing.LabelEncoder()
-    for i in range(len(X)):
-        le.fit(X[i])
-        X[i] = le.transform(X[i])
+    for elem in X:
+        le.fit(elem)
+        elem = le.transform(elem)
 
     if y:
         le_y = preprocessing.LabelEncoder()
