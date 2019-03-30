@@ -1,4 +1,4 @@
-from sklearn import preprocessing
+from sklearn.preprocessing import LabelEncoder
 
 def vecs_from_CSV(filename, has_labels=True, label_last=True, separator=","):
     '''
@@ -33,12 +33,12 @@ def encode(X, y):
         Note: this does not normalize.
     '''
 
-    le = preprocessing.LabelEncoder()
+    le = LabelEncoder()
 
     X = [le.fit(x) and le.transform(x) for x in X]
 
     if y:
-        le_y = preprocessing.LabelEncoder()
+        le_y = LabelEncoder()
         le_y.fit(y)
         y = le_y.transform(y)
 
