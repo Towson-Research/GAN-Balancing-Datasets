@@ -34,9 +34,8 @@ def encode(X, y):
     '''
 
     le = preprocessing.LabelEncoder()
-    for elem in X:
-        le.fit(elem)
-        elem = le.transform(elem)
+
+    X = [le.fit(x) and le.transform(x) for x in X]
 
     if y:
         le_y = preprocessing.LabelEncoder()
