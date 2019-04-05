@@ -1,0 +1,2018 @@
+DBScan Results
+-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of clusters: 33-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of noise points: 763-------------------------------
+eps: 0.1
+min_samples: 25
+Homogeneity: 0.450-------------------------------
+eps: 0.1
+min_samples: 25
+Completeness: 0.519-------------------------------
+eps: 0.1
+min_samples: 25
+V-measure: 0.482-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Rand Index: 0.276-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Mutual Information: 0.400-------------------------------
+eps: 0.1
+min_samples: 25
+Silhouette Coefficient: -0.004-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of clusters: 26-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of noise points: 798-------------------------------
+eps: 0.1
+min_samples: 25
+Homogeneity: 0.421-------------------------------
+eps: 0.1
+min_samples: 25
+Completeness: 0.550-------------------------------
+eps: 0.1
+min_samples: 25
+V-measure: 0.477-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Rand Index: 0.282-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Mutual Information: 0.379-------------------------------
+eps: 0.1
+min_samples: 25
+Silhouette Coefficient: -0.039-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of clusters: 23-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of noise points: 816-------------------------------
+eps: 0.1
+min_samples: 25
+Homogeneity: 0.398-------------------------------
+eps: 0.1
+min_samples: 25
+Completeness: 0.557-------------------------------
+eps: 0.1
+min_samples: 25
+V-measure: 0.464-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Rand Index: 0.271-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Mutual Information: 0.358-------------------------------
+eps: 0.1
+min_samples: 25
+Silhouette Coefficient: -0.063-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of clusters: 19-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of noise points: 844-------------------------------
+eps: 0.1
+min_samples: 25
+Homogeneity: 0.363-------------------------------
+eps: 0.1
+min_samples: 25
+Completeness: 0.569-------------------------------
+eps: 0.1
+min_samples: 25
+V-measure: 0.443-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Rand Index: 0.248-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Mutual Information: 0.327-------------------------------
+eps: 0.1
+min_samples: 25
+Silhouette Coefficient: -0.093-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of clusters: 17-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of noise points: 860-------------------------------
+eps: 0.1
+min_samples: 25
+Homogeneity: 0.347-------------------------------
+eps: 0.1
+min_samples: 25
+Completeness: 0.585-------------------------------
+eps: 0.1
+min_samples: 25
+V-measure: 0.436-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Rand Index: 0.247-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Mutual Information: 0.314-------------------------------
+eps: 0.1
+min_samples: 25
+Silhouette Coefficient: -0.110-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of clusters: 15-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of noise points: 878-------------------------------
+eps: 0.1
+min_samples: 25
+Homogeneity: 0.319-------------------------------
+eps: 0.1
+min_samples: 25
+Completeness: 0.585-------------------------------
+eps: 0.1
+min_samples: 25
+V-measure: 0.413-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Rand Index: 0.219-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Mutual Information: 0.289-------------------------------
+eps: 0.1
+min_samples: 25
+Silhouette Coefficient: -0.135-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of clusters: 13-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of noise points: 898-------------------------------
+eps: 0.1
+min_samples: 25
+Homogeneity: 0.287-------------------------------
+eps: 0.1
+min_samples: 25
+Completeness: 0.582-------------------------------
+eps: 0.1
+min_samples: 25
+V-measure: 0.384-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Rand Index: 0.190-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Mutual Information: 0.259-------------------------------
+eps: 0.1
+min_samples: 25
+Silhouette Coefficient: -0.164-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of clusters: 10-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of noise points: 931-------------------------------
+eps: 0.1
+min_samples: 25
+Homogeneity: 0.238-------------------------------
+eps: 0.1
+min_samples: 25
+Completeness: 0.586-------------------------------
+eps: 0.1
+min_samples: 25
+V-measure: 0.339-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Rand Index: 0.170-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Mutual Information: 0.215-------------------------------
+eps: 0.1
+min_samples: 25
+Silhouette Coefficient: -0.188-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of clusters: 6-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of noise points: 979-------------------------------
+eps: 0.1
+min_samples: 25
+Homogeneity: 0.168-------------------------------
+eps: 0.1
+min_samples: 25
+Completeness: 0.595-------------------------------
+eps: 0.1
+min_samples: 25
+V-measure: 0.262-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Rand Index: 0.105-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Mutual Information: 0.153-------------------------------
+eps: 0.1
+min_samples: 25
+Silhouette Coefficient: -0.193-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of clusters: 6-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of noise points: 979-------------------------------
+eps: 0.1
+min_samples: 25
+Homogeneity: 0.168-------------------------------
+eps: 0.1
+min_samples: 25
+Completeness: 0.595-------------------------------
+eps: 0.1
+min_samples: 25
+V-measure: 0.262-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Rand Index: 0.105-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Mutual Information: 0.153-------------------------------
+eps: 0.1
+min_samples: 25
+Silhouette Coefficient: -0.193-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of clusters: 5-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of noise points: 993-------------------------------
+eps: 0.1
+min_samples: 25
+Homogeneity: 0.147-------------------------------
+eps: 0.1
+min_samples: 25
+Completeness: 0.595-------------------------------
+eps: 0.1
+min_samples: 25
+V-measure: 0.236-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Rand Index: 0.087-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Mutual Information: 0.134-------------------------------
+eps: 0.1
+min_samples: 25
+Silhouette Coefficient: -0.193-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of clusters: 4-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of noise points: 1008-------------------------------
+eps: 0.1
+min_samples: 25
+Homogeneity: 0.124-------------------------------
+eps: 0.1
+min_samples: 25
+Completeness: 0.592-------------------------------
+eps: 0.1
+min_samples: 25
+V-measure: 0.205-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Rand Index: 0.068-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Mutual Information: 0.114-------------------------------
+eps: 0.1
+min_samples: 25
+Silhouette Coefficient: -0.207-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of clusters: 2-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of noise points: 1040-------------------------------
+eps: 0.1
+min_samples: 25
+Homogeneity: 0.075-------------------------------
+eps: 0.1
+min_samples: 25
+Completeness: 0.575-------------------------------
+eps: 0.1
+min_samples: 25
+V-measure: 0.133-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Rand Index: 0.028-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Mutual Information: 0.069-------------------------------
+eps: 0.1
+min_samples: 25
+Silhouette Coefficient: -0.216-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of clusters: 2-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of noise points: 1040-------------------------------
+eps: 0.1
+min_samples: 25
+Homogeneity: 0.075-------------------------------
+eps: 0.1
+min_samples: 25
+Completeness: 0.575-------------------------------
+eps: 0.1
+min_samples: 25
+V-measure: 0.133-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Rand Index: 0.028-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Mutual Information: 0.069-------------------------------
+eps: 0.1
+min_samples: 25
+Silhouette Coefficient: -0.216-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of clusters: 2-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of noise points: 1040-------------------------------
+eps: 0.1
+min_samples: 25
+Homogeneity: 0.075-------------------------------
+eps: 0.1
+min_samples: 25
+Completeness: 0.575-------------------------------
+eps: 0.1
+min_samples: 25
+V-measure: 0.133-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Rand Index: 0.028-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Mutual Information: 0.069-------------------------------
+eps: 0.1
+min_samples: 25
+Silhouette Coefficient: -0.216-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of clusters: 2-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of noise points: 1040-------------------------------
+eps: 0.1
+min_samples: 25
+Homogeneity: 0.075-------------------------------
+eps: 0.1
+min_samples: 25
+Completeness: 0.575-------------------------------
+eps: 0.1
+min_samples: 25
+V-measure: 0.133-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Rand Index: 0.028-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Mutual Information: 0.069-------------------------------
+eps: 0.1
+min_samples: 25
+Silhouette Coefficient: -0.216-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of clusters: 2-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of noise points: 1040-------------------------------
+eps: 0.1
+min_samples: 25
+Homogeneity: 0.075-------------------------------
+eps: 0.1
+min_samples: 25
+Completeness: 0.575-------------------------------
+eps: 0.1
+min_samples: 25
+V-measure: 0.133-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Rand Index: 0.028-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Mutual Information: 0.069-------------------------------
+eps: 0.1
+min_samples: 25
+Silhouette Coefficient: -0.216-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of clusters: 1-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of noise points: 1061-------------------------------
+eps: 0.1
+min_samples: 25
+Homogeneity: 0.068-------------------------------
+eps: 0.1
+min_samples: 25
+Completeness: 0.844-------------------------------
+eps: 0.1
+min_samples: 25
+V-measure: 0.126-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Rand Index: 0.051-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Mutual Information: 0.065-------------------------------
+eps: 0.1
+min_samples: 25
+Silhouette Coefficient: -0.058-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of clusters: 1-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of noise points: 1061-------------------------------
+eps: 0.1
+min_samples: 25
+Homogeneity: 0.068-------------------------------
+eps: 0.1
+min_samples: 25
+Completeness: 0.844-------------------------------
+eps: 0.1
+min_samples: 25
+V-measure: 0.126-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Rand Index: 0.051-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Mutual Information: 0.065-------------------------------
+eps: 0.1
+min_samples: 25
+Silhouette Coefficient: -0.058-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of clusters: 1-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of noise points: 1061-------------------------------
+eps: 0.1
+min_samples: 25
+Homogeneity: 0.068-------------------------------
+eps: 0.1
+min_samples: 25
+Completeness: 0.844-------------------------------
+eps: 0.1
+min_samples: 25
+V-measure: 0.126-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Rand Index: 0.051-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Mutual Information: 0.065-------------------------------
+eps: 0.1
+min_samples: 25
+Silhouette Coefficient: -0.058-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of clusters: 1-------------------------------
+eps: 0.1
+min_samples: 25
+Estimated number of noise points: 1061-------------------------------
+eps: 0.1
+min_samples: 25
+Homogeneity: 0.068-------------------------------
+eps: 0.1
+min_samples: 25
+Completeness: 0.844-------------------------------
+eps: 0.1
+min_samples: 25
+V-measure: 0.126-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Rand Index: 0.051-------------------------------
+eps: 0.1
+min_samples: 25
+Adjusted Mutual Information: 0.065-------------------------------
+eps: 0.1
+min_samples: 25
+Silhouette Coefficient: -0.058-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of clusters: 33-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of noise points: 763-------------------------------
+eps: 0.2
+min_samples: 25
+Homogeneity: 0.450-------------------------------
+eps: 0.2
+min_samples: 25
+Completeness: 0.519-------------------------------
+eps: 0.2
+min_samples: 25
+V-measure: 0.482-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Rand Index: 0.276-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Mutual Information: 0.400-------------------------------
+eps: 0.2
+min_samples: 25
+Silhouette Coefficient: -0.004-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of clusters: 26-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of noise points: 798-------------------------------
+eps: 0.2
+min_samples: 25
+Homogeneity: 0.421-------------------------------
+eps: 0.2
+min_samples: 25
+Completeness: 0.550-------------------------------
+eps: 0.2
+min_samples: 25
+V-measure: 0.477-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Rand Index: 0.282-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Mutual Information: 0.379-------------------------------
+eps: 0.2
+min_samples: 25
+Silhouette Coefficient: -0.039-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of clusters: 23-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of noise points: 816-------------------------------
+eps: 0.2
+min_samples: 25
+Homogeneity: 0.398-------------------------------
+eps: 0.2
+min_samples: 25
+Completeness: 0.557-------------------------------
+eps: 0.2
+min_samples: 25
+V-measure: 0.464-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Rand Index: 0.271-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Mutual Information: 0.358-------------------------------
+eps: 0.2
+min_samples: 25
+Silhouette Coefficient: -0.063-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of clusters: 19-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of noise points: 844-------------------------------
+eps: 0.2
+min_samples: 25
+Homogeneity: 0.363-------------------------------
+eps: 0.2
+min_samples: 25
+Completeness: 0.569-------------------------------
+eps: 0.2
+min_samples: 25
+V-measure: 0.443-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Rand Index: 0.248-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Mutual Information: 0.327-------------------------------
+eps: 0.2
+min_samples: 25
+Silhouette Coefficient: -0.093-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of clusters: 17-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of noise points: 860-------------------------------
+eps: 0.2
+min_samples: 25
+Homogeneity: 0.347-------------------------------
+eps: 0.2
+min_samples: 25
+Completeness: 0.585-------------------------------
+eps: 0.2
+min_samples: 25
+V-measure: 0.436-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Rand Index: 0.247-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Mutual Information: 0.314-------------------------------
+eps: 0.2
+min_samples: 25
+Silhouette Coefficient: -0.110-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of clusters: 15-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of noise points: 878-------------------------------
+eps: 0.2
+min_samples: 25
+Homogeneity: 0.319-------------------------------
+eps: 0.2
+min_samples: 25
+Completeness: 0.585-------------------------------
+eps: 0.2
+min_samples: 25
+V-measure: 0.413-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Rand Index: 0.219-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Mutual Information: 0.289-------------------------------
+eps: 0.2
+min_samples: 25
+Silhouette Coefficient: -0.135-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of clusters: 13-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of noise points: 898-------------------------------
+eps: 0.2
+min_samples: 25
+Homogeneity: 0.287-------------------------------
+eps: 0.2
+min_samples: 25
+Completeness: 0.582-------------------------------
+eps: 0.2
+min_samples: 25
+V-measure: 0.384-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Rand Index: 0.190-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Mutual Information: 0.259-------------------------------
+eps: 0.2
+min_samples: 25
+Silhouette Coefficient: -0.164-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of clusters: 10-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of noise points: 931-------------------------------
+eps: 0.2
+min_samples: 25
+Homogeneity: 0.238-------------------------------
+eps: 0.2
+min_samples: 25
+Completeness: 0.586-------------------------------
+eps: 0.2
+min_samples: 25
+V-measure: 0.339-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Rand Index: 0.170-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Mutual Information: 0.215-------------------------------
+eps: 0.2
+min_samples: 25
+Silhouette Coefficient: -0.188-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of clusters: 6-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of noise points: 979-------------------------------
+eps: 0.2
+min_samples: 25
+Homogeneity: 0.168-------------------------------
+eps: 0.2
+min_samples: 25
+Completeness: 0.595-------------------------------
+eps: 0.2
+min_samples: 25
+V-measure: 0.262-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Rand Index: 0.105-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Mutual Information: 0.153-------------------------------
+eps: 0.2
+min_samples: 25
+Silhouette Coefficient: -0.193-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of clusters: 6-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of noise points: 979-------------------------------
+eps: 0.2
+min_samples: 25
+Homogeneity: 0.168-------------------------------
+eps: 0.2
+min_samples: 25
+Completeness: 0.595-------------------------------
+eps: 0.2
+min_samples: 25
+V-measure: 0.262-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Rand Index: 0.105-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Mutual Information: 0.153-------------------------------
+eps: 0.2
+min_samples: 25
+Silhouette Coefficient: -0.193-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of clusters: 5-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of noise points: 993-------------------------------
+eps: 0.2
+min_samples: 25
+Homogeneity: 0.147-------------------------------
+eps: 0.2
+min_samples: 25
+Completeness: 0.595-------------------------------
+eps: 0.2
+min_samples: 25
+V-measure: 0.236-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Rand Index: 0.087-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Mutual Information: 0.134-------------------------------
+eps: 0.2
+min_samples: 25
+Silhouette Coefficient: -0.193-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of clusters: 4-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of noise points: 1008-------------------------------
+eps: 0.2
+min_samples: 25
+Homogeneity: 0.124-------------------------------
+eps: 0.2
+min_samples: 25
+Completeness: 0.592-------------------------------
+eps: 0.2
+min_samples: 25
+V-measure: 0.205-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Rand Index: 0.068-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Mutual Information: 0.114-------------------------------
+eps: 0.2
+min_samples: 25
+Silhouette Coefficient: -0.207-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of clusters: 2-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of noise points: 1040-------------------------------
+eps: 0.2
+min_samples: 25
+Homogeneity: 0.075-------------------------------
+eps: 0.2
+min_samples: 25
+Completeness: 0.575-------------------------------
+eps: 0.2
+min_samples: 25
+V-measure: 0.133-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Rand Index: 0.028-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Mutual Information: 0.069-------------------------------
+eps: 0.2
+min_samples: 25
+Silhouette Coefficient: -0.216-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of clusters: 2-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of noise points: 1040-------------------------------
+eps: 0.2
+min_samples: 25
+Homogeneity: 0.075-------------------------------
+eps: 0.2
+min_samples: 25
+Completeness: 0.575-------------------------------
+eps: 0.2
+min_samples: 25
+V-measure: 0.133-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Rand Index: 0.028-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Mutual Information: 0.069-------------------------------
+eps: 0.2
+min_samples: 25
+Silhouette Coefficient: -0.216-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of clusters: 2-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of noise points: 1040-------------------------------
+eps: 0.2
+min_samples: 25
+Homogeneity: 0.075-------------------------------
+eps: 0.2
+min_samples: 25
+Completeness: 0.575-------------------------------
+eps: 0.2
+min_samples: 25
+V-measure: 0.133-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Rand Index: 0.028-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Mutual Information: 0.069-------------------------------
+eps: 0.2
+min_samples: 25
+Silhouette Coefficient: -0.216-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of clusters: 2-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of noise points: 1040-------------------------------
+eps: 0.2
+min_samples: 25
+Homogeneity: 0.075-------------------------------
+eps: 0.2
+min_samples: 25
+Completeness: 0.575-------------------------------
+eps: 0.2
+min_samples: 25
+V-measure: 0.133-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Rand Index: 0.028-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Mutual Information: 0.069-------------------------------
+eps: 0.2
+min_samples: 25
+Silhouette Coefficient: -0.216-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of clusters: 2-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of noise points: 1040-------------------------------
+eps: 0.2
+min_samples: 25
+Homogeneity: 0.075-------------------------------
+eps: 0.2
+min_samples: 25
+Completeness: 0.575-------------------------------
+eps: 0.2
+min_samples: 25
+V-measure: 0.133-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Rand Index: 0.028-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Mutual Information: 0.069-------------------------------
+eps: 0.2
+min_samples: 25
+Silhouette Coefficient: -0.216-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of clusters: 1-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of noise points: 1061-------------------------------
+eps: 0.2
+min_samples: 25
+Homogeneity: 0.068-------------------------------
+eps: 0.2
+min_samples: 25
+Completeness: 0.844-------------------------------
+eps: 0.2
+min_samples: 25
+V-measure: 0.126-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Rand Index: 0.051-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Mutual Information: 0.065-------------------------------
+eps: 0.2
+min_samples: 25
+Silhouette Coefficient: -0.058-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of clusters: 1-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of noise points: 1061-------------------------------
+eps: 0.2
+min_samples: 25
+Homogeneity: 0.068-------------------------------
+eps: 0.2
+min_samples: 25
+Completeness: 0.844-------------------------------
+eps: 0.2
+min_samples: 25
+V-measure: 0.126-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Rand Index: 0.051-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Mutual Information: 0.065-------------------------------
+eps: 0.2
+min_samples: 25
+Silhouette Coefficient: -0.058-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of clusters: 1-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of noise points: 1061-------------------------------
+eps: 0.2
+min_samples: 25
+Homogeneity: 0.068-------------------------------
+eps: 0.2
+min_samples: 25
+Completeness: 0.844-------------------------------
+eps: 0.2
+min_samples: 25
+V-measure: 0.126-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Rand Index: 0.051-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Mutual Information: 0.065-------------------------------
+eps: 0.2
+min_samples: 25
+Silhouette Coefficient: -0.058-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of clusters: 1-------------------------------
+eps: 0.2
+min_samples: 25
+Estimated number of noise points: 1061-------------------------------
+eps: 0.2
+min_samples: 25
+Homogeneity: 0.068-------------------------------
+eps: 0.2
+min_samples: 25
+Completeness: 0.844-------------------------------
+eps: 0.2
+min_samples: 25
+V-measure: 0.126-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Rand Index: 0.051-------------------------------
+eps: 0.2
+min_samples: 25
+Adjusted Mutual Information: 0.065-------------------------------
+eps: 0.2
+min_samples: 25
+Silhouette Coefficient: -0.058-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of clusters: 33-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of noise points: 763-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Homogeneity: 0.450-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Completeness: 0.519-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+V-measure: 0.482-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Rand Index: 0.276-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Mutual Information: 0.400-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Silhouette Coefficient: -0.004-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of clusters: 26-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of noise points: 798-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Homogeneity: 0.421-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Completeness: 0.550-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+V-measure: 0.477-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Rand Index: 0.282-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Mutual Information: 0.379-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Silhouette Coefficient: -0.039-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of clusters: 23-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of noise points: 816-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Homogeneity: 0.398-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Completeness: 0.557-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+V-measure: 0.464-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Rand Index: 0.271-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Mutual Information: 0.358-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Silhouette Coefficient: -0.063-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of clusters: 19-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of noise points: 844-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Homogeneity: 0.363-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Completeness: 0.569-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+V-measure: 0.443-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Rand Index: 0.248-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Mutual Information: 0.327-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Silhouette Coefficient: -0.093-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of clusters: 17-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of noise points: 860-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Homogeneity: 0.347-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Completeness: 0.585-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+V-measure: 0.436-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Rand Index: 0.247-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Mutual Information: 0.314-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Silhouette Coefficient: -0.110-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of clusters: 15-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of noise points: 878-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Homogeneity: 0.319-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Completeness: 0.585-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+V-measure: 0.413-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Rand Index: 0.219-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Mutual Information: 0.289-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Silhouette Coefficient: -0.135-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of clusters: 13-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of noise points: 898-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Homogeneity: 0.287-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Completeness: 0.582-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+V-measure: 0.384-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Rand Index: 0.190-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Mutual Information: 0.259-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Silhouette Coefficient: -0.164-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of clusters: 10-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of noise points: 931-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Homogeneity: 0.238-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Completeness: 0.586-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+V-measure: 0.339-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Rand Index: 0.170-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Mutual Information: 0.215-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Silhouette Coefficient: -0.188-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of clusters: 6-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of noise points: 979-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Homogeneity: 0.168-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Completeness: 0.595-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+V-measure: 0.262-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Rand Index: 0.105-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Mutual Information: 0.153-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Silhouette Coefficient: -0.193-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of clusters: 6-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of noise points: 979-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Homogeneity: 0.168-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Completeness: 0.595-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+V-measure: 0.262-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Rand Index: 0.105-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Mutual Information: 0.153-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Silhouette Coefficient: -0.193-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of clusters: 5-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of noise points: 993-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Homogeneity: 0.147-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Completeness: 0.595-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+V-measure: 0.236-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Rand Index: 0.087-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Mutual Information: 0.134-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Silhouette Coefficient: -0.193-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of clusters: 4-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of noise points: 1008-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Homogeneity: 0.124-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Completeness: 0.592-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+V-measure: 0.205-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Rand Index: 0.068-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Mutual Information: 0.114-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Silhouette Coefficient: -0.207-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of clusters: 2-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of noise points: 1040-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Homogeneity: 0.075-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Completeness: 0.575-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+V-measure: 0.133-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Rand Index: 0.028-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Mutual Information: 0.069-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Silhouette Coefficient: -0.216-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of clusters: 2-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of noise points: 1040-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Homogeneity: 0.075-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Completeness: 0.575-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+V-measure: 0.133-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Rand Index: 0.028-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Mutual Information: 0.069-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Silhouette Coefficient: -0.216-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of clusters: 2-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of noise points: 1040-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Homogeneity: 0.075-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Completeness: 0.575-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+V-measure: 0.133-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Rand Index: 0.028-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Mutual Information: 0.069-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Silhouette Coefficient: -0.216-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of clusters: 2-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of noise points: 1040-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Homogeneity: 0.075-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Completeness: 0.575-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+V-measure: 0.133-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Rand Index: 0.028-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Mutual Information: 0.069-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Silhouette Coefficient: -0.216-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of clusters: 2-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of noise points: 1040-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Homogeneity: 0.075-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Completeness: 0.575-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+V-measure: 0.133-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Rand Index: 0.028-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Mutual Information: 0.069-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Silhouette Coefficient: -0.216-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of clusters: 1-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of noise points: 1061-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Homogeneity: 0.068-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Completeness: 0.844-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+V-measure: 0.126-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Rand Index: 0.051-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Mutual Information: 0.065-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Silhouette Coefficient: -0.058-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of clusters: 1-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of noise points: 1061-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Homogeneity: 0.068-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Completeness: 0.844-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+V-measure: 0.126-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Rand Index: 0.051-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Mutual Information: 0.065-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Silhouette Coefficient: -0.058-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of clusters: 1-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of noise points: 1061-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Homogeneity: 0.068-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Completeness: 0.844-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+V-measure: 0.126-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Rand Index: 0.051-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Mutual Information: 0.065-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Silhouette Coefficient: -0.058-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of clusters: 1-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Estimated number of noise points: 1061-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Homogeneity: 0.068-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Completeness: 0.844-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+V-measure: 0.126-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Rand Index: 0.051-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Adjusted Mutual Information: 0.065-------------------------------
+eps: 0.30000000000000004
+min_samples: 25
+Silhouette Coefficient: -0.058-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of clusters: 34-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of noise points: 754-------------------------------
+eps: 0.4
+min_samples: 25
+Homogeneity: 0.452-------------------------------
+eps: 0.4
+min_samples: 25
+Completeness: 0.508-------------------------------
+eps: 0.4
+min_samples: 25
+V-measure: 0.479-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Rand Index: 0.263-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Mutual Information: 0.401-------------------------------
+eps: 0.4
+min_samples: 25
+Silhouette Coefficient: 0.007-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of clusters: 27-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of noise points: 789-------------------------------
+eps: 0.4
+min_samples: 25
+Homogeneity: 0.424-------------------------------
+eps: 0.4
+min_samples: 25
+Completeness: 0.537-------------------------------
+eps: 0.4
+min_samples: 25
+V-measure: 0.474-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Rand Index: 0.269-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Mutual Information: 0.379-------------------------------
+eps: 0.4
+min_samples: 25
+Silhouette Coefficient: -0.028-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of clusters: 23-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of noise points: 813-------------------------------
+eps: 0.4
+min_samples: 25
+Homogeneity: 0.399-------------------------------
+eps: 0.4
+min_samples: 25
+Completeness: 0.553-------------------------------
+eps: 0.4
+min_samples: 25
+V-measure: 0.463-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Rand Index: 0.267-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Mutual Information: 0.359-------------------------------
+eps: 0.4
+min_samples: 25
+Silhouette Coefficient: -0.060-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of clusters: 19-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of noise points: 841-------------------------------
+eps: 0.4
+min_samples: 25
+Homogeneity: 0.363-------------------------------
+eps: 0.4
+min_samples: 25
+Completeness: 0.565-------------------------------
+eps: 0.4
+min_samples: 25
+V-measure: 0.442-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Rand Index: 0.244-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Mutual Information: 0.328-------------------------------
+eps: 0.4
+min_samples: 25
+Silhouette Coefficient: -0.089-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of clusters: 17-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of noise points: 857-------------------------------
+eps: 0.4
+min_samples: 25
+Homogeneity: 0.348-------------------------------
+eps: 0.4
+min_samples: 25
+Completeness: 0.580-------------------------------
+eps: 0.4
+min_samples: 25
+V-measure: 0.435-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Rand Index: 0.243-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Mutual Information: 0.315-------------------------------
+eps: 0.4
+min_samples: 25
+Silhouette Coefficient: -0.106-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of clusters: 15-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of noise points: 875-------------------------------
+eps: 0.4
+min_samples: 25
+Homogeneity: 0.320-------------------------------
+eps: 0.4
+min_samples: 25
+Completeness: 0.580-------------------------------
+eps: 0.4
+min_samples: 25
+V-measure: 0.412-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Rand Index: 0.215-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Mutual Information: 0.289-------------------------------
+eps: 0.4
+min_samples: 25
+Silhouette Coefficient: -0.130-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of clusters: 13-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of noise points: 895-------------------------------
+eps: 0.4
+min_samples: 25
+Homogeneity: 0.287-------------------------------
+eps: 0.4
+min_samples: 25
+Completeness: 0.576-------------------------------
+eps: 0.4
+min_samples: 25
+V-measure: 0.384-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Rand Index: 0.186-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Mutual Information: 0.260-------------------------------
+eps: 0.4
+min_samples: 25
+Silhouette Coefficient: -0.160-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of clusters: 11-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of noise points: 917-------------------------------
+eps: 0.4
+min_samples: 25
+Homogeneity: 0.242-------------------------------
+eps: 0.4
+min_samples: 25
+Completeness: 0.548-------------------------------
+eps: 0.4
+min_samples: 25
+V-measure: 0.336-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Rand Index: 0.152-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Mutual Information: 0.217-------------------------------
+eps: 0.4
+min_samples: 25
+Silhouette Coefficient: -0.188-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of clusters: 7-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of noise points: 965-------------------------------
+eps: 0.4
+min_samples: 25
+Homogeneity: 0.172-------------------------------
+eps: 0.4
+min_samples: 25
+Completeness: 0.542-------------------------------
+eps: 0.4
+min_samples: 25
+V-measure: 0.262-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Rand Index: 0.088-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Mutual Information: 0.155-------------------------------
+eps: 0.4
+min_samples: 25
+Silhouette Coefficient: -0.196-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of clusters: 7-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of noise points: 965-------------------------------
+eps: 0.4
+min_samples: 25
+Homogeneity: 0.172-------------------------------
+eps: 0.4
+min_samples: 25
+Completeness: 0.542-------------------------------
+eps: 0.4
+min_samples: 25
+V-measure: 0.262-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Rand Index: 0.088-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Mutual Information: 0.155-------------------------------
+eps: 0.4
+min_samples: 25
+Silhouette Coefficient: -0.196-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of clusters: 5-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of noise points: 993-------------------------------
+eps: 0.4
+min_samples: 25
+Homogeneity: 0.147-------------------------------
+eps: 0.4
+min_samples: 25
+Completeness: 0.595-------------------------------
+eps: 0.4
+min_samples: 25
+V-measure: 0.236-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Rand Index: 0.087-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Mutual Information: 0.134-------------------------------
+eps: 0.4
+min_samples: 25
+Silhouette Coefficient: -0.193-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of clusters: 4-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of noise points: 1008-------------------------------
+eps: 0.4
+min_samples: 25
+Homogeneity: 0.124-------------------------------
+eps: 0.4
+min_samples: 25
+Completeness: 0.592-------------------------------
+eps: 0.4
+min_samples: 25
+V-measure: 0.205-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Rand Index: 0.068-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Mutual Information: 0.114-------------------------------
+eps: 0.4
+min_samples: 25
+Silhouette Coefficient: -0.207-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of clusters: 2-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of noise points: 1040-------------------------------
+eps: 0.4
+min_samples: 25
+Homogeneity: 0.075-------------------------------
+eps: 0.4
+min_samples: 25
+Completeness: 0.575-------------------------------
+eps: 0.4
+min_samples: 25
+V-measure: 0.133-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Rand Index: 0.028-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Mutual Information: 0.069-------------------------------
+eps: 0.4
+min_samples: 25
+Silhouette Coefficient: -0.216-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of clusters: 2-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of noise points: 1040-------------------------------
+eps: 0.4
+min_samples: 25
+Homogeneity: 0.075-------------------------------
+eps: 0.4
+min_samples: 25
+Completeness: 0.575-------------------------------
+eps: 0.4
+min_samples: 25
+V-measure: 0.133-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Rand Index: 0.028-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Mutual Information: 0.069-------------------------------
+eps: 0.4
+min_samples: 25
+Silhouette Coefficient: -0.216-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of clusters: 2-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of noise points: 1040-------------------------------
+eps: 0.4
+min_samples: 25
+Homogeneity: 0.075-------------------------------
+eps: 0.4
+min_samples: 25
+Completeness: 0.575-------------------------------
+eps: 0.4
+min_samples: 25
+V-measure: 0.133-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Rand Index: 0.028-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Mutual Information: 0.069-------------------------------
+eps: 0.4
+min_samples: 25
+Silhouette Coefficient: -0.216-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of clusters: 2-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of noise points: 1040-------------------------------
+eps: 0.4
+min_samples: 25
+Homogeneity: 0.075-------------------------------
+eps: 0.4
+min_samples: 25
+Completeness: 0.575-------------------------------
+eps: 0.4
+min_samples: 25
+V-measure: 0.133-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Rand Index: 0.028-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Mutual Information: 0.069-------------------------------
+eps: 0.4
+min_samples: 25
+Silhouette Coefficient: -0.216-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of clusters: 2-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of noise points: 1040-------------------------------
+eps: 0.4
+min_samples: 25
+Homogeneity: 0.075-------------------------------
+eps: 0.4
+min_samples: 25
+Completeness: 0.575-------------------------------
+eps: 0.4
+min_samples: 25
+V-measure: 0.133-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Rand Index: 0.028-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Mutual Information: 0.069-------------------------------
+eps: 0.4
+min_samples: 25
+Silhouette Coefficient: -0.216-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of clusters: 1-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of noise points: 1061-------------------------------
+eps: 0.4
+min_samples: 25
+Homogeneity: 0.068-------------------------------
+eps: 0.4
+min_samples: 25
+Completeness: 0.844-------------------------------
+eps: 0.4
+min_samples: 25
+V-measure: 0.126-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Rand Index: 0.051-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Mutual Information: 0.065-------------------------------
+eps: 0.4
+min_samples: 25
+Silhouette Coefficient: -0.058-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of clusters: 1-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of noise points: 1061-------------------------------
+eps: 0.4
+min_samples: 25
+Homogeneity: 0.068-------------------------------
+eps: 0.4
+min_samples: 25
+Completeness: 0.844-------------------------------
+eps: 0.4
+min_samples: 25
+V-measure: 0.126-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Rand Index: 0.051-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Mutual Information: 0.065-------------------------------
+eps: 0.4
+min_samples: 25
+Silhouette Coefficient: -0.058-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of clusters: 1-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of noise points: 1061-------------------------------
+eps: 0.4
+min_samples: 25
+Homogeneity: 0.068-------------------------------
+eps: 0.4
+min_samples: 25
+Completeness: 0.844-------------------------------
+eps: 0.4
+min_samples: 25
+V-measure: 0.126-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Rand Index: 0.051-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Mutual Information: 0.065-------------------------------
+eps: 0.4
+min_samples: 25
+Silhouette Coefficient: -0.058-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of clusters: 1-------------------------------
+eps: 0.4
+min_samples: 25
+Estimated number of noise points: 1061-------------------------------
+eps: 0.4
+min_samples: 25
+Homogeneity: 0.068-------------------------------
+eps: 0.4
+min_samples: 25
+Completeness: 0.844-------------------------------
+eps: 0.4
+min_samples: 25
+V-measure: 0.126-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Rand Index: 0.051-------------------------------
+eps: 0.4
+min_samples: 25
+Adjusted Mutual Information: 0.065-------------------------------
+eps: 0.4
+min_samples: 25
+Silhouette Coefficient: -0.058
