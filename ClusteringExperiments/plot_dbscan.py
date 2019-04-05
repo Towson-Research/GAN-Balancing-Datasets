@@ -69,7 +69,7 @@ class DBSCANNER(object):
     # #############################################################################
     # Plot result
 
-    def plot_me(self, pca_components = 2, mode = "display", savedir = "figs"):
+    def pca_plot_me(self, pca_components = 2, mode = "display", savedir = "figs"):
         X = self.X
         labels = self.labels
         core_samples_mask = self.core_samples_mask
@@ -137,7 +137,7 @@ def main():
                 print(line)
                 f.write("-------------------------------\n")
                 f.write("eps: " + str(db_s.eps) + "\nmin_samples: " + str(min_samples) + "\n" + line)
-            db_s.plot_me(mode = "save")
+            db_s.pca_plot_me(mode = "save")
         f.close()
     
 
