@@ -390,6 +390,25 @@ class SQLConnector(object):
                 return result
         finally:
             pass
+
+    def pull_all_attacks(self, num):
+        """ Returns randomly shuffled data by attack type """
+        self._use_datasets()
+        try:
+            with self.connection.cursor() as cursor:
+                sql = """
+                        select *
+                        from kdd99
+                        order by RAND ()
+                        limit %s;
+                    """
+                cursor.execute(sql, num)
+                result = cursor.fetchall()
+                return result
+        finally:
+            pass
+
+
     @staticmethod
     def pull_kdd99_columns(allQ=True):
         """ Returns kdd99 col names """
