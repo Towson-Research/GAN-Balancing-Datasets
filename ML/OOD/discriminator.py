@@ -6,14 +6,26 @@ from keras.layers.advanced_activations import LeakyReLU
 
 class Discriminator(object):
 
-    def __init__(self):
+    def __init__(self, **kwargs):
         """ Constructor """
+        self._defaults()
+        self._args(kwargs)
+        self._build()
+
+    def _args(self, kwargs):
+        for key, value in kwargs.items():
+            if key == 'layers':
+                self.layers = value
+            if key == 'alpha':
+                self.alpha = value
+            if key == 'dropout':
+                self.dropout = value
+
+    def _defaults(self):
         self.discriminator = None
         self.layers = [32, 16, 8]
         self.alpha = 0.1
         self.dropout = 0.3
-        self._build()
-
 
     def _build(self):
         """ Builds the discriminator """
