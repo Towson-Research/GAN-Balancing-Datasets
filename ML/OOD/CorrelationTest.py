@@ -29,10 +29,10 @@ def correlation_ratio(categories, measurements):
 def main():
     conn = SQLConnector()
     data = conn.pull_all_attacks(num=40000)
-    dataframe = pd.DataFrame.from_records(data=data,
-                                          columns=conn.pull_kdd99_columns(allQ=True))
-
     columns = conn.pull_kdd99_columns()
+    dataframe = pd.DataFrame(data=data, columns=columns)
+    dataframe = dataframe.iloc[:, :41]
+
     print(type(columns))
     # ==========
     # ENCODING
@@ -44,20 +44,23 @@ def main():
     fit = dataframe.apply(lambda x: d[x.name].fit_transform(x))  # fit is encoded dataframe
     dataset = fit.values  # transform to ndarray
 
-    df = pd.DataFrame(data=dataset, columns=columns)
+    print(dataset)
+    print(dataset.size)
 
     #TODO: Figure out what the fuck the method actually takes as params
     correlation_matrix = np.zeros(shape=(41,41))
+
     for i in range(1, len(columns) - 1):
         for j in range(0, len(columns) - 1):
-            print(df.iloc[:i])
-            print()
-            print(df.iloc[:j])
 
-            correlation_matrix[i, j] = correlation_ratio(df.iloc[:i], df.iloc[:j])
-    categories = correlation_ratio(columns, dataset)
-    print(type(categories))
-    print(categories)
+            correlation_matrix[i, j] = correlation_ratio(dataset[:, i], dataset[:, j])
+
+    print(type(columns))
+    correlation_dataframe = pd.DataFrame(data=correlation_matrix, index=columns[:41], columns=columns[:41])
+    print(correlation_dataframe)
+    print(correlation_matrix.shape)
+    correlation_heatmap(correlation_dataframe)
+
 
 
 
@@ -65,8 +68,7 @@ def main():
 def correlation_heatmap(data):
 
     fig, ax = plt.subplots(figsize=(10, 10))
-    # sns.heatmap(, vmax=1.0, center=0, fmt='.2f',
-    #            square=True, linewidths=.5, annot=True, cbar_kws={"shrink": .70})
+    sns.heatmap(data, vmax=1.0, center=0, fmt='.2f', square=True, linewidths=.5, cbar_kws={"shrink": .70})
     plt.show();
 
 

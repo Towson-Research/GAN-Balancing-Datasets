@@ -141,18 +141,23 @@ class GAN(object):
         """ Build the GAN """
         # build the discriminator portion
 
-        self.discriminator = Discriminator().get_model()#self.discriminator_layers
-        self.discriminator.compile(
-                loss='binary_crossentropy', optimizer=self.optimizer, metrics=['accuracy'])
-
-        # build the generator portion
-        gen_args = {
-                 'attack_type': self.attack_type,
-                 'layers': self.generator_layers,
+        disc_args = {
+                 'layers': self.generator_layers.reverse(),
                  'alpha': self.generator_alpha,
                  'momentum': self.generator_momentum
                  }
-        self.generator = Generator().get_model()#**gen_args
+        self.discriminator = Discriminator().get_model()#self.discriminator_layers
+        self.discriminator.compile(
+                loss='binary_crossentropy', optimizer=self.optimizer, metrics=['accuracy'])
+        print(self.discriminator.summary())
+
+        # build the generator portion
+        gen_args = {
+                 'layers': self.generator_layers,
+                 'alpha': self.generator_alpha,
+                 }
+        self.generator = Generator(**gen_args).get_model()#**gen_args
+        print(self.generator.summary())
 
         # input and output of our combined model
         z = Input(shape=(41,))
@@ -197,7 +202,10 @@ class GAN(object):
             if epoch % 500 == 0:
                 print("%d [D loss: %f, acc.: %.2f%%] [G loss: %f] [Loss change: %.3f, Loss increases: %.0f]" % (epoch, d_loss[0], 100 * d_loss[1], g_loss, g_loss - prev_g_loss, loss_increase_count))
 
-
+            '''
+            # ======================
+            # Decoding attacks
+            # ======================
             if epoch % 20 == 0:
                 decode = gen_attacks[:1]  # take a slice from the ndarray that we want to decode
                 #MAX QUESTION: Do we plan on changing the shape of this at some
@@ -228,11 +236,25 @@ class GAN(object):
                                 attack_type=attack_num, accuracy=accuracy, gen_list=lis)
 
                         # peek at our results
+            '''
+            accuracy = (d_loss[1] * 100)
+            layersstr = str(self.generator_layers[0]) + "," + str(self.generator_layers[1]) + "," + str(
+                self.generator_layers[2])
+            attack_num = util.attacks_to_num(self.attack_type)
+
+        conn.write_hypers(layerstr=layersstr, attack_encoded=attack_num, accuracy=accuracy)
+
+        # TODO: Get the evaluation model implemented and replace the accuracy parameter with that metric
+        # TODO: Log our generated attacks to the gens table
+        # TODO: Refactor our sql methods with the new database structure
+        # TODO: Add foreign key for attack type in hypers table
+        '''
         hypers = conn.read_hyper()  # by epoch?
         gens = conn.read_gens()   # by epoch?
         print("\n\nMYSQL DATA:\n==============")
         print("hypers  " + str(hypers))
         print("\ngens  " + str(gens) + "\n")
+        '''
 
 
     def test(self):

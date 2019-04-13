@@ -56,7 +56,7 @@ class SQLConnector(object):
         try:
             with self.connection.cursor() as cursor:
                 sql1 = """
-                            select max(iteration) 
+                            select max(hypers_id) 
                             from hypers 
                             where id = %s;
                         """
@@ -72,7 +72,7 @@ class SQLConnector(object):
 
         finally:
             pass
-
+    '''
     def write(self, gennum, modelnum, layersstr, accuracy, attack_type, gen_list):
         """ Writes to the hypers and gens table """
         iteration = self._get_max_iter(modelnum)
@@ -84,6 +84,21 @@ class SQLConnector(object):
                          gen_list[25], gen_list[26], gen_list[27], gen_list[28], gen_list[29], gen_list[30], gen_list[31],
                          gen_list[32], gen_list[33], gen_list[34], gen_list[35], gen_list[36], gen_list[37], gen_list[38],
                          gen_list[39], gen_list[40], attack_type)
+'''
+
+    def write_hypers(self, layerstr, attack_encoded, accuracy):
+        try:
+            with self.connection.cursor() as cursor:
+                sql = """ 
+                            insert into hypers (layers, attack, accuracy) 
+                            values (%s, %s, %s); 
+                        """
+                cursor.execute(sql, [str(layerstr), str(attack_encoded), str(accuracy)])
+
+            self.connection.commit()
+
+        finally:
+            pass
 
 
     def _sort_hyper(self):
@@ -446,7 +461,7 @@ class SQLConnector(object):
         try:
             with self.connection.cursor() as cursor:
                 sql = """
-                        insert into attacks (id, name)
+                        insert into attacks (id, attack_name)
                         values (%s, %s);
                     """
                 cursor.execute(sql, (str(theid), str(attack)))
