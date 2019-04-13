@@ -4,6 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import LabelEncoder
+
 import argparse
 from os import path, makedirs
 from sys import argv
@@ -27,6 +28,7 @@ def correlation_ratio(categories, measurements):
     else:
         eta = numerator / denominator
     return eta
+
 
 def main(argv):
     parser = argparse.ArgumentParser()
@@ -76,6 +78,7 @@ def main(argv):
     print(dataset.size)
 
     #TODO: Figure out what the fuck the method actually takes as params
+
     correlation_matrix = np.zeros(shape=(col_len,col_len))
 
     for i in range(1, len(columns) - 1):
