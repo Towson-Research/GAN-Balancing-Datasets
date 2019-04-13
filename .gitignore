@@ -1,4 +1,5 @@
 *.swp
+*.pyc
 */.ipynb_checkpoints/
 */__pycache__/
 */.vscode/

@@ -57,8 +57,8 @@ class GAN(object):
         self.fake = None
         self.X_train = None
 
-        self.generator_alpha= 0.1
-        self.generator_momentum= 0.0
+        self.generator_alpha = 0.1
+        self.generator_momentum = 0.0
         self.generator_layers = [8, 16, 32]
 
         self.confusion_matrix = None
@@ -228,12 +228,7 @@ class GAN(object):
                                 attack_type=attack_num, accuracy=accuracy, gen_list=lis)
 
                         # peek at our results
-        hypers = conn.read_hyper()  # by epoch?
-        gens = conn.read_gens()   # by epoch?
-        print("\n\nMYSQL DATA:\n==============")
-        print("hypers  " + str(hypers))
-        print("\ngens  " + str(gens) + "\n")
-
+            writeOut(conn)
 
     def test(self):
         """ A GAN should know how to test itself and save its results into a confusion matrix. """
@@ -280,14 +275,18 @@ class GAN(object):
 def signal_handler(sig, frame):
     """ Catches Crl-C command to print from database before ending """
     conn = SQLConnector()
-    hypers = conn.read_hyper()  # by epoch?
-    gens = conn.read_gens()   # by epoch?
-    print("\n\nMYSQL DATA:\n==============")
-    print("hypers  " + str(hypers))
-    print("\ngens  " + str(gens) + "\n")
+    writeOut(conn)
     sys.exit(0)
+    print("did it work?")
 signal.signal(signal.SIGINT, signal_handler)
 
+
+def writeOut(conn):
+   hypers = conn.read_hyper()  # by epoch?
+   gens = conn.read_gens()   # by epoch?
+   print("\n\nMYSQL DATA:\n==============")
+   print("hypers  " + str(hypers))
+   print("\ngens  " + str(gens) + "\n")
 
 def main():
     """ Auto run main method """
