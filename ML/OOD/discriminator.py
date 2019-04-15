@@ -32,6 +32,8 @@ class Discriminator(object):
         model = Sequential()
 
         # needs 41 for input and needs 1 for output
+        print(self.layers)
+        print(type(self.layers))
         model.add(Dense(self.layers[0], input_dim=41, activation='relu'))
         model.add(LeakyReLU(alpha=self.alpha))
         model.add(Dropout(self.dropout))

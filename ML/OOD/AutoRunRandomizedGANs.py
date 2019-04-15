@@ -9,7 +9,7 @@ def main():
         c = np.random.randint(10, b)
 
         args = {
-            'attack_type': "neptune",
+            'attack_type': "satan",
             'max_epochs': 7000,
             'batch_size': 255,
             'sample_size': 500,
