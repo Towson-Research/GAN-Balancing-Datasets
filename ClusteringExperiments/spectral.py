@@ -35,7 +35,7 @@ num_labels = (len(set(labels_true)))
 # Do the thing
 
 spectral = SpectralClustering(n_clusters=2,
-                assign_labels="discretize",
+#                assign_labels="discretize",
                 random_state=0).fit(X)
 
 y_pred = kmeans.labels_
@@ -47,7 +47,7 @@ print("Accuracy for Spectral Clustering with k = 2 on attacks vs. normal: ", cor
 
 
 spectral = SpectralClustering(n_clusters=num_labels,
-                assign_labels="discretize",
+#                assign_labels="discretize",
                 random_state=0).fit(X)
 y_pred = kmeans.labels_
 
