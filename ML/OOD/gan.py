@@ -57,8 +57,8 @@ class GAN(object):
         self.fake = None
         self.X_train = None
 
-        self.generator_alpha= 0.1
-        self.generator_momentum= 0.0
+        self.generator_alpha = 0.1
+        self.generator_momentum = 0.0
         self.generator_layers = [8, 16, 32]
 
         self.confusion_matrix = None
@@ -228,6 +228,8 @@ class GAN(object):
                                 attack_type=attack_num, accuracy=accuracy, gen_list=lis)
 
                         # peek at our results
+            self.writeOut(self, conn)
+    def writeOut(self, conn):
         hypers = conn.read_hyper()  # by epoch?
         gens = conn.read_gens()   # by epoch?
         print("\n\nMYSQL DATA:\n==============")
@@ -280,11 +282,7 @@ class GAN(object):
 def signal_handler(sig, frame):
     """ Catches Crl-C command to print from database before ending """
     conn = SQLConnector()
-    hypers = conn.read_hyper()  # by epoch?
-    gens = conn.read_gens()   # by epoch?
-    print("\n\nMYSQL DATA:\n==============")
-    print("hypers  " + str(hypers))
-    print("\ngens  " + str(gens) + "\n")
+    writeOut(self, conn)
     sys.exit(0)
 signal.signal(signal.SIGINT, signal_handler)
 
