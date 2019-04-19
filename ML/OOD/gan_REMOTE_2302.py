@@ -303,6 +303,7 @@ def signal_handler(sig, frame):
     conn = SQLConnector()
     writeOut(conn)
     sys.exit(0)
+    print("did it work?")
 signal.signal(signal.SIGINT, signal_handler)
 
 

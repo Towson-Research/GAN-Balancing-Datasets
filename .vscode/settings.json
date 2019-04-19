@@ -1,0 +1,14 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": false,
+    "python.linting.enabled": true,
+    "sshfs.configs": [
+        {
+            "host": "10.55.17.240",
+            "merge": true,
+            "name": "deng",
+            "username": "ldeng"
+        }
+    ],
+    "python.pythonPath": "/Users/maxcoplan/anaconda3/envs/ml/bin/python"
+}
