@@ -236,6 +236,10 @@ class GAN(object):
                                 attack_type=attack_num, accuracy=accuracy, gen_list=lis)
 
                         # peek at our results
+<<<<<<< HEAD
+            self.writeOut(self, conn)
+    def writeOut(self, conn):
+=======
             '''
             accuracy = (d_loss[1] * 100)
             layersstr = str(self.generator_layers[0]) + "," + str(self.generator_layers[1]) + "," + str(
@@ -249,6 +253,7 @@ class GAN(object):
         # TODO: Refactor our sql methods with the new database structure
         # TODO: Add foreign key for attack type in hypers table
         '''
+>>>>>>> a0723d5e3ffa306c304e1b615fc28e9c3a6ad0e2
         hypers = conn.read_hyper()  # by epoch?
         gens = conn.read_gens()   # by epoch?
         print("\n\nMYSQL DATA:\n==============")
@@ -301,8 +306,13 @@ class GAN(object):
 def signal_handler(sig, frame):
     """ Catches Crl-C command to print from database before ending """
     conn = SQLConnector()
+<<<<<<< HEAD
+    writeOut(self, conn)
+=======
     writeOut(conn)
+>>>>>>> a0723d5e3ffa306c304e1b615fc28e9c3a6ad0e2
     sys.exit(0)
+    print("did it work?")
 signal.signal(signal.SIGINT, signal_handler)
 
 
