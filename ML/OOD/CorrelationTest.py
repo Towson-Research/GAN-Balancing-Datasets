@@ -56,7 +56,7 @@ def main(argv):
     host = args.host
 
     conn = SQLConnector(host = host)
-    data = conn.pull_all_attacks(num)
+    data = conn.pull_all_attacks(num, nodupes = True)
     columns = conn.pull_kdd99_columns()
     col_len = len(columns) - 1
     dataframe = pd.DataFrame(data=data, columns=columns)

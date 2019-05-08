@@ -387,36 +387,52 @@ class SQLConnector(object):
         finally:
             pass
 
-    def pull_kdd99(self, attack, num):
+    def pull_kdd99(self, attack, num, nodupes = False):
         """ Returns randomly shuffled data by attack type """
         self._use_datasets()
         try:
             with self.connection.cursor() as cursor:
-                sql = """
-                        select *
-                        from kdd99
-                        where attack_type like %s
-                        order by RAND ()
-                        limit %s;
-                    """
+                if nodupes:
+                    sql = """
+                            select *
+                            from kdd99_dupless
+                            where attack_type like %s
+                            order by RAND ()
+                            limit %s;
+                        """
+                else:
+                    sql = """
+                            select *
+                            from kdd99
+                            where attack_type like %s
+                            order by RAND ()
+                            limit %s;
+                        """
                 cursor.execute(sql, ('%'+str(attack)+'%', num))
                 result = cursor.fetchall()
                 return result
         finally:
             pass
-
-          
-    def pull_all_attacks(self, num):
+    
+    def pull_all_attacks(self, num, nodupes = False):
         """ Returns randomly shuffled data by attack type """
         self._use_datasets()
         try:
             with self.connection.cursor() as cursor:
-                sql = """
-                        select *
-                        from kdd99
-                        order by RAND ()
-                        limit %s;
-                    """
+                if nodupes:
+                    sql = """
+                            select *
+                            from kdd99_dupless
+                            order by RAND ()
+                            limit %s;
+                        """
+                else:
+                    sql = """
+                            select *
+                            from kdd99
+                            order by RAND ()
+                            limit %s;
+                        """
                 cursor.execute(sql, num)
                 result = cursor.fetchall()
                 return result
