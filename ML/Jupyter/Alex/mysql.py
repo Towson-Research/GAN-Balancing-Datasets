@@ -121,7 +121,7 @@ class SQLConnector(object):
             with self.connection.cursor() as cursor:
                 sql = """
                         select * from hypers 
-                        where accuracy > %s;
+                        where accuracy >= %s;
                     """
                 cursor.execute(sql, (str(acc)))
                 result = cursor.fetchall()
@@ -161,7 +161,7 @@ class SQLConnector(object):
                             num_outbound_cmds int, 
                             is_host_login int, 
                             is_guest_login int, 
-                            count int, 
+                            cnt int, 
                             srv_count int, 
                             serror_rate int, 
                             srv_serror_rate int, 
@@ -226,7 +226,7 @@ class SQLConnector(object):
                             num_outbound_cmds, 
                             is_host_login, 
                             is_guest_login, 
-                            count, 
+                            cnt, 
                             srv_count, 
                             serror_rate, 
                             srv_serror_rate, 
@@ -283,10 +283,12 @@ class SQLConnector(object):
     def read_gens(self):
         """ Reads from the gens table dependent on accuracy """
         try:
-            with self.connection.cursor() as cursor:
+            with self.connection.cursor() as cursor:#gens_id, h_id, attack_type 
                 sql = """
-                        select gens_id, h_id, attack_type 
-                        from gens;
+                        select *
+                        from gens
+                        where h_id = 927
+                        limit 10;
                     """ #Does not return correct output for accuracies
                 cursor.execute(sql)
                 result = cursor.fetchall()
