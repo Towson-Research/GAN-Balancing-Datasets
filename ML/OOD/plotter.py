@@ -105,8 +105,6 @@ def bar_graph(categories_values_lists, category_names = None, data_series_names 
     opacity = 0.8
     colors = ["b", "g", "r", "c", "m", "y", "k"]
 
-    print(category_names, data_series_names)
-
     for i, series_name in enumerate(data_series_names):
         p = bar_width * i + index
         rect = plt.bar(p, categories_values_lists[i], bar_width,
