@@ -4,4 +4,4 @@
 */__pycache__/
 */.vscode/
 *.data
-*.pyc
+.pyc

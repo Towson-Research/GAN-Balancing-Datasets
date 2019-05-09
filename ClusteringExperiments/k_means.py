@@ -42,6 +42,12 @@ y_true = [1 if x > 0 else 0 for x in labels_true]
 correct = sum(np.multiply(y_pred, y_true))
 print("Accuracy for K_means with k = 2 on attacks vs. normal: ", correct/len(y_pred))
 
+X, labels_true = enc.vecs_from_CSV("kddcup_50_of_each.data")
+
+X, labels_true = enc.encode(X, labels_true)
+X = StandardScaler().fit_transform(X)
+
+num_labels = (len(set(labels_true)))
 
 kmeans = KMeans(n_clusters=num_labels, random_state=0).fit(X)
 y_pred = kmeans.labels_
