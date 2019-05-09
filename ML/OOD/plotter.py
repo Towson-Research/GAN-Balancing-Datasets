@@ -5,6 +5,31 @@ import numpy as np
 import matplotlib.pyplot as plt
 import random
 
+'''
+Plotter.py instructions:
+
+plot_2D_multiline plots multiple lines on the same graph. Just pass it a list of lists as the first argument, 
+all of which will be interpreted as y-values (instead of xy pairs, or something else entirely like plt.plot() 
+normally does.
+
+plot_3D will take a list of either two or three lists as its first argument. It will generate the Z axis as 
+the datapoint index if you only pass it two lists. Otherwise if you pass three lists, it will interpret the 
+lists as (x,y,z) tuples.
+
+In other words, if you have two sets of a certain number of data points with only one output value, use the 
+first function. If you have a certain number of datapoints with (x,y) output values, use the second function.
+
+All the lists have to be the same length, though.
+(I can still generate the figures but if anyone else just wants to use them I wanted to make sure the instructions 
+were here.)
+I will add the bar graph portion in the morning.
+
+But I think that might actually just be native to plt without any need for additional interpretation.
+
+Also, if you want to generate a bunch of figures during a loop without having to save and close the figure each 
+time, pass savefile = (something), mode = “save” and it’ll save the file. Just make sure you generate a unique name.
+'''
+
 def plot_3D(axes_data, X_label = "X", Y_label = "Y", Z_label = "Z", 
             savefile = None, mode = "show", create_Z = True):
     fig = plt.figure()
@@ -33,7 +58,7 @@ def plot_3D(axes_data, X_label = "X", Y_label = "Y", Z_label = "Z",
     # on the plane y=0
     ax.view_init(elev=20., azim=-35)
 
-    if mode == "save" and savefile:
+    if mode.lower() == "save" and savefile:
         plt.savefig(savefile)
     else:
         plt.show()
@@ -48,7 +73,7 @@ def plot_2D_multiline(axes_data, X_label = "X", Y_label = "Y",
     for X, Y in zip(Xs, axes_data):
         plt.plot(X, Y)
     
-    if mode == "save":
+    if mode.lower() == "save":
         plt.savefig(savefile)
     else:
         plt.show()
