@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from collections import defaultdict
 import numpy as np
 import pandas as pd
