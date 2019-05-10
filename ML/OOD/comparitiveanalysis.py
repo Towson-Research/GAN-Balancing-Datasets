@@ -78,7 +78,7 @@ def main():
     print("Counts for the classes in balanced labels: ")
     print(bal_counts)
 
-    for j in range (0, 100):
+    for j in range(100):
         unbalanced_classifier = build_discriminator(layers, alpha, dropout, unb_class_count)
         balanced_classifier = build_discriminator(layers, alpha, dropout, bal_class_count)
 
@@ -101,8 +101,9 @@ def main():
         unbalanced_array[:, 41] = unb_enc.transform(unbalanced_array[:, 41])
         balanced_array[:, 41] = bal_enc.transform(balanced_array[:, 41])
         [unb_classes, _] = np.unique(unbalanced_array[:, 41], return_counts=True)
-        unb_cm = train(unbalanced_classifier, unbalanced_array)
-        bal_cm = train(balanced_classifier, balanced_array)
+        train_data = unbalanced_array[:, :41].astype(int)
+        unb_cm = train(unbalanced_classifier, unbalanced_array, train_data)
+        bal_cm = train(balanced_classifier, balanced_array,train_data)
 
         print("Metrics for iteration " + str(j))
         # print("Confusion matrix of unbalanced: ")
@@ -121,7 +122,7 @@ def main():
         # Measure some metrics based on the confusion matrix
         # Figure out how to structure our data and measurements and upload the data
         # END LOOP
-def train(classifier, data):
+def train(classifier, data, train_data):
     callbacks = [keras.callbacks.EarlyStopping(
         monitor='val_loss', patience=2)]
 
@@ -129,9 +130,7 @@ def train(classifier, data):
     # Splitting Data into subsets
     # ==================================
 
-    train_data = data[:, :41].astype(int)
-    train_labels = data[:, 41]
-
+    train_labels = unbalanced_array[:,41]
     validationToTrainRatio = 0.05
     validationSize = int(validationToTrainRatio * len(train_data))
     val_data = train_data[:validationSize]
@@ -145,7 +144,7 @@ def train(classifier, data):
     test_labels = train_labels[:testSize]
     train_data = train_data[testSize:]
     train_labels = train_labels[testSize:]
-    
+
     history = classifier.fit(train_data,
                                  train_labels,
                                  epochs=10,
