@@ -38,7 +38,7 @@ def build_trimmed_dataset(input_filename, output_filename, minimum, maximum, bal
 
 def main(argv):
     if len(argv) < 5:
-        print("Usage: buid_trimmed_dataset.py loadfile savefile min max -b\n\
+        print("Usage: build_trimmed_dataset.py loadfile savefile min max -b\n\
         loadfile is the big dataset.\n\
         savefile is the file to save the new dataset entries to.\n\
         min is the minimum number of samples from a class to justify writing to the new set\n\

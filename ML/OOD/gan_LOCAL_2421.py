@@ -15,7 +15,6 @@ import sys
 
 from discriminator import Discriminator
 from generator import Generator
-from evaluator import Evaluator
 from mysql import SQLConnector
 from utilities import Utilities as util
 
@@ -40,7 +39,6 @@ class GAN(object):
         self.discriminator = None
         self.generator = None
         self.gan = None
-        self.evaluator = None
 
         # saved_states can be used to save states of a GAN, say
         # 5 of them so that the best can be saved when breaking out.
@@ -97,7 +95,7 @@ class GAN(object):
         print("Attack type: " + self.attack_type)
 
         conn = SQLConnector()
-        data = conn.pull_kdd99(attack=self.attack_type, num=5000)
+        data = conn.pull_kdd99(attack=self.attack_type, num=500)
         dataframe = pd.DataFrame.from_records(data=data,
                 columns=conn.pull_kdd99_columns(allQ=True))
 
@@ -107,49 +105,9 @@ class GAN(object):
         # https://stackoverflow.com/questions/24458645/label-encoding-across-multiple-columns-in-scikit-learn
 
         d = defaultdict(LabelEncoder)
-        features = dataframe.iloc[:, :41]
-        attack_labels = dataframe.iloc[:, 41:]
 
-        for i in range(0, attack_labels.size):
-            attack_labels.at[i, 'attack_type'] = util.attacks_to_num(attack_labels.at[i, 'attack_type'])
-
-        fit = features.apply(lambda x: d[x.name].fit_transform(x))  # fit is encoded dataframe
-
-        dataframe = fit.join(attack_labels)
-        dataset = dataframe.values   # transform to ndarray
-
-        #TODO: Move this entire process outside of gan.py? creating the evaluation model may take time and doesn't need to be redone for every GAN model Moving this
-        #TODO: and then handling evaluation and database uploading to another script (like in the automation script) may be more efficient
-
-
-        #pulling and encoding data for evaluation model
-        '''
-        eval_data = np.asarray(conn.pull_evaluator_data(1000000, self.attack_type))
-        eval_dataframe = pd.DataFrame.from_records(data=eval_data,
-                                              columns=conn.pull_kdd99_columns(allQ=True))
-        encoded_eval_df = eval_dataframe.apply(lambda x: d[x.name].fit_transform(x))
-        '''
-        eval_dataset = pd.read_csv('PortsweepAndNonportsweep.csv', header=None)
-        eval_dataset = eval_dataset.values
-
-        self.eval_dataset_X = eval_dataset[:,0:41].astype(int)
-        self.eval_dataset_Y = eval_dataset[:, 41]
-
-        validationToTrainRatio = 0.05
-        validationSize = int(validationToTrainRatio * len(self.eval_dataset_X))
-        self.eval_validation_data = self.eval_dataset_X[:validationSize]
-        self.eval_validation_labels = self.eval_dataset_Y[:validationSize]
-        self.eval_dataset_X = self.eval_dataset_X[validationSize:]
-        self.eval_dataset_Y = self.eval_dataset_Y[validationSize:]
-
-        testToTrainRatio = 0.05
-        testSize = int(testToTrainRatio * len(self.eval_dataset_X))
-        self.eval_test_data = self.eval_dataset_X[:testSize]
-        self.eval_test_labels = self.eval_dataset_Y[:testSize]
-        self.eval_dataset_X = self.eval_dataset_X[testSize:]
-        self.eval_dataset_Y = self.eval_dataset_Y [testSize:]
-
-
+        fit = dataframe.apply(lambda x: d[x.name].fit_transform(x))  # fit is encoded dataframe
+        dataset = fit.values   # transform to ndarray
 
         #print(fit)
 
@@ -182,39 +140,19 @@ class GAN(object):
     def build(self):
         """ Build the GAN """
         # build the discriminator portion
-        eval_args = {
-            'train_data': self.eval_dataset_X,
-            'train_labels':  self.eval_dataset_Y,
-            'validation_data': self.eval_validation_data,
-            'validation_labels': self.eval_validation_labels,
-            'test_data': self.eval_test_data,
-            'test_labels': self.eval_test_labels,
 
-        }
-
-        #doing this so we can read the data from the evaluator object
-        evaluator_object = Evaluator(**eval_args)
-        self.evaluator = evaluator_object.get_model()
-        print("Evaluator metrics after training:")
-        print(evaluator_object.performance)
-        disc_layers = self.generator_layers.copy()
-        disc_layers.reverse()
-        print(disc_layers)
-        disc_args = {
-                 'layers': disc_layers,
-                 'alpha': self.generator_alpha,
-                 'momentum': self.generator_momentum
-                 }
-        self.discriminator = Discriminator(**disc_args).get_model()#self.discriminator_layers
+        self.discriminator = Discriminator().get_model()#self.discriminator_layers
         self.discriminator.compile(
                 loss='binary_crossentropy', optimizer=self.optimizer, metrics=['accuracy'])
 
         # build the generator portion
         gen_args = {
+                 'attack_type': self.attack_type,
                  'layers': self.generator_layers,
                  'alpha': self.generator_alpha,
+                 'momentum': self.generator_momentum
                  }
-        self.generator = Generator(**gen_args).get_model()#**gen_args
+        self.generator = Generator().get_model()#**gen_args
 
         # input and output of our combined model
         z = Input(shape=(41,))
@@ -230,7 +168,6 @@ class GAN(object):
         # break condition for training (when diverging)
         loss_increase_count = 0
         prev_g_loss = 0
-
 
         conn = SQLConnector()
 
@@ -260,11 +197,7 @@ class GAN(object):
             if epoch % 500 == 0:
                 print("%d [D loss: %f, acc.: %.2f%%] [G loss: %f] [Loss change: %.3f, Loss increases: %.0f]" % (epoch, d_loss[0], 100 * d_loss[1], g_loss, g_loss - prev_g_loss, loss_increase_count))
 
-<<<<<<< HEAD
-            '''
-            # ======================
-            # Decoding attacks
-            # ======================
+
             if epoch % 20 == 0:
                 decode = gen_attacks[:1]  # take a slice from the ndarray that we want to decode
                 #MAX QUESTION: Do we plan on changing the shape of this at some
@@ -295,84 +228,14 @@ class GAN(object):
                                 attack_type=attack_num, accuracy=accuracy, gen_list=lis)
 
                         # peek at our results
-            '''
+            self.writeOut(self, conn)
+    def writeOut(self, conn):
+        hypers = conn.read_hyper()  # by epoch?
+        gens = conn.read_gens()   # by epoch?
+        print("\n\nMYSQL DATA:\n==============")
+        print("hypers  " + str(hypers))
+        print("\ngens  " + str(gens) + "\n")
 
-        ''' Calculating values for database, and writing to db
-        '''
-        '''accuracy = (d_loss[1] * 100)'''
-
-
-        predicted_gen_attack_labels = self.evaluator.predict(gen_attacks).transpose().astype(int)
-        gen_attack_labels = np.full(predicted_gen_attack_labels.shape, 1)
-
-        print("Generated attack labels: ")
-        print(gen_attack_labels)
-        print("Predicted labels of generated attacks: ")
-        print(predicted_gen_attack_labels)
-
-        right = (predicted_gen_attack_labels == 1).sum()
-        wrong = (predicted_gen_attack_labels != 1).sum()
-
-        accuracy = (right / float(right + wrong))
-
-        print("Accuracy of evaluator on generated data: %.4f " % accuracy)
-        if accuracy > .50:
-            conn.write_gens(gen_attacks, util.attacks_to_num(self.attack_type))
-
-        layersstr = str(self.generator_layers[0]) + "," + str(self.generator_layers[1]) + "," + str(
-           self.generator_layers[2])
-        attack_num = util.attacks_to_num(self.attack_type)
-||||||| merged common ancestors
-            '''
-            # ======================
-            # Decoding attacks
-            # ======================
-            if epoch % 20 == 0:
-                decode = gen_attacks[:1]  # take a slice from the ndarray that we want to decode
-                #MAX QUESTION: Do we plan on changing the shape of this at some
-                #point? If not just do
-                #decode = gen_attacks[0]
-                #decode_ints = decode.astype(int)
-                #print("decoded floats ======= " + str(decode))
-                #print("decoded ints ======= " + str(decode_ints))
-                accuracy_threshold = 55
-                accuracy = (d_loss[1] * 100)
-                if(accuracy > accuracy_threshold):
-                    # print out first result
-                    list_of_lists = util.decode_gen(decode)
-                    print(list_of_lists)
-
-                    # ??????
-                    gennum = 1  # pickle
-                    modelnum = 1
-
-                    layersstr = str(self.generator_layers[0]) + "," + str(self.generator_layers[1]) + "," + str(self.generator_layers[2])
-                    attack_num = util.attacks_to_num(self.attack_type)
-
-                    # send all to database
-                    print(np.shape(list_of_lists))
-                    for lis in list_of_lists:
-                        #print(len(lis))
-                        conn.write(gennum=gennum, modelnum=modelnum, layersstr=layersstr,
-                                attack_type=attack_num, accuracy=accuracy, gen_list=lis)
-
-                        # peek at our results
-            '''
-            accuracy = (d_loss[1] * 100)
-            layersstr = str(self.generator_layers[0]) + "," + str(self.generator_layers[1]) + "," + str(
-                self.generator_layers[2])
-            attack_num = util.attacks_to_num(self.attack_type)
-=======
-            accuracy = (d_loss[1] * 100)
-            layersstr = str(self.generator_layers[0]) + "," + str(self.generator_layers[1]) + "," + str(
-                self.generator_layers[2])
-            attack_num = util.attacks_to_num(self.attack_type)
->>>>>>> master
-
-        conn.write_hypers(layerstr=layersstr, attack_encoded=attack_num, accuracy=accuracy)
-
-        # TODO: Log our generated attacks to the gens table
-        # TODO: Add foreign key for attack type in hypers table
 
     def test(self):
         """ A GAN should know how to test itself and save its results into a confusion matrix. """
@@ -416,27 +279,18 @@ class GAN(object):
             f.close()
 
 
-
-
 def signal_handler(sig, frame):
     """ Catches Crl-C command to print from database before ending """
     conn = SQLConnector()
-    writeOut(conn)
+    writeOut(self, conn)
     sys.exit(0)
 signal.signal(signal.SIGINT, signal_handler)
 
 
-def writeOut(conn):
-   hypers = conn.read_hyper()  # by epoch?
-   gens = conn.read_gens()   # by epoch?
-   print("\n\nMYSQL DATA:\n==============")
-   print("hypers  " + str(hypers))
-   print("\ngens  " + str(gens) + "\n")
-
 def main():
     """ Auto run main method """
     args = {
-            'attack_type': "portsweep",    # optional v
+            'attack_type': "neptune",    # optional v
             'max_epochs': 7000,
             'batch_size': 255,
             'sample_size': 500,

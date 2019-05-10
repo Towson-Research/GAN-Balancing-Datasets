@@ -56,10 +56,12 @@ def main(argv):
     host = args.host
 
     conn = SQLConnector(host = host)
-    data = conn.pull_all_attacks(num)
+    data = conn.pull_all_attacks(num, nodupes = True)
     columns = conn.pull_kdd99_columns()
     col_len = len(columns) - 1
     dataframe = pd.DataFrame(data=data, columns=columns)
+
+    # Using Tim's method.
     dataframe = dataframe.iloc[:, :col_len]
 
     print(type(columns))
@@ -78,6 +80,10 @@ def main(argv):
     print(dataset.size)
 
     #TODO: Figure out what the fuck the method actually takes as params
+
+    # Using the Pandas .corr function.
+    corr_matrix = fit.corr()
+    correlation_heatmap(corr_matrix)
 
     correlation_matrix = np.zeros(shape=(col_len,col_len))
 

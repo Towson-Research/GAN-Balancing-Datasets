@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module file_tools</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>file_tools</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/admin/Documents/COSC%20490/GAN-Balancing-Datasets/ML/OOD/file_tools.py">/Users/admin/Documents/COSC 490/GAN-Balancing-Datasets/ML/OOD/file_tools.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-list_from_file"><strong>list_from_file</strong></a>(filename, separator, type_cast=None)</dt><dd><tt>Converts&nbsp;the&nbsp;contents&nbsp;of&nbsp;a&nbsp;separated&nbsp;file&nbsp;into&nbsp;a&nbsp;list.<br>
+filename:&nbsp;the&nbsp;file&nbsp;to&nbsp;extract&nbsp;the&nbsp;contents&nbsp;of<br>
+separator:&nbsp;e.g.&nbsp;,&nbsp;or&nbsp;;&nbsp;for&nbsp;csv&nbsp;files<br>
+type_cast:&nbsp;Optional&nbsp;to&nbsp;cast&nbsp;all&nbsp;members&nbsp;of&nbsp;the&nbsp;list&nbsp;before&nbsp;return<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Python&nbsp;will&nbsp;default&nbsp;file&nbsp;reads&nbsp;to&nbsp;str&nbsp;so&nbsp;you&nbsp;only&nbsp;need&nbsp;to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;supply&nbsp;this&nbsp;if&nbsp;you&nbsp;want&nbsp;something&nbsp;else,&nbsp;like&nbsp;int</tt></dd></dl>
+ <dl><dt><a name="-loop_over_files"><strong>loop_over_files</strong></a>(action, action_parameters=None, directory='', file_extension='')</dt><dd><tt>action:&nbsp;A&nbsp;function&nbsp;to&nbsp;be&nbsp;performed&nbsp;on&nbsp;a&nbsp;batch&nbsp;of&nbsp;files.<br>
+action_parameters:&nbsp;A&nbsp;list&nbsp;of&nbsp;the&nbsp;parameters&nbsp;for&nbsp;that&nbsp;function.<br>
+&nbsp;<br>
+Make&nbsp;sure&nbsp;any&nbsp;function&nbsp;that's&nbsp;going&nbsp;to&nbsp;use&nbsp;this&nbsp;takes&nbsp;the&nbsp;<br>
+filename&nbsp;as&nbsp;its&nbsp;first&nbsp;argument.</tt></dd></dl>
+ <dl><dt><a name="-write_list_to_new_file"><strong>write_list_to_new_file</strong></a>(outfile, l)</dt></dl>
+</td></tr></table>
+</body></html>
