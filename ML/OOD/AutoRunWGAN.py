@@ -1,5 +1,5 @@
 import numpy as np
-from gan import GAN
+from wgan import WGAN
 
 def main():
 
@@ -9,7 +9,7 @@ def main():
         c = np.random.randint(10, b)
 
         args = {
-            'attack_type': "portsweep",
+            'attack_type': "smurf",
             'max_epochs': 7000,
             'batch_size': 255,
             'sample_size': 500,
@@ -17,7 +17,7 @@ def main():
             'generator_layers': [a, b, c]
         }
         for iter in range (0, 10):
-            gan = GAN(**args)
+            gan = WGAN(**args)
             gan.train()
             print("GAN finished with layers:")
             print(str([a, b, c]))

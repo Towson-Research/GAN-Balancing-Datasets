@@ -90,7 +90,7 @@ class SQLConnector(object):
         try:
             with self.connection.cursor() as cursor:
                 sql = """ 
-                            insert into hypers (hypers_id, layers, attack, accuracy) 
+                            insert into results.hypers (hypers_id, layers, attack, accuracy) 
                             values (NULL, %s, %s, %s); 
                         """
                         # null because auto increment
@@ -107,7 +107,7 @@ class SQLConnector(object):
         try:
             with self.connection.cursor() as cursor:
                 sql = """
-                        alter table hypers 
+                        alter table results.hypers 
                         order by hypers_id asc;
                     """
                 cursor.execute(sql)
@@ -189,7 +189,13 @@ class SQLConnector(object):
             pass
 
     def write_gens(self, gen_attack_array, attack_type):
-        hypers_id = self.get_last_model_id()
+        hypers_id = self.get_last_model_id()[0]
+        hypers_id = hypers_id['max(hypers_id)']
+        print(type(hypers_id))
+        print(hypers_id)
+        gen_attack_array = gen_attack_array.astype(int)
+        print(len(gen_attack_array[0]))
+        print(gen_attack_array[0, :])
         for i in range(0, len(gen_attack_array[:, 0])):
             self._write_gen_attack(hypers_id, gen_attack_array[i, 0], gen_attack_array[i, 1], gen_attack_array[i, 2],
                                    gen_attack_array[i, 3], gen_attack_array[i, 4], gen_attack_array[i, 5],
@@ -204,7 +210,7 @@ class SQLConnector(object):
                                    gen_attack_array[i, 30], gen_attack_array[i, 31], gen_attack_array[i, 32],
                                    gen_attack_array[i, 33], gen_attack_array[i, 34], gen_attack_array[i, 35],
                                    gen_attack_array[i, 36], gen_attack_array[i, 37], gen_attack_array[i, 38],
-                                   gen_attack_array[i, 39], gen_attack_array[i, 40], gen_attack_array[i, 41], attack_type)
+                                   gen_attack_array[i, 39], gen_attack_array[i, 40], attack_type)
 
 
 
@@ -218,10 +224,12 @@ class SQLConnector(object):
                     dst_host_srv_diff_host_rate, dst_host_serror_rate, dst_host_srv_serror_rate,
                     dst_host_rerror_rate, dst_host_srv_rerror_rate, attack_type):
         """ Writes to the gens table """
+
         try:
             with self.connection.cursor() as cursor:
                 sql = """
-                        insert into gens ( 
+                        insert into results.gens ( 
+                            gens_id,
                             h_id, 
                             duration, 
                             protocol_type, 
@@ -245,7 +253,7 @@ class SQLConnector(object):
                             num_outbound_cmds, 
                             is_host_login, 
                             is_guest_login, 
-                            count, 
+                            cnt, 
                             srv_count, 
                             serror_rate, 
                             srv_serror_rate, 
@@ -519,7 +527,7 @@ class SQLConnector(object):
             with self.connection.cursor() as cursor:
                 sql = """
                         select max(hypers_id)
-                        from hypers
+                        from results.hypers;
                             """
                 cursor.execute(sql)
                 result = cursor.fetchall()

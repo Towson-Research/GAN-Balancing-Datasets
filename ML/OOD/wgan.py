@@ -3,17 +3,18 @@
 from collections import defaultdict
 import numpy as np
 import pandas as pd
+import keras.backend as K
 
 from keras.layers import Input
 from keras.models import Model
-from keras.optimizers import Adam
-from sklearn.preprocessing import LabelEncoder
+from keras.optimizers import RMSprop
+from sklearn.preprocessing import LabelEncoder, MaxAbsScaler, MinMaxScaler
 from sklearn.metrics import confusion_matrix, classification_report
 
 import signal
 import sys
 
-from discriminator import Discriminator
+from critic import Critic
 from generator import Generator
 from evaluator import Evaluator
 from mysql import SQLConnector
@@ -25,7 +26,11 @@ except:
     import pickle
 
 
-class GAN(object):
+# TODO: Implement weight clipping
+# TODO: Implement WGAN loss function
+# TODO: Implement RMSprop loss function
+
+class WGAN(object):
 
     def __init__(self, **kwargs):
         """ Constructor """
@@ -37,7 +42,7 @@ class GAN(object):
     def _defaults(self):
         """ Sets default variable values """
         self.attack_type = None
-        self.discriminator = None
+        self.critic = None
         self.generator = None
         self.gan = None
         self.evaluator = None
@@ -47,13 +52,15 @@ class GAN(object):
         self.saved_states = []
         self.confusion_matrix = None
         self.classification_report = None
+        self.scaler = None
 
         self.optimizer_learning_rate = 0.001
-        self.optimizer = Adam(self.optimizer_learning_rate)
+        self.optimizer = RMSprop(lr=0.00005)
 
         self.max_epochs = 7000
         self.batch_size = 255
         self.sample_size = 500
+        self.clip_value = 0.01
 
         self.valid = None
         self.fake = None
@@ -81,8 +88,8 @@ class GAN(object):
                 self.sample_size = value
             elif key == 'optimizer_learning_rate':
                 self.optimizer_learning_rate = value
-            elif key == 'discriminator_layers':
-                self.discriminator_layers = value
+            elif key == 'critic':
+                self.critic = value
             elif key == 'generator_layers':
                 self.generator_layers = value
             elif key == 'generator_alpha':
@@ -107,28 +114,31 @@ class GAN(object):
         # https://stackoverflow.com/questions/24458645/label-encoding-across-multiple-columns-in-scikit-learn
 
         d = defaultdict(LabelEncoder)
+
+        # Splitting the data from features and lablels. Want labels to be consistent with evaluator encoding, so
+        # we use the utils attack_to_num function
         features = dataframe.iloc[:, :41]
         attack_labels = dataframe.iloc[:, 41:]
 
         for i in range(0, attack_labels.size):
             attack_labels.at[i, 'attack_type'] = util.attacks_to_num(attack_labels.at[i, 'attack_type'])
 
-        fit = features.apply(lambda x: d[x.name].fit_transform(x))  # fit is encoded dataframe
+        features = features.apply(lambda x: d[x.name].fit_transform(x))  # fit is encoded dataframe
 
-        dataframe = fit.join(attack_labels)
+        # feature scaling, reccomended from github implementation
+        self.scaler = MinMaxScaler(feature_range=(-1, 1))
+        scaled_features = self.scaler.fit_transform(features.astype(float))
+        scaled_df = pd.DataFrame(data=scaled_features)
+
+
+        # Join the seperately encoded sections back into one dataframe
+        dataframe = scaled_df.join(attack_labels)
         dataset = dataframe.values   # transform to ndarray
+        print(dataset)
 
-        #TODO: Move this entire process outside of gan.py? creating the evaluation model may take time and doesn't need to be redone for every GAN model Moving this
-        #TODO: and then handling evaluation and database uploading to another script (like in the automation script) may be more efficient
+        # TODO: Feature scaling? May be necessary. Has to be on a per-feature basis?
 
-
-        #pulling and encoding data for evaluation model
-        '''
-        eval_data = np.asarray(conn.pull_evaluator_data(1000000, self.attack_type))
-        eval_dataframe = pd.DataFrame.from_records(data=eval_data,
-                                              columns=conn.pull_kdd99_columns(allQ=True))
-        encoded_eval_df = eval_dataframe.apply(lambda x: d[x.name].fit_transform(x))
-        '''
+        # Splitting up the evaluation dataset. Should maybe be moved?
         eval_dataset = pd.read_csv('PortsweepAndNonportsweep.csv', header=None)
         eval_dataset = eval_dataset.values
 
@@ -148,22 +158,6 @@ class GAN(object):
         self.eval_test_labels = self.eval_dataset_Y[:testSize]
         self.eval_dataset_X = self.eval_dataset_X[testSize:]
         self.eval_dataset_Y = self.eval_dataset_Y [testSize:]
-
-
-
-        #print(fit)
-
-        # ==========
-        # DECODING
-        # ==========
-
-#         print("===============================================")
-#         print("decoded:")
-#         print("===============================================")
-#         decode_test = dataset[:5]  # take a slice from the ndarray that we want to decode
-#         decode_test_df = pd.DataFrame(decode_test, columns=conn.pull_kdd99_columns())  # turn that ndarray into a dataframe with correct column names and order
-#         decoded = decode_test_df.apply(lambda x: d[x.name].inverse_transform(x))  # decode that dataframe
-#         print(decoded)
 
 
         # to visually judge encoded dataset
@@ -192,22 +186,24 @@ class GAN(object):
 
         }
 
-        #doing this so we can read the data from the evaluator object
+        # Doing this so we can read the data from the evaluator object
         evaluator_object = Evaluator(**eval_args)
         self.evaluator = evaluator_object.get_model()
+
+
         print("Evaluator metrics after training:")
         print(evaluator_object.performance)
-        disc_layers = self.generator_layers.copy()
-        disc_layers.reverse()
-        print(disc_layers)
-        disc_args = {
-                 'layers': disc_layers,
+        critic_layers = self.generator_layers.copy()
+        critic_layers.reverse()
+        print(critic_layers)
+        critic_args = {
+                 'layers': critic_layers,
                  'alpha': self.generator_alpha,
-                 'momentum': self.generator_momentum
+                 'optimizer': self.optimizer,
                  }
-        self.discriminator = Discriminator(**disc_args).get_model()#self.discriminator_layers
-        self.discriminator.compile(
-                loss='binary_crossentropy', optimizer=self.optimizer, metrics=['accuracy'])
+        self.critic = Critic(**critic_args).get_model()#self.discriminator_layers
+        self.critic.compile(
+                loss=self.wasserstein_loss, optimizer=self.optimizer, metrics=['accuracy'])
 
         # build the generator portion
         gen_args = {
@@ -219,11 +215,11 @@ class GAN(object):
         # input and output of our combined model
         z = Input(shape=(41,))
         attack = self.generator(z)
-        validity = self.discriminator(attack)
+        validity = self.critic(attack)
 
         # build combined model from generator and discriminator
         self.gan = Model(z, validity)
-        self.gan.compile(loss='binary_crossentropy', optimizer=self.optimizer)
+        self.gan.compile(loss=self.wasserstein_loss, optimizer=self.optimizer)
 
     def train(self):
         """ Trains the GAN system """
@@ -248,11 +244,16 @@ class GAN(object):
             gen_attacks = self.generator.predict(noise)
 
             # loss functions, based on what metrics we specify at model compile time
-            d_loss_real = self.discriminator.train_on_batch(
+            c_loss_real = self.critic.train_on_batch(
                     attacks, self.valid)
-            d_loss_fake = self.discriminator.train_on_batch(
+            c_loss_fake = self.critic.train_on_batch(
                     gen_attacks, self.fake)
-            d_loss = 0.5 * np.add(d_loss_real, d_loss_fake)
+            d_loss = 0.5 * np.add(c_loss_real, c_loss_fake)
+
+            for l in self.critic.layers:
+                weights = l.get_weights()
+                weights = [np.clip(w, -self.clip_value, self.clip_value) for w in weights]
+                l.set_weights(weights)
 
             # generator loss function
             g_loss = self.gan.train_on_batch(noise, self.valid)
@@ -260,47 +261,8 @@ class GAN(object):
             if epoch % 500 == 0:
                 print("%d [D loss: %f, acc.: %.2f%%] [G loss: %f] [Loss change: %.3f, Loss increases: %.0f]" % (epoch, d_loss[0], 100 * d_loss[1], g_loss, g_loss - prev_g_loss, loss_increase_count))
 
-            '''
-            # ======================
-            # Decoding attacks
-            # ======================
-            if epoch % 20 == 0:
-                decode = gen_attacks[:1]  # take a slice from the ndarray that we want to decode
-                #MAX QUESTION: Do we plan on changing the shape of this at some
-                #point? If not just do
-                #decode = gen_attacks[0]
-                #decode_ints = decode.astype(int)
-                #print("decoded floats ======= " + str(decode))
-                #print("decoded ints ======= " + str(decode_ints))
-                accuracy_threshold = 55
-                accuracy = (d_loss[1] * 100)
-                if(accuracy > accuracy_threshold):
-                    # print out first result
-                    list_of_lists = util.decode_gen(decode)
-                    print(list_of_lists)
 
-                    # ??????
-                    gennum = 1  # pickle
-                    modelnum = 1
-
-                    layersstr = str(self.generator_layers[0]) + "," + str(self.generator_layers[1]) + "," + str(self.generator_layers[2])
-                    attack_num = util.attacks_to_num(self.attack_type)
-
-                    # send all to database
-                    print(np.shape(list_of_lists))
-                    for lis in list_of_lists:
-                        #print(len(lis))
-                        conn.write(gennum=gennum, modelnum=modelnum, layersstr=layersstr,
-                                attack_type=attack_num, accuracy=accuracy, gen_list=lis)
-
-                        # peek at our results
-            '''
-
-        ''' Calculating values for database, and writing to db
-        '''
-        '''accuracy = (d_loss[1] * 100)'''
-
-
+        gen_attacks = self.scaler.inverse_transform(gen_attacks)
         predicted_gen_attack_labels = self.evaluator.predict(gen_attacks).transpose().astype(int)
         gen_attack_labels = np.full(predicted_gen_attack_labels.shape, 1)
 
@@ -314,6 +276,9 @@ class GAN(object):
 
         accuracy = (right / float(right + wrong))
 
+        print("5 generated attacks: ")
+        print(gen_attacks[:5, :])
+        print()
         print("Accuracy of evaluator on generated data: %.4f " % accuracy)
         if accuracy > .50:
             conn.write_gens(gen_attacks, util.attacks_to_num(self.attack_type))
@@ -324,20 +289,20 @@ class GAN(object):
 
         conn.write_hypers(layerstr=layersstr, attack_encoded=attack_num, accuracy=accuracy)
 
-        # TODO: Log our generated attacks to the gens table
         # TODO: Add foreign key for attack type in hypers table
-        '''
-        hypers = conn.read_hyper()  # by epoch?
-        gens = conn.read_gens()   # by epoch?
-        print("\n\nMYSQL DATA:\n==============")
-        print("hypers  " + str(hypers))
-        print("\ngens  " + str(gens) + "\n")
-        '''
 
     def test(self):
         """ A GAN should know how to test itself and save its results into a confusion matrix. """
         # TODO
         pass
+
+    # This functions should only be passed the FEATURES, we don't want to scale the labels
+    def feature_scale(self, dataset):
+        # Scale all features, minus the label
+        for i in range(0, len(dataset[0, :])):
+            col_avg = np.mean(dataset[:, i])
+            col_sd = np.std(dataset[:, i])
+            dataset[:, i] = (dataset[:, i] - col_avg) / col_sd
 
     ##########################################################################################
     # Uses Sklearn's confusion matrix maker
@@ -346,6 +311,9 @@ class GAN(object):
     def make_confusion_matrix(self, y_true, y_pred):
         self.confusion_matrix = confusion_matrix(y_true, y_pred)
         self.classification_report = classification_report(y_true, y_pred)
+
+    def wasserstein_loss(self, y_true, y_pred):
+        return K.mean(y_true * y_pred)
 
     ################################################################################
     # Use these to save instances of a trained network with some desirable settings
@@ -397,16 +365,15 @@ def writeOut(conn):
 def main():
     """ Auto run main method """
     args = {
-            'attack_type': "portsweep",    # optional v
+            'attack_type': "smurf",    # optional v
             'max_epochs': 7000,
             'batch_size': 255,
             'sample_size': 500,
             'optimizer_learning_rate': 0.001
             }
-    gan = GAN(**args)
+    gan = WGAN(**args)
     gan.train()
 
 
 if __name__ == "__main__":
     main()
-
