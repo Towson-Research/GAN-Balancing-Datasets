@@ -32,6 +32,10 @@ time, pass savefile = (something), mode = “save” and it’ll save the file. 
 
 def plot_3D(axes_data, x_label = "X", y_label = "Y", z_label = "Z", 
             savefile = None, mode = "show", create_z = True, title = None):
+    '''
+        Generates a 3D figure from two or three lists of output values (axes_data).
+        If only one list is passed, this will plot a 2D figure.
+    '''
     fig = plt.figure()
     if len(axes_data) == 1:
         # Make a 2D plot instead.
@@ -64,8 +68,11 @@ def plot_3D(axes_data, x_label = "X", y_label = "Y", z_label = "Z",
     else:
         plt.show()
 
-def plot_2D_multiline(axes_data, x_label = "X", y_label = "Y", 
+def plot_2D(axes_data, x_label = "X", y_label = "Y", 
             savefile = None, mode = "show", create_x = True, title = None):
+    '''
+        Creates 2D line graphs for any number of sets of output points (axes data)
+    '''
     fig = plt.figure()
     ax = fig.add_subplot(111)
     Xs = []
@@ -86,7 +93,11 @@ def plot_2D_multiline(axes_data, x_label = "X", y_label = "Y",
 
 def bar_graph(categories_values_lists, category_names = None, data_series_names = None, 
                 x_label = "X", y_label = "Y", mode = "show", title = None):
-    
+    '''
+        Create a bar graph, with bars for for each member of categories_values_lists.
+        Will generate series names (as letters) and category names (as numbers) if
+        not provided.
+    '''
     n_groups = len(categories_values_lists[0])
     n_bars = len(categories_values_lists)
     if not data_series_names:
@@ -138,13 +149,16 @@ def autolabel(rects, ax):
 
 
 def test():
+    '''
+        Test the plotter functions.
+    '''
     n = 10
     X = [random.randrange(25) for i in range(n)]
     Y = [random.randrange(25) for i in range(n)]
     Z = [random.randrange(25) for i in range(n)]
     #plot_3D([X, Y, Z], savefile = "test3d.png")
 
-    #plot_2D_multiline([X, Y, Z], savefile = "test3d.png")
+    #plot_2D([X, Y, Z], savefile = "test3d.png")
 
     bar_graph([X, Y, Z])
 
