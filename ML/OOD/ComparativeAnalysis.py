@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from collections import defaultdict
 import numpy as np
 import pandas as pd
@@ -33,8 +34,8 @@ def main():
     balanced_array = balanced_df.values
 
     gen_data = np.asarray(conn.read_gen_attacks_acc_thresh(.90, 1000))
-    gen_df = pd.DataFrame.from_records(data=data,
-                                          columns=conn.pull_kdd99_columns(allQ=True))
+    gen_df = pd.DataFrame.from_records(gen_data,
+            columns=conn.pull_kdd99_columns(allQ=True))
 
     balanced_df = pd.concat([balanced_df, gen_df])
     print(len(balanced_df))
@@ -51,6 +52,6 @@ def main():
     # Measure some metrics based on the confusion matrix
     # Figure out how to structure our data and measurements and upload the data
     # END LOOP
-    
+
 if __name__ == "__main__":
     main()
