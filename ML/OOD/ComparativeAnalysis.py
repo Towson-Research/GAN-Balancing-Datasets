@@ -51,6 +51,16 @@ def main():
     # Measure some metrics based on the confusion matrix
     # Figure out how to structure our data and measurements and upload the data
     # END LOOP
+    layers=[32,16,8,24]
+    classifier=getClassifer(layers)
+    classifier.train_on_batch(attacks)
     
+
+def getClassifier(layers):
+    '''Copying/pasting from Discriminator._build(), because Discriminator has
+    hard-wired length 1 output vector'''
+    classifier=new Discriminator(layers=layers)
+    return classifer
+
 if __name__ == "__main__":
     main()

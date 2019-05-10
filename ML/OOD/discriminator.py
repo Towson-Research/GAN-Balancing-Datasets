@@ -23,7 +23,7 @@ class Discriminator(object):
 
     def _defaults(self):
         self.discriminator = None
-        self.layers = [32, 16, 8]
+        self.layers = [32, 16, 8,1]
         self.alpha = 0.1
         self.dropout = 0.3
 
@@ -41,7 +41,7 @@ class Discriminator(object):
         model.add(Dense(self.layers[2]))
         model.add(LeakyReLU(alpha=self.alpha))
         model.add(Dropout(self.dropout))
-        model.add(Dense(1, activation='sigmoid'))  # outputs 0 to 1, 1 being read and 0 being fake
+        model.add(Dense(self.layers[3], activation='sigmoid'))  # outputs 0 to 1, 1 being read and 0 being fake
 
         attack = Input(shape=(41,))
         validity = model(attack)

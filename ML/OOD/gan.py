@@ -202,41 +202,6 @@ class GAN(object):
             if epoch % 500 == 0:
                 print("%d [D loss: %f, acc.: %.2f%%] [G loss: %f] [Loss change: %.3f, Loss increases: %.0f]" % (epoch, d_loss[0], 100 * d_loss[1], g_loss, g_loss - prev_g_loss, loss_increase_count))
 
-            '''
-            # ======================
-            # Decoding attacks
-            # ======================
-            if epoch % 20 == 0:
-                decode = gen_attacks[:1]  # take a slice from the ndarray that we want to decode
-                #MAX QUESTION: Do we plan on changing the shape of this at some
-                #point? If not just do
-                #decode = gen_attacks[0]
-                #decode_ints = decode.astype(int)
-                #print("decoded floats ======= " + str(decode))
-                #print("decoded ints ======= " + str(decode_ints))
-                accuracy_threshold = 55
-                accuracy = (d_loss[1] * 100)
-                if(accuracy > accuracy_threshold):
-                    # print out first result
-                    list_of_lists = util.decode_gen(decode)
-                    print(list_of_lists)
-
-                    # ??????
-                    gennum = 1  # pickle
-                    modelnum = 1
-
-                    layersstr = str(self.generator_layers[0]) + "," + str(self.generator_layers[1]) + "," + str(self.generator_layers[2])
-                    attack_num = util.attacks_to_num(self.attack_type)
-
-                    # send all to database
-                    print(np.shape(list_of_lists))
-                    for lis in list_of_lists:
-                        #print(len(lis))
-                        conn.write(gennum=gennum, modelnum=modelnum, layersstr=layersstr,
-                                attack_type=attack_num, accuracy=accuracy, gen_list=lis)
-
-                        # peek at our results
-            '''
             accuracy = (d_loss[1] * 100)
             layersstr = str(self.generator_layers[0]) + "," + str(self.generator_layers[1]) + "," + str(
                 self.generator_layers[2])
@@ -248,13 +213,6 @@ class GAN(object):
         # TODO: Log our generated attacks to the gens table
         # TODO: Refactor our sql methods with the new database structure
         # TODO: Add foreign key for attack type in hypers table
-        '''
-        hypers = conn.read_hyper()  # by epoch?
-        gens = conn.read_gens()   # by epoch?
-        print("\n\nMYSQL DATA:\n==============")
-        print("hypers  " + str(hypers))
-        print("\ngens  " + str(gens) + "\n")
-        '''
 
     def test(self):
         """ A GAN should know how to test itself and save its results into a confusion matrix. """
